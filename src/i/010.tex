@@ -1,0 +1,654 @@
+\id{IRSTI 50.13.13}{}
+
+{\bfseries SOFTWARE FOR SELECTIVE LASER MELTING METHOD FOR ADDITIVE
+TECHNOLOGIES}
+
+{\bfseries \tsp{1}A.
+Tulegulov}\fig{i/image1}[]{\bfseries ,
+\tsp{1}A.
+Jumagaliyeva}\fig{i/image1}[]{\bfseries \envelope ,
+\tsp{1}A.
+Sadu}\fig{i/image1}[]{\bfseries ,
+\tsp{1}В.
+Yemilov}\fig{i/image1}[]{\bfseries ,
+\tsp{1}M.
+Nurmagambetov}\fig{i/image1}[],
+
+{\bfseries \tsp{1}J.
+Zhantlesov}\fig{i/image1}[]{\bfseries ,
+\tsp{2}I.
+Dyussebayev}\fig{i/image1}[]
+
+\emph{\tsp{1}K.Kulazhanov Kazakh University of Technology
+and Business, Astana, Kazakhstan,}
+
+\emph{\tsp{2}K. Satbayev Kazakh National Research Technical
+University, Almaty, Kazakhstan}
+
+\envelope Corresponding- author:
+jumagalievaainur.m@gmail.com
+
+The article is devoted to the study of additive manufacturing
+technologies, which have become increasingly important in recent years
+in modern mechanical engineering, aerospace engineering, medicine, and
+other high-tech industries. Of particular interest is the software for
+selective laser melting (SLM) technology. Modern algorithms allow for
+high dimensional accuracy, the ability to produce parts with specified
+properties, and a shorter production cycle compared to traditional
+manufacturing methods.
+
+In this study, the focus is on the automated control system for printing
+parts and assemblies using selective laser melting. The obtained data
+can be further used in the development of algorithms for automated
+selection of powder compositions and SLM modes.
+
+The purpose of this work is to automate the technology of selecting the
+composition of the powder material for selective laser melting. To
+achieve this goal, the work involves studying the SLM technology and the
+features of obtaining powders from technogenic waste, developing an
+algorithm for automating the selection of powder composition, and
+creating a software module that provides automatic selection of the
+optimal powder composition and printing parameters.
+
+The scientific novelty and significance of the work lie in the creation
+of a software and hardware complex for the rapid selection of powder
+composition and parameters of the selective laser melting process. The
+implementation of the proposed approach makes it possible to produce
+practical parts in a short time without compromising the quality and
+performance of the material, and it also forms the basis for further
+development of automated additive manufacturing control systems.
+
+{\bfseries Keywords:} additive manufacturing, software, algorithm, software
+and hardware complex, selective laser melting (SLM), automation.
+
+{\bfseries АДДИТИВТІ ТЕХНОЛОГИЯЛАРҒА АРНАЛҒАН СЕЛЕКТИВТІ ЛАЗЕРЛІК БАЛҚЫТУ
+ӘДІСІНІҢ БАҒДАРЛАМАЛЫҚ ЖАСАҚТАМАСЫ}
+
+{\bfseries \tsp{1}А.Д. Тулегулов, \tsp{1}А.М.
+Джумагалиева\envelope , \tsp{1}А. Саду,
+\tsp{1}Б. Емилов, \tsp{1}М.Ш. Нурмагамбетов,}
+
+{\bfseries \tsp{1}М.Ш. Нурмагамбетов, \tsp{1}Ж.
+Жантлесов, \tsp{2}И.М. Дюсебаев}
+
+\emph{\tsp{1}К. Құлажанов атындағы Қазақ технология және
+бизнес университеті, Астана, Қазақстан,}
+
+\emph{\tsp{2}Қ.И. Сәтбаев атындағы Қазақ ұлттық техникалық
+зерттеу университеті, Алматы, Қазақстан,}
+
+e-mail: jumagalievaainur.m@gmail.com
+
+Мақала соңғы жылдары заманауи машина жасауда, аэроғарыштық техникада,
+медицинада және басқа да жоғары технологиялық салаларда маңызды рөл
+атқарған аддитивті өндіріс технологияларын зерттеуге арналған.
+Селективті лазерлік балқыту (SLM) технологиясының бағдарламалық
+жасақтамасы ерекше қызығушылық тудырады. Заманауи Алгоритмдер
+өлшемдердің жоғары дәлдігін, берілген қасиеттері бар бөлшектерді жасау
+мүмкіндігін және дәстүрлі өндіріс әдістерімен салыстырғанда өндіріс
+циклін қысқартуға мүмкіндік береді.
+
+Осы зерттеу шеңберінде талдау объектісі ретінде селективті лазерлік
+балқыту әдісімен бөлшектер мен тораптарды басып шығару процесін
+басқарудың автоматтандырылған жүйесі қарастырылады. Алынған мәліметтер
+болашақта ұнтақтардың құрамын және SLM режимдерін автоматтандырылған
+таңдау алгоритмдерін жасау кезінде қолданыла алады.
+
+Бұл жұмыстың мақсаты селективті лазерлік балқыту үшін ұнтақ материалының
+құрамын таңдау технологиясын автоматтандыру болып табылады. Жұмыста
+қойылған мақсатқа жету үшін SLM технологиясын және техногендік
+қалдықтардан ұнтақтарды алу ерекшеліктерін зерделеу, ұнтақ құрамын
+таңдауды автоматтандыру алгоритмін әзірлеу, сондай-ақ ұнтақтың оңтайлы
+құрамы мен басып шығару параметрлерін автоматты түрде таңдауды
+қамтамасыз ететін бағдарламалық модуль құру көзделеді.
+
+Жұмыстың ғылыми жаңалығы мен маңыздылығы ұнтақтың құрамын және
+селективті лазерлік балқу процесінің параметрлерін жедел таңдау үшін
+бағдарламалық-техникалық кешен құру болып табылады. Ұсынылған тәсілді
+іске асыру материалдың сапасы мен пайдалану қасиеттерін жоғалтпай қысқа
+мерзімде практикалық бөлшектерді дайындау мүмкіндігін қамтамасыз етеді,
+сондай-ақ қосымша өндірісті басқарудың автоматтандырылған жүйелерін одан
+әрі дамыту үшін негіз қалыптастырады.
+
+{\bfseries Түйін сөздер}: аддитивті өндіріс, бағдарламалық қамтамасыз ету,
+алгоритм, бағдарламалық-техникалық кешен, селективті лазерлік балқыту
+(SLM), автоматтандыру.
+
+{\bfseries ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ МЕТОДА СЕЛЕКТИВНОГО ЛАЗЕРНОГО ПЛАВЛЕНИЯ
+ДЛЯ АДДИТИВНЫХ ТЕХНОЛОГИЙ}
+
+{\bfseries \tsp{1}А.Д. Тулегулов, \tsp{1}А.М.
+Джумагалиева\envelope , \tsp{1}А. Саду,
+\tsp{1}Б. Емилов, \tsp{1}М.Ш. Нурмагамбетов,}
+
+{\bfseries \tsp{1}Ж. Жантлесов, \tsp{2}И.М.
+Дюсебаев}
+
+\emph{\tsp{1}Казахский университет технологии и бизнеса им.
+Кулажанова, Астана, Казахстан,}
+
+\emph{\tsp{2}Казахский национальный исследовательский
+технический университет им. К. Сатпаева, Алматы, Казахстан,}
+
+e-mail: jumagalievaainur.m@gmail.com
+
+Статья посвящена исследованию аддитивных технологий производства,
+которые в последние годы приобрели значительную важность в современном
+машиностроении, аэрокосмической технике, медицине и других
+высокотехнологичных отраслях промышленности. Особый интерес представляет
+программное обеспечение технологии селективного лазерного плавление
+(SLM). Современные алгоритмы позволяют обеспечить высокую точность
+размеров, возможность изготовления деталей с заданными свойствами и
+сокращение производственного цикла по сравнению с традиционными методами
+производства.
+
+В рамках данного исследования в качестве объекта анализа рассматривается
+автоматизированная система управления процессом печати деталей и узлов
+методом селективного лазерного плавления. Полученные данные могут быть
+использованы в дальнейшем при разработке алгоритмов автоматизированного
+подбора состава порошков и режимов SLM.
+
+Целью данной работы является автоматизация технологии подбора состава
+порошкового материала для селективного лазерного плавления. Для
+достижения поставленной цели в работе предполагается изучение технологии
+SLM и особенностей получения порошков из техногенных отходов, разработка
+алгоритма автоматизации подбора состава порошка, а также создание
+программного модуля, обеспечивающего автоматический выбор оптимального
+состава порошка и параметров печати.
+
+Научная новизна и значимость работы заключается в создании
+программно-технического комплекса для оперативного подбора состава
+порошка и параметров процесса селективного лазерного плавления.
+Реализация предлагаемого подхода обеспечивает возможность изготовления
+практических деталей в сжатые сроки без потери качества и
+эксплуатационных свойств материала, а также формирует основу для
+дальнейшего развития автоматизированных систем управления аддитивным
+производством.
+
+{\bfseries Ключевые слова:} аддитивное производство, программное
+обеспечение, алгоритм, программно-технический комплекс, селективная
+лазерная плавка (SLM), автоматизация.
+
+{\bfseries Introduction.} Current trends in the development of additive
+manufacturing technologies are closely associated with the
+implementation of automation and intelligent control of technological
+processes. The automation of powder composition selection and selective
+laser melting parameters reduces process preparation time, minimizes the
+influence of the human factor, and ensures high reproducibility of
+manufacturing results.
+
+In this study, a gear manufactured by selective laser melting is
+analyzed as an example of a functional component operating under
+mechanical loads. To evaluate the quality of the formed material,
+optical microscopy is employed to investigate the microstructure, the
+characteristics of layer-by-layer formation, and the presence of defects
+associated with the laser melting process. The obtained data can be
+further used to develop algorithms for the automated selection of powder
+compositions and SLM processing parameters.
+
+The aim of this work is to automate the technology for selecting the
+composition of powder materials for selective laser melting. To achieve
+this aim, the study addresses the following objectives: investigation of
+SLM technology and the features of powder production from industrial
+waste; development of an algorithm for automating the selection of
+powder composition; and creation of a software module that enables the
+automatic determination of optimal powder compositions and SLM
+processing parameters.
+
+The scientific novelty of this research lies in the fact that, in the
+Republic of Kazakhstan, studies focused on the development of composite
+powder materials for additive manufacturing technologies, particularly
+for selective laser melting, have been extremely limited. Within the
+framework of this work, powder materials derived from locally available
+industrial waste are obtained and analyzed for the first time, followed
+by an assessment of the quality of manufactured parts based on
+microstructural analysis {[}1{]}.
+
+The scientific significance of the study consists in the development of
+a domestically grounded methodology that enables the rapid selection of
+powder compositions and selective laser melting parameters under various
+technological conditions. The implementation of the proposed approach
+makes it possible to manufacture functional parts within a short
+timeframe without compromising material quality or performance
+characteristics, and also establishes a foundation for the further
+development of automated control systems in additive manufacturing.
+
+{\bfseries Materials and мethods.} The object of research in this work is a
+metal gear made by selective laser melting (Selective Laser Melting,
+SLM) from powder material. The choice of a gear as an object of research
+is due to the fact that this part belongs to the class of functional
+elements of machines and mechanisms operating under conditions of cyclic
+mechanical loads and increased requirements for geometric accuracy and
+surface quality {[}2{]}.
+
+Gears produced using the SLM process are of practical interest for
+mechanical engineering and precision instrument manufacturing, as
+additive technologies enable the fabrication of components with complex
+geometries without the use of conventional machining operations. At the
+same time, the quality of such products is largely determined by the
+characteristics of microstructure formation during the layer-by-layer
+laser melting of the powder material (fig.1a).
+
+In this study, the gear is considered as a model component that allows
+the assessment of the influence of additive manufacturing process
+parameters on the structure of the formed material. Microstructural
+analysis of the product makes it possible to identify characteristic
+features of SLM technology, including the layered structure, structural
+heterogeneity, and the presence of potential defects associated with
+laser processing conditions and the properties of the initial powder
+material (fig.1b).
+
+\fig{i/image87}[]
+\fig{i/image88}[]
+
+a b
+
+{\bfseries Fig.1 - Infographics of SLM technology(а). The resulting
+sample(в)}
+
+For the microscopic examination of the gear structure, a MAGUS Metal 630
+metallographic microscope equipped with a trinocular head was used. The
+microscope is designed for the investigation of opaque metallic samples
+in reflected light mode {[}3{]}. The optical system provides an
+effective magnification range of approximately 50× to 500×, enabling the
+acquisition of both overview images of the surface and detailed images
+of local microstructural features. (fig.2)
+
+\fig{i/image89}[]\fig{i/image90}[]
+
+{\bfseries Fig.2 - Magus 630 Microscope}
+
+Microscopic observations were carried out in reflected light at various
+magnifications, which made it possible to obtain a general view of the
+gear surface as well as high-resolution images of selected areas
+characterizing the microstructural features of the material {[}4{]}.
+
+The microscope specifications are presented in Table 1.
+
+{\bfseries Table 1 - MAGUS Metal 630 microscope specifications}
+
+%% \begin{longtable}[]{@{}
+%%   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2574}}
+%%   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7426}}@{}}
+%% \toprule\noalign{}
+%% \begin{minipage}[b]{\linewidth}\raggedright
+%% {\bfseries Parameter}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Value}
+%% \end{minipage} \\
+%% \midrule\noalign{}
+%% \endhead
+%% \bottomrule\noalign{}
+%% \endlastfoot
+%% Microscope type & Metallographic optical \\
+%% Purpose & Reflected light microscopy for metals and alloys \\
+%% Image capture method & Digital camera (MAGUS CBF30) \\
+%% Magnification (total) & 50--500× (basic configuration) \\
+%% Eyepieces & 10×/22 mm (10 mm interpupillary distance) (other eyepiece
+%% options available) \\
+%% Objectives (included) & PL L5×/0,12; PL L10×/0,25; PL L20×/0,40; PL
+%% L50×/0,70 \\
+%% \end{longtable}
+
+The surface of the sample under investigation was subjected to visual
+analysis without complex metallographic preparation, which is consistent
+with the objectives of the work and the conditions of practical quality
+control of additive manufacturing products. This approach allows us to
+evaluate the possibility of using optical microscopy as an element of
+operational and potentially automated control of products obtained by
+the SLM method. (tab.2)
+
+{\bfseries Table 2 -Main materials and methods of additive manufacturing of
+metals}
+
+%% \begin{longtable}[]{@{}
+%%   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1731}}
+%%   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1602}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1516}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1214}}
+%%   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1820}}
+%%   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2117}}@{}}
+%% \toprule\noalign{}
+%% \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Category}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Material / Method}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Ultimate tensile strength, MPa}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Yield strength, MPa}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+%% {\bfseries Application area}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Key advantages}
+%% \end{minipage} \\
+%% \midrule\noalign{}
+%% \endhead
+%% \bottomrule\noalign{}
+%% \endlastfoot
+%% Aluminum alloys & AlSi10Mg & 460 ± 20 & 270 ± 10 & Aerospace,
+%% automotive, defense industries & High strength, corrosion resistance,
+%% relatively low cost \\
+%% & AlSi12 & 409 ± 20 & 211 ± 20 & Lattice and lightweight structures &
+%% High bending strength, good castability \\
+%% & AlSi9Cu3 & 415 ± 15 & 236 ± 8 & Aerospace and automotive components &
+%% Improved mechanical properties compared to casting \\
+%% & AlCuMgZr & 451 ± 4 & 446 ± 4 & High-load aerospace components &
+%% Near-full density, high fatigue strength \\
+%% Magnesium alloys & WE43 (Mg--Nd--Zn--Zr) & - & - & Biomedical implants &
+%% Biocompatibility, biodegradability, porous structure supporting bone
+%% ingrowth \\
+%% Titanium alloys & Ti-6Al-4V / Ti-45Nb & - & - & Implants, aerospace
+%% industry & High specific strength, reduced Young's modulus (Ti-45Nb) \\
+%% \end{longtable}
+
+During the study, microphotographs of the gear surface were taken,
+reflecting the nature of the layer-by-layer formation of the material,
+the presence of porosity, inhomogeneities, and other structural features
+{[}5-6{]}. The images obtained were used for subsequent analysis and
+interpretation of the microstructure of the product, as well as for
+comparing the observed features with data presented in scientific
+publications on selective laser melting (fig.3).
+
+\fig{i/image91}[]
+
+{\bfseries Fig.3 - LPBF Operational Principles and Schematic.}
+
+Figure 4 illustrates the schematic representation of the selective laser
+melting (SLM) process used for the fabrication of metal components from
+powder materials. The process is based on the layer-by-layer melting of
+a thin powder layer by a high-energy laser beam, followed by
+solidification and bonding with the previously formed layer.
+
+During the manufacturing process, a powder dispenser supplies a
+controlled amount of metal powder onto the build platform. A recoater
+blade spreads the powder into a uniform layer with a predefined
+thickness. The build chamber is filled with an inert argon atmosphere to
+prevent oxidation of the molten material and to ensure stable melting
+conditions {[}7-9{]}.
+
+A fiber laser source generates a focused laser beam, which is directed
+onto the powder bed by a scanning galvanometer system. The laser
+selectively melts the powder according to the predefined scan strategy,
+forming a localized molten pool. After laser exposure, the molten
+material rapidly solidifies, resulting in the formation of a dense solid
+layer.
+
+{\bfseries Results and Discussions.} As a result of microscopic analysis of
+the surface of a gear manufactured using selective laser melting,
+micrographs were obtained that reflect the peculiarities of material
+structure formation during the additive manufacturing process. The
+investigation was conducted at various magnifications, which made it
+possible to evaluate both the overall surface morphology of the product
+and local structural features (fig.4).
+
+\fig{i/image92}[]
+
+{\bfseries Fig.4 - Photograph of a gear with 40x magnification}
+
+\begin{quote}
+At a magnification of 40× (fig.5), a heterogeneous surface structure
+formed as a result of the layer-by-layer laser melting of the powder
+material can be clearly observed {[}10{]}. The surface morphology is
+characterized by alternating regions with different degrees of fusion,
+which is a typical feature of components produced using the SLM process.
+\end{quote}
+
+\fig{i/image93}[]
+
+{\bfseries Fig.5 - Powder Bed Fusion Physical Manufacturing Cycle}
+
+\begin{quote}
+The arrangement of structural features indicates a pronounced
+directionality of the material formation process, determined by the
+laser scanning strategy and the sequence of layer deposition. Similar
+structural characteristics are widely reported in scientific studies
+devoted to the selective laser melting of metallic powders and confirm
+the validity of the selected technological approach. (fig.6a). At a
+magnification of 50× (fig.6b), a more detailed analysis of the surface
+structure becomes possible. The micrographs reveal characteristic
+boundaries between individual layers formed during the successive
+melting of the powder material. The presence of pronounced layering is a
+consequence of the discrete nature of the additive manufacturing process
+and is determined by the applied layer thickness and laser processing
+parameters.
+\end{quote}
+
+\fig{i/image94}[]\fig{i/image95}[]
+
+a b
+
+{\bfseries Fig.6 - Photo of the gear from the reverse side 50×}
+
+\begin{quote}
+In certain areas of the surface, areas with increased roughness and
+local structural in homogeneities were identified. These features may be
+associated with the uneven distribution of heat flows in the laser
+exposure zone, as well as with variations in the properties of the
+powder material, including particle size and shape {[}11{]}.
+
+It should be noted that no pronounced macrodefects, such as large cracks
+or regions of incomplete fusion, were detected in the investigated
+sample. This indicates sufficient stability of the selective laser
+melting process and appropriately selected baseline printing parameters
+for the fabrication of a functional component.
+
+Individual micrographs (fig.7) show the presence of small pores
+distributed unevenly across the surface of the product. Porosity is one
+of the most common defects in additive manufacturing using the SLM
+method and can result from insufficient laser energy density, the
+presence of gas inclusions in the powder, or incomplete fusion of
+particles.
+
+The size and morphology of the observed pores indicate microporosity,
+which generally has a less pronounced effect on the operational
+properties of the component compared to larger defects. Nevertheless,
+the presence of even fine porosity should be taken into account in the
+further selection of powder material composition and optimization of
+selective laser melting process parameters.
+
+The obtained results confirm the feasibility of using microscopic
+analysis as a tool for the primary quality assessment of components
+manufactured by selective laser melting, particularly at the stages of
+powder composition development and process parameter optimization.
+\end{quote}
+
+\fig{i/image96}[]
+
+{\bfseries Fig.7 - Morphology of gear wear particles revealed by optical
+microscopy}
+
+\begin{quote}
+The size and morphology of the observed pores indicate the presence of
+microporosity, which generally has a less significant effect on the
+service performance of the component compared to larger defects.
+Nevertheless, even fine porosity should be taken into account in the
+further selection of powder material composition and in the optimization
+of selective laser melting process parameters.
+
+The obtained data confirm the feasibility of using microscopic analysis
+as a tool for the preliminary quality assessment of components
+manufactured by selective laser melting, particularly at the stages of
+powder composition development and optimization of technological process
+parameters.
+
+Figure 8 presents optical micrographs of the surface of the gear
+manufactured by selective laser melting at different magnifications. At
+a magnification of 40×, a heterogeneous surface structure associated
+with the layer-by-layer nature of material formation is clearly
+observed. At a magnification of 500×, local structural inhomogeneities
+and individual pores characteristic of SLM-fabricated components are
+revealed.
+\end{quote}
+
+\fig{i/image97}[]
+
+{\bfseries Fig.8 - Photograph of sample images of a gear}
+
+Figure 10 shows micrographs of the surface of a gear obtained by
+selective laser melting at various magnifications. At a magnification of
+×40, the heterogeneous structure of the surface, caused by the
+layer-by-layer nature of the material formation, is clearly visible. At
+a magnification of ×50, local inhomogeneities and individual pores
+characteristic of products manufactured by the SLM method are revealed.
+
+{\bfseries Conclusion.} During the study, the microstructural features of a
+gear manufactured by selective laser melting were evaluated using
+optical microscopy. The obtained micrographs revealed characteristic
+features of the additive manufacturing process, including layer-by-layer
+material formation, microstructural heterogeneity, and the presence of
+microporosity.
+
+The microstructural analysis showed that the investigated sample
+exhibits structural features typical of SLM-produced components, while
+no significant macrodefects, such as cracks or regions of incomplete
+fusion, were detected. This indicates sufficient stability of the
+selective laser melting process and an acceptable level of material
+quality for functional applications.
+
+The results of the study confirm that optical microscopy is an effective
+and accessible method for the preliminary quality assessment of parts
+manufactured using selective laser melting. This method enables the
+rapid identification of key microstructural features and potential
+defects, which is particularly important during the stages of powder
+material selection and optimization of SLM processing parameters.
+
+The obtained results can be used as a basis for the further development
+of automated algorithms for selecting powder compositions and selective
+laser melting parameters, as well as for the creation of quality control
+systems in additive manufacturing aimed at improving the reproducibility
+and reliability of manufactured components.
+
+\emph{{\bfseries Funding.} This study is funded by the committee on science
+and higher education (No. AR23490424 "development of an additive
+installation for the manufacture of metal objects for the defense
+industry").}
+
+\begin{quote}
+{\bfseries References}
+\end{quote}
+
+1. Liu J., et al. Automated, economical, and environmentally-friendly
+asphalt mix design based on machine learning and multi-objective grey
+wolf optimization// Journal of traffic and transportation engineering.
+-2024.
+-\href{file:///C:/Users/admin/OneDrive/Desktop/ZU/2026/ARTICLE/Vol.\%2011(3)}{Vol.
+11(3).} - P.381- 405.
+\href{https://doi.org/10.1016/j.jtte.2023.10.002}{DOI
+10.1016/j.jtte.2023.10.002}.
+
+2. Sharov K, et al. The dry mortar consumption calculation automation in
+the finishing work organization// IOP Conference Series: Materials
+Science and Engineering. -2020. -Vol.~913:032042. DOI
+\href{https://iopscience.iop.org/article/10.1088/1757-899X/913/3/032042}{10.1088/1757-899X/913/3/032042}.
+
+3. Barbhuiya S., Saeed Sh. Artificial Intelligence in Concrete Mix
+Design: Advances, Applications and Challenges// International Conference
+on Innovation and Intelligence for Informatics, Computing, and
+Technologies. -2023. -P.32-37. DOI
+\href{https://doi.org/10.1109/3ICT60104.2023.10391485}{10.1109/3ICT60104.2023.10391485}.
+
+4. Smakova N., Tulegulov A., et al. Software development for SLM-3D
+printer prototype control system using klipper firmware program// KazUTB
+Bulletin. -2025. -T.3(28). -P.166-176.
+\href{https://doi.org/10.58805/kazutb.v.3.28-1138}{DOI
+10.58805/kazutb.v.3.28-1138}.
+
+5. Shegetaeva A., Smakova N., Tulegulov A., Steremhartz A. Аlgorithm for
+multi-factored forecasting of network vulnerabilities: from CVE data
+analysis to the development of a forecasting model// KazUTB Bulletin.
+-2025. -T.2(27). -P.112-123. DOI
+\href{https://doi.org/10.58805/kazutb.v.2.27-1006}{10.58805/kazutb.v.2.27-1006}.
+
+6. Tulegulov A., Akishev K., et al. Evaluation of the use of automated
+control systems for solving traffic control problems// KazUTB Bulletin.
+-2024. -T.4(25). -P.8-15.
+\href{https://doi.org/10.58805/kazutb.v.4.25-668}{DOI
+10.58805/kazutb.v.4.25-668}.
+
+7. Tulegulov A., Zhamangarin D., et al. The use of digital technologies
+for intelligent traffic management//KazUTB Bulletin. -2024.
+-T.2(23)-2024. -P.146-155. DOI
+\href{https://doi.org/10.58805/kazutb.v.2.23-485}{10.58805/kazutb.v.2.23-485}.
+
+8. Aryngazin K., Akishev K., Tulegulov A., et al. Development of an
+information and logical database model for accounting and movement of
+wind turbine equipment// KazUTB Bulletin. -2024. -T.1(22). -P.22-29. DOI
+\href{https://doi.org/10.58805/kazutb.v.1.22-248}{10.58805/kazutb.v.1.22-248}.
+
+9. Jumagaliyeva A., et al. The impact of blockchain and artificial
+intelligence technologies in network security for e-voting//
+International Journal of Electrical and Computer Engineering (IJECE).
+-2024. -Vol.14 (6). -P.6723\textasciitilde6733. DOI 10.11591/ijece.
+v14i6.pp.6723-6733.
+
+10. Yergesh M., Tulegulov A., et al. Development of an intelligent
+system automating managerial decision-making using big data//
+Eastern-European Journal of Enterprise Technologies. -2023. -T.6. -№
+3(126). -P.27-35 DOI 10.15587/1729-4061.2023.289395.
+
+11. Bayzharikova М., Tulegulov A., et al. Evalution of the efficiency of
+the technological process for the production of building products with
+fillers from metallurgical slag// Metalurgija. -2024. -Vol.63(2).
+-P.267-270. ISSN 0543-5846.
+
+\emph{{\bfseries Information about the authors}}
+
+Tulegulov A.D. - Candidate of Physical and Mathematical Sciences,
+Associate Professor, K.Kulazhanov Kazakh University of Technology and
+Business, Astana, Kazakhstan, e-mail:
+tad62@ya.ru;
+
+Jumagalieva A.M. - Master' s degree, Associate Professor,
+K.Kulazhanov Kazakh University of Technology and Business, Astana,
+Kazakhstan, e-mail:
+jumagalievaainur.m@gmail.com;
+
+Sadu A. - Master' s student, K.Kulazhanov Kazakh
+University of Technology and Business, Astana, Kazakhstan, e-mail:
+alishersadu9@gmail.com;
+
+Yemilov Birzhan -- Master' s student, K.Kulazhanov Kazakh
+University of Technology and Business, Astana, Kazakhstan, e-mail:
+chuckbot30@gmail.com;
+
+Nurmagambetov M.Sh. - Candidate of Agricultural Sciences, Associate
+Professor, K.Kulazhanov Kazakh University of Technology and Business,
+Astana, Kazakhstan, e-mail:
+Nurmag@mail.ru;
+
+Zhangabyl Kh.Zh. - Candidate of Physico-mathematical Sciences, Associate
+Professor, K.Kulazhanov Kazakh University of Technology and Business,
+Astana, Kazakhstan, e-mail:
+Zhan@mail.ru;
+
+Dyussebayev I. - PhD, K.I. Satpayev Kazakh National Research University,
+Almaty, Kazakhstan, e-mail:
+Nomad.i.m.13@mail.ru.
+
+\emph{{\bfseries Сведения об авторах}}
+
+Тулегулов А. Д.-кандидат физико-математических наук, ассоциированный
+профессор, Казахский университет технологии и бизнеса им. К. Кулажанова,
+Астана, Казахстан, e-mail: tad62@ya.ru;
+
+Жумагалиева А. М.-магистр, ассоциированный профессор, Казахский
+университет технологии и бизнеса им. К. Кулажанова, Астана, Казахстан,
+e-mail: jumagalievaainur.m@gmail.com;
+
+Саду А.-магистрант, Казахский университет технологии и бизнеса им.К.
+Кулажанова, Астана, Казахстан, e-mail: alishersadu9@gmail.com;
+
+Емилов Б.-магистрант, Казахский университет технологии и бизнеса им. К.
+Кулажанова, Астана, Казахстан, e-mail: chuckbot30@gmail.com;
+
+Нурмагамбетов М. Ш.-кандидат с.-х. наук, ассоциированный профессор,
+Казахский университет технологии и бизнеса им. К. Кулажанова, Астана,
+Казахстан, e-mail: Nurmag@mail.ru;
+
+Жантлесов Ж.Х.-кандидат физико-математических наук, ассоциированный
+профессор, Казахский университет технологии и бизнеса им. К. Кулажанова,
+Астана, Казахстан, e-mail: Zhan@mail.ru;
+
+Дюсебаев И.-доктор PhD, Казахский национальный исследовательский
+университет им. К. Сатпаева, Алматы, Казахстан, e-mail: Nomad13@mail.ru.\

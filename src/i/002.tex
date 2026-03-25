@@ -1,0 +1,802 @@
+\id{IRSTI 27.47.23}{}, 28.23.29, 15.21.69
+
+{\bfseries ARCHITECTURE AND APPLICATION OF A BIOTECHNICAL SYSTEM FOR HUMAN
+PSYCHOPHYSIOLOGICAL TESTING}
+
+{\bfseries \tsp{1}A.T.Mazakova}\fig{i/image1}[]{\bfseries ,
+\tsp{1}Sh.A.Jomartova}\fig{i/image1}[]{\bfseries ,\tsp{1,2}
+T.Zh.Mazakov}\fig{i/image1}[]
+{\bfseries \envelope ,\tsp{3}B.Zhao}\fig{i/image1}[],
+
+{\bfseries \tsp{1}A.M.Abubakirov}\fig{i/image1}[]
+
+\emph{{\bfseries \tsp{1}}Al-Farabi Kazakh National University,
+Almaty, Kazakhstan,}
+
+\emph{{\bfseries \tsp{2}}International University of
+Engineering and Technology, Almaty, Kazakhstan,}
+
+\emph{{\bfseries \tsp{3}} Dalian Polytechnic University,
+Dalian, China}
+
+\envelope Corresponding author: tmazakov@mail.ru
+
+This article examines the architecture and practical application of a
+biotechnical system for human psychophysiological testing, designed to
+objectively assess the functional and psychoemotional state of an
+individual during psychological testing. The relevance of this research
+stems from the increasing role of the human factor in ensuring the
+reliability and safety of modern technical and organizational systems,
+as well as the need to integrate instrumental diagnostic methods into
+professional selection, personnel certification, and functional state
+monitoring.
+
+The proposed biotechnical system implements an integrated approach
+combining hardware recording of physiological signals
+(electrocardiograms and photoplethysmograms) and software automation of
+psychological testing, followed by intelligent data processing. The
+system' s architecture is modular and includes a hardware
+subsystem for recording biomedical signals, a microprocessor-based
+primary processing module, a data transmission interface, and a software
+platform for analysis, visualization, and reporting.
+
+The study developed algorithms for digital processing of biomedical
+signals, including multi-stage filtering, artifact suppression, cardiac
+cycle segmentation, detection of characteristic ECG points,
+photoplethysmogram analysis, calculation of heart rate variability
+parameters, wavelet analysis of non-stationary components, and the
+generation of an extended vector of diagnostic features. An ensemble
+classification model is used for intelligent data interpretation,
+ensuring robust recognition of psychophysiological states in the face of
+interindividual variability in physiological parameters.
+
+The results of the experimental testing confirm the viability of the
+proposed architecture and the practical applicability of the
+biotechnical system for tasks of professional selection, personnel
+certification, and functional monitoring in technically complex and
+socially responsible areas of activity.
+
+{\bfseries Keywords\emph{: }}biotechnical system, psychophysiological
+testing, electrocardiogram, photoplethysmogram, heart rate variability,
+digital signal processing, intelligent diagnostics.
+
+{\bfseries Адамның психофизиологиялық тестілеуіне арналған биотехникалық
+жүйенің архитектурасы және қолданылуы}
+
+{\bfseries \tsp{1}А.Т. Мазакова,
+\tsp{1}Ш.А.Джомартова,\tsp{1,2}Т.Ж.
+Мазаков\envelope , \tsp{3} Б.Чжао,}
+
+{\bfseries \tsp{1}А.М.Абубакиров}
+
+\emph{\tsp{1}Әл-Фараби атындағы Қазақ Ұлттық Университеті,
+Алматы, Қазақстан,}
+
+\emph{\tsp{2}Халықаралық инженерлік-технологиялық
+университет, Алматы, Қазақстан,}
+
+\emph{\tsp{3}Далянь политехникалық университеті, Далянь,
+Қытай,}
+
+e-mail: \href{mailto:tmazakov@mail.ru}{\ul{tmazakov@mail.ru}}
+
+Бұл мақалада психологиялық тестілеу кезінде жеке тұлғаның функционалдық
+және психоэмоционалдық жағдайын объективті бағалауға арналған адамның
+психофизиологиялық тестілеуіне арналған биотехникалық жүйенің
+архитектурасы мен практикалық қолданылуы қарастырылады. Бұл зерттеудің
+өзектілігі заманауи техникалық және ұйымдастырушылық жүйелердің
+сенімділігі мен қауіпсіздігін қамтамасыз етудегі адам факторының рөлінің
+артуынан, сондай-ақ аспаптық диагностикалық әдістерді кәсіби іріктеуге,
+персоналды сертификаттауға және функционалдық жағдайды бақылауға
+біріктіру қажеттілігінен туындайды.
+
+Ұсынылған биотехникалық жүйе физиологиялық сигналдарды
+(электрокардиограммалар мен фотоплетизмограммалар) аппараттық жазуды
+және психологиялық тестілеуді бағдарламалық автоматтандыруды
+біріктіретін интеграцияланған тәсілді жүзеге асырады, содан кейін
+интеллектуалды деректерді өңдеу жүзеге асырылады. Жүйенің архитектурасы
+модульдік болып табылады және биомедициналық сигналдарды жазуға арналған
+аппараттық ішкі жүйені, микропроцессорға негізделген бастапқы өңдеу
+модулін, деректерді беру интерфейсін және талдау, визуализациялау және
+есеп беру үшін бағдарламалық платформаны қамтиды. Зерттеу барысында
+биомедициналық сигналдарды сандық өңдеу алгоритмдері әзірленді, оның
+ішінде көп сатылы сүзгілеу, артефактіні басу, жүрек циклін сегменттеу,
+ЭКГ-ға тән нүктелерді анықтау, фотоплетизмограмманы талдау, жүрек соғу
+жиілігінің өзгергіштік параметрлерін есептеу, стационар емес
+компоненттердің толқындық талдауы және диагностикалық белгілердің
+кеңейтілген векторын жасау. Ансамбльдік жіктеу моделі физиологиялық
+параметрлердегі жеке аралық өзгергіштік болған кезде психофизиологиялық
+күйлерді сенімді тануды қамтамасыз ететін интеллектуалды деректерді
+түсіндіру үшін қолданылады.
+
+Эксперименттік сынақ нәтижелері ұсынылған архитектураның өміршеңдігін
+және биотехникалық жүйенің техникалық тұрғыдан күрделі және әлеуметтік
+жауапты салаларда кәсіби іріктеу, персоналды сертификаттау және
+функционалдық мониторинг үшін практикалық қолданылуын растайды.
+
+{\bfseries Түйін сөздер:} биотехникалық жүйе, психофизиологиялық тестілеу,
+электрокардиограмма, фотоплетизмограмма, жүрек соғу жиілігінің
+өзгергіштігі, сандық сигналдарды өңдеу, интеллектуалды диагностика.
+
+{\bfseries АРХИТЕКТУРА И ПРИМЕНЕНИЕ БИОТЕХНИЧЕСКОЙ СИСТЕМЫ
+ПСИХОФИЗИОЛОГИЧЕСКОГО ТЕСТИРОВАНИЯ ЧЕЛОВЕКА}
+
+{\bfseries \tsp{1}А.Т. Мазакова,
+\tsp{1}Ш.А.Джомартова, \tsp{1,2} Т.Ж.
+Мазаков\envelope  , \tsp{3}Б.Чжао,}
+
+{\bfseries \tsp{1}А.М.Абубакиров}
+
+\emph{{\bfseries \tsp{1}}Казахский национальный университет им.
+аль-Фараби, Алматы, Казахстан,}
+
+\emph{{\bfseries \tsp{2}}Международный
+инженерно-технологический университет, Алматы, Казахстан,}
+
+\emph{{\bfseries \tsp{3}}Даляньский политехнический
+университет, Далянь, Китай,}
+
+e-mail: tmazakov@mail.ru
+
+В статье рассматривается архитектура и практическое применение
+биотехнической системы психофизиологического тестирования человека,
+предназначенной для объективной оценки функционального и
+психоэмоционального состояния личности в процессе выполнения
+психологических тестовых заданий. Актуальность исследования обусловлена
+возрастающей ролью человеческого фактора в обеспечении надёжности и
+безопасности современных технических и организационных систем, а также
+необходимостью внедрения инструментальных методов диагностики в процессы
+профессионального отбора, аттестации персонала и мониторинга
+функционального состояния человека.
+
+Предложенная биотехническая система реализует интегрированный подход,
+объединяющий аппаратную регистрацию физиологических сигналов
+(электрокардиограммы и фотоплетизмограммы) и программную автоматизацию
+психологического тестирования с последующей интеллектуальной обработкой
+данных. Архитектура системы построена по модульному принципу и включает
+аппаратную подсистему регистрации биомедицинских сигналов,
+микропроцессорный модуль первичной обработки, интерфейс передачи данных
+и программную платформу анализа, визуализации и формирования
+аналитических отчётов.
+
+В работе разработаны алгоритмы цифровой обработки биомедицинских
+сигналов, включающие многоэтапную фильтрацию, подавление артефактов,
+сегментацию кардиоциклов, детектирование характерных точек ЭКГ, анализ
+фотоплетизмограммы, вычисление параметров вариабельности сердечного
+ритма, вейвлет-анализ нестационарных компонент и формирование
+расширенного вектора диагностических признаков. Для интеллектуальной
+интерпретации данных применяется ансамблевая модель классификации,
+обеспечивающая устойчивое распознавание психофизиологических состояний в
+условиях межиндивидуальной вариабельности физиологических параметров.
+
+Результаты экспериментальной апробации подтверждают работоспособность
+предложенной архитектуры и практическую применимость биотехнической
+системы для задач профессионального отбора, аттестации персонала и
+функционального мониторинга в технически сложных и социально
+ответственных областях деятельности.
+
+{\bfseries Ключевые слова:} биотехническая система, психофизиологическое
+тестирование, электрокардиограмма, фотоплетизмограмма, вариабельность
+сердечного ритма, цифровая обработка сигналов, интеллектуальная
+диагностика.
+
+{\bfseries Introduction.} The current stage of scientific and technological
+progress is characterized by rapidly increasing levels of automation,
+increasing complexity of technical systems, and increasing volumes of
+processed information. Under these conditions, the role of the human
+factor in ensuring the reliability, safety, and efficiency of complex
+ergatic and cyber-physical systems is increasing. Despite the widespread
+implementation of intelligent control algorithms, final decision-making
+in many critical areas still rests with the human operator,
+necessitating constant monitoring of their functional and
+psycho-emotional state.
+
+In aviation, transport, energy, telecommunications, industry, law
+enforcement and the military, the professional activities of personnel
+are associated with high responsibility, the need to quickly respond to
+emergency situations and process large volumes of information under time
+pressure {[}1,2{]}. In such conditions, decreased concentration,
+fatigue, emotional stress and disruption of psychophysiological
+adaptation mechanisms can lead to operator errors and, as a consequence,
+to emergency situations with severe socio-economic consequences.
+
+In this regard, the task of objectively assessing a
+person' s functional state and their ability to
+effectively perform professional duties under conditions of increased
+psycho-emotional stress is particularly relevant {[}3{]}. Traditional
+methods of psychological diagnostics based on questionnaires, surveys,
+and expert assessments have a number of limitations due to the
+subjectivity of self-reports, the influence of the
+subject' s motivational attitudes, and social
+desirability effects. Furthermore, such methods do not allow for the
+detection of latent stress reactions manifesting at the level of the
+autonomic nervous system and cardiovascular regulation.
+
+One promising area is the development of biotechnical systems that
+integrate a biological object and a technical device into a single
+system for recording, processing, and interpreting information. Such
+systems allow for the integration of psychological methods with
+hardware-based recording of physiological parameters, ensuring greater
+diagnostic reliability.
+
+In recent years, instrumental methods of psychophysiological diagnostics
+based on the recording of objective physiological indicators reflecting
+the state of the body' s regulatory systems have become
+increasingly widespread {[}4{]}. These indicators include
+electrocardiograms, photoplethysmograms, galvanic skin responses,
+respiratory parameters, electroencephalograms, and other biosignals.
+Their analysis allows us to identify signs of sympathoadrenal system
+activation, assess autonomic balance, and diagnose the degree of
+psychoemotional stress.
+
+The electrocardiogram is of particular interest as one of the most
+informative and accessible biomedical signals {[}5-7{]}. Heart rate and
+heart rate variability parameters are widely used in medical and
+psychophysiological practice to assess the body' s
+functional state, stress resistance, and adaptive reserves. Analysis of
+the temporal and spectral characteristics of the ECG allows for the
+acquisition of objective information on the state of central and
+autonomic regulatory mechanisms.
+
+At the same time, recording physiological parameters in isolation
+without considering the psychological context does not allow for a full
+interpretation of the observed responses. To obtain a reliable
+psychophysiological picture, it is necessary to correlate the
+body' s physiological responses with specific cognitive
+and emotional stimuli. In this regard, integrating psychological testing
+with the synchronous recording of physiological signals is a promising
+approach.
+
+This integrated approach is implemented within biotechnical systems,
+which are complex ergatic assemblies that unite a biological object (a
+human) and technical means for recording, processing, and interpreting
+information. A biotechnical psychophysiological testing system forms a
+closed loop: "human - measurement system - analytical system --
+specialist," ensuring objective and reproducible diagnostics of
+functional state.
+
+Currently, various hardware and software systems for psychophysiological
+diagnostics exist worldwide, including polygraph systems and functional
+monitoring systems {[}8,9{]}. However, most of them are focused either
+on lie detection or medical diagnostics and do not provide close
+integration with psychological testing for professional selection and
+personnel certification. Furthermore, many foreign solutions are
+expensive, require specialized maintenance, and are not always adapted
+to the operating conditions of departmental and corporate information
+systems.
+
+In this regard, the development of domestic biotechnical
+psychophysiological testing systems focused on professional selection,
+pre-shift and pre-trip inspection, functional monitoring, and scientific
+research is urgent. Such systems must combine reliable hardware,
+flexible software, high diagnostic information yield, and ease of use.
+
+This paper is devoted to the development of an architecture and analysis
+of the practical application of a biotechnical system for human
+psychophysiological testing, implementing an event-driven approach to
+the integration of psychological testing and segmented electrocardiogram
+recording {[}10{]}. The paper examines the principles of system
+construction, the organization of information flows, algorithms for
+digital processing of biomedical signals, and methods for intelligent
+data interpretation.
+
+The aim of the study is to create a universal biotechnical platform that
+provides an objective assessment of the functional and psycho-emotional
+state of a person during the performance of psychological test tasks and
+is suitable for widespread implementation in applied and departmental
+information environments.
+
+{\bfseries Materials and methods.} The biotechnical system of
+psychophysiological testing being developed is intended for the
+automated conduct of psychological tests with the simultaneous recording
+of the physiological reactions of the subject' s body and
+belongs to the class of ergatic biotechnical systems and is intended to
+automate the procedure of psychophysiological testing with the
+synchronous recording of the physiological reactions of the body.
+
+Three people participate in the testing process: 1) the test subject, 2)
+the BTS operator, and 3) the psychologist. Figures 1-2 show the
+interaction diagrams.
+
+\fig{i/image14}[]
+
+{\bfseries Fig.1- Scheme of interaction between the BTS operator and the
+subject}
+
+\fig{i/image15}[]
+
+{\bfseries Fig.2 - Scheme of processing testing results by a psychologist}
+
+The system architecture is built on a multi-level modular principle and
+includes two key functional blocks:
+
+1) a psychological testing block;
+
+2) a block for recording, synchronizing, and writing the
+electrocardiogram to a results file.
+
+In general, the system consists of the following functional levels: 1)
+recording of biomedical signals, 2) analog-to-digital conversion, 3)
+microprocessor processing, 4) data transmission and storage, and 5)
+intelligent analysis and visualization.
+
+The system includes:
+
+1) ECG and photoplethysmogram sensors;
+
+2) analog-to-digital converter;
+
+3) microcontroller module;
+
+4) USB interface;
+
+5) personal computer with analysis software platform;
+
+6) results database and report generation module.
+
+The integration of these blocks ensures the formation of an objective
+psychophysiological profile of the individual and allows for the
+analysis of physiological reactions to each individual stimulus (test
+question).
+
+{\bfseries Results and discussion.} The psychological testing unit
+automates the psychodiagnostic examination procedure and ensures
+standardized presentation of stimulus material, recording of the
+subject' s responses, and recording of the time
+parameters for completing tasks.
+
+\emph{The unit performs the following main functions:}
+
+- formation of a battery of psychological tests;
+
+- sequential presentation of questions (stimuli);
+
+- recording the start and end of each question;
+
+- recording the selected answer;
+
+- measuring the reaction time of the subject;
+
+- synchronization with the ECG recording unit.
+
+\emph{The testing process includes the following steps:}
+
+- loading the test battery from the database;
+
+- initializing the testing session;
+
+- displaying instructions to the subject;
+
+- sequential presentation of questions;
+
+- recording responses and reaction times;
+
+- transferring time stamps to the ECG recording unit;
+
+- generating a psychological testing protocol.
+
+Each test question is considered as a separate psychophysiological
+stimulus, to which the subject's body forms an individual physiological
+response.
+
+For each question, the following information is recorded: question
+number
+,
+start time
+,
+end time
+,
+reaction time
+,
+and the selected answer option. These parameters are subsequently used
+to synchronize with physiological signals and generate diagnostic
+features.
+
+The physiological data recording unit is designed for continuous
+recording of an electrocardiogram during the psychological test and the
+formation of a result file containing segmented ECG fragments for each
+question.
+
+The ECG signal is collected from the body surface using non-invasive
+electrodes and fed to the analog-to-digital converter (ADC) of the
+microprocessor module. The following steps are performed:
+
+- preliminary analog filtering;
+
+- analog-to-digital conversion;
+
+- transmission of digital readings to the software subsystem.
+
+The software registration module ensures continuous reception of digital
+ECG readings and their storage in a text file of results in real time.
+
+The results of electrocardiogram recording are saved in a text file of
+ekg.txt format, in which the values of the ECG signal amplitude at
+discrete moments in time are recorded line by line.
+
+To ensure synchronization of physiological data with psychological
+stimuli, a special \emph{separator marker is used}, inserted into the
+file at the end of each question.
+
+Each fragment between two markers corresponds to one test question.
+
+The use of segmented ECG recordings divided by test questions provides
+the following advantages:
+
+- analysis of the body' s response to each stimulus;
+
+- identification of hidden stress reactions;
+
+- comparison of physiological parameters with specific psychological
+scales;
+
+- formation of an individual psychophysiological profile;
+
+- increased diagnostic reliability.
+
+This approach allows us to move from an integrated assessment of a
+person's condition to event-oriented psychophysiological diagnostics.
+
+One of the key features of the developed biotechnical
+psychophysiological testing system is the use of event-driven
+electrocardiogram recording during psychological testing tasks. Unlike
+traditional physiological monitoring methods, which analyze the
+subject' s holistic state throughout the entire
+examination session, the proposed system utilizes event-driven
+synchronization of physiological data with individual psychological
+stimuli. Each test question is considered a distinct psychophysiological
+event, eliciting an individual response from the body' s
+regulatory systems. This approach allows for a shift from an average
+assessment of functional status to a detailed analysis of responses to
+specific cognitive and emotional stimuli, significantly increasing the
+diagnostic sensitivity and prognostic value of the system.
+
+Experimental testing of the developed biotechnical system for
+psychophysiological testing was carried out with the aim of assessing
+the performance of the hardware and software architecture, verifying the
+algorithms for processing biomedical signals, and determining the
+diagnostic information content of the proposed psychophysiological
+indicators.
+
+The main objective of the experimental studies was to confirm the
+possibility of objectively recording the physiological reactions of the
+body during the performance of psychological test tasks, as well as to
+evaluate the effectiveness of the event-segmented approach to the
+analysis of the electrocardiogram, synchronized with individual test
+questions.
+
+The experimental studies were conducted in a laboratory setting at the
+Educational and Scientific Center for Psychophysiological Research.
+Volunteers aged 18 to 30 with no diagnosed cardiovascular or
+neurological conditions participated in the trial.
+
+Before testing, subjects underwent a briefing explaining the
+study' s objectives, the procedure, and the rules for
+using the system' s hardware. Each participant provided
+informed consent for the processing of personal and biomedical data.
+
+The testing procedure included the following steps:
+
+1. Registration of an individual background profile in a resting state
+(3--5 minutes).
+
+2. Conducting a battery of psychological tests with synchronous ECG
+recording.
+
+3. Formation of the resulting ECG file with segmentation by questions.
+
+4. Automatic processing of physiological data.
+
+5. Formation of a psychophysiological conclusion.
+
+During the experiment, standard requirements of biomedical ergonomics
+were observed: a comfortable position for the subject, a stable room
+temperature, and the absence of external irritants and electromagnetic
+interference.
+
+During the testing, a battery of psychological tests was used, aimed at
+diagnosing:
+
+- anxiety level;
+
+- aggressiveness of personality;
+
+- neuropsychic stability;
+
+- stress resistance and cognitive load.
+
+Each test included 20 to 40 questions, presented in random order to
+minimize habituation. For each question, the following were recorded:
+
+- question number;
+
+- the moment of beginning and end;
+
+- selected answer option;
+
+- the reaction time of the subject.
+
+Simultaneously with the presentation of questions, continuous ECG
+recording was carried out, followed by recording of data in a text file
+of ekg.txt format with division of segments by marker.
+
+The processing of experimental data was carried out automatically and
+included the following steps:
+
+1. Import of the resulting ECG file.
+
+2. Signal segmentation by FFFF markers.
+
+3. Digital filtering of each segment.
+
+4. R-peak detection and cardiac cycle segmentation.
+
+5. Calculation of RR intervals and heart rate variability indices.
+
+6. Formation of a vector of psychophysiological characteristics.
+
+7. Normalization relative to the background profile.
+
+8. Intelligent classification of states.
+
+9. Calculation of the integral index of psychophysiological stress.
+
+\begin{quote}
+For each test question, a set of indicators was formed that reflect the
+body' s physiological response to the corresponding
+stimulus.
+
+The experiment yielded representative arrays of event-segmented
+physiological data. Analysis revealed consistent patterns of changes in
+cardiovascular regulation indicators depending on the emotional
+significance of the stimuli.
+
+For questions related to the anxiety and aggression scales, the
+following were observed:
+
+- increase in heart rate by 10-18\%;
+
+- reduction of SDNN and RMSSD values by 15-25\%;
+
+- growth of the integral energy of the cardiac signal;
+
+- increasing the reaction time of the subject.
+\end{quote}
+
+For neutral questions, physiological parameters remained close to
+background values. The application of the ensemble classification model
+provided the following average accuracy rates:
+
+- Accuracy: 91- 93\%
+
+- Sensitivity: 88 - 92\%
+
+- Specificity: 94 - 97\%
+
+- F1 score: 0.88-0.91
+
+The obtained values confirm the high stability of the algorithms and the
+correctness of the selected set of diagnostic features.
+
+The results of the pilot study showed that the developed biotechnical
+system can detect both overt and covert psycho-emotional reactions,
+which are not always consciously recognized by the subjects. This
+confirms the diagnostic value of the instrumental approach and its
+advantages over traditional survey methods.
+
+Event-segmented ECG analysis provides a detailed picture of the
+body' s reactions to individual psychological stimuli and
+allows for the formation of individual psychophysiological profiles
+suitable for practical use in professional selection and functional
+monitoring systems.
+
+{\bfseries Conclusions.} This paper examines the design principles,
+architecture, and practical application of a biotechnical system for
+human psychophysiological testing. This system is designed to
+objectively assess the functional and psychoemotional state of an
+individual while completing psychological testing tasks. The developed
+system implements an integrated biotechnical approach, combining an
+automated psychological testing unit and a hardware unit for recording
+physiological signals, followed by intelligent data processing.
+
+The relevance of the research conducted is determined by the growing
+role of the human factor in ensuring the reliability and safety of
+modern technical and organizational systems {[}11-14{]}. Given the
+increasing information load, the increasing complexity of professional
+activities, and the increasing responsibility of personnel, traditional
+psychodiagnostic methods, based primarily on survey methods, do not
+always provide the necessary level of objectivity and predictive value.
+Therefore, the development of psychophysiological testing tools based on
+the recording of the body' s physiological reactions is
+an important and sought-after scientific and technical task.
+
+A key feature of the developed biotechnical system is the event-driven
+organization of the testing procedure, in which each question in the
+psychological test is treated as an individual psychophysiological
+stimulus, eliciting a specific response from the body' s
+regulatory systems. The psychological testing unit ensures standardized
+presentation of stimulus material, recording of the
+subject' s responses and the timing of task completion,
+as well as the generation of a testing protocol containing data on the
+sequence of questions, reaction times, and selected answers.
+
+This study developed and tested a set of algorithms for digital
+processing of biomedical signals, including multi-stage filtering,
+artifact suppression, cardiac cycle segmentation, detection of
+characteristic ECG points, heart rate variability analysis, and the
+generation of an extended vector of diagnostic features. The use of an
+event-based segmentation approach allows for the calculation of
+psychophysiological indicators separately for each test question and the
+comparison of physiological responses with specific psychological
+scales.
+
+The study places particular emphasis on individualizing diagnostics
+through the use of a background profile of the subject, formed at rest.
+Normalizing diagnostic features relative to the individual background
+allows for accounting for interindividual variability in physiological
+parameters and ensures accurate comparison of the same
+individual' s responses under different conditions. This
+approach improves the robustness of state recognition algorithms and the
+reliability of diagnostic conclusions.
+
+Experimental testing of the system confirmed the operability of the
+hardware and software architecture, the correctness of the implemented
+signal processing algorithms, and the high diagnostic value of the
+event-based segmentation approach. The results demonstrate the ability
+to detect both overt and covert psychoemotional reactions that are not
+always consciously recognized by subjects and not reflected in their
+subjective self-assessments. This confirms the fundamental advantages of
+the instrumental psychophysiological approach compared to traditional
+survey methods.
+
+The practical significance of the developed biotechnical system lies in
+its potential for use in professional selection systems and periodic
+certification of personnel in technically complex and socially
+responsible fields, such as aviation, transportation, energy, industry,
+telecommunications, law enforcement, and the military. The mobility of
+the hardware and the versatility of the software allow the system to be
+used in both stationary laboratories and mobile settings, including
+pre-shift and pre-trip inspections.
+
+The use of event-segmented ECG recording during psychological testing
+paves the way for the development of individual digital
+psychophysiological profiles of employees and the implementation of
+long-term monitoring systems for their functional status. Integration of
+the system with corporate and departmental information platforms enables
+the automation of data analysis, report generation, and decision support
+processes in the areas of human resources management and occupational
+safety.
+
+Further development of the biotechnical system includes expanding the
+sensor suite by incorporating galvanic skin response, respiratory
+parameters, and accelerometry, which will improve diagnostic robustness
+and the accuracy of psychophysiological response interpretation. The
+implementation of deep learning methods for automatically generating
+diagnostic features and adapting classifiers to the individual
+characteristics of test subjects is also promising.
+
+Thus, the developed biotechnical system for psychophysiological testing
+represents a modern and effective tool for objectively diagnosing a
+person' s functional and psychoemotional state.
+Event-driven integration of psychological testing and segmented ECG
+recording provides a fundamentally new level of detail and reliability
+in psychophysiological diagnostics and forms the basis for the creation
+of intelligent systems to ensure professional safety in the face of
+increasing psychoemotional and informational stress.
+
+{\bfseries References}
+
+1. Chernorizov AM, Isaychev SA, Zinchenko Yu. P. Psychophysiological
+methods for the diagnostics of human functional states: New approaches
+and perspectives // Psychology in Russia: State of the Art. -- 2016. -
+Vol.9(4).- P.23-36. DOI 10.11621/ pir.2016.0403.
+
+2. Lohani M, Payne BR, Strayer DL. A Review of Psychophysiological
+Measures to Assess Cognitive States in Real-World Driving//Front Hum
+Neurosci. - 2019. doi 10.3389/fnhum.2019.00057.
+
+3. Tiberio L., Cesta A., Olivetti Belardinelli M. Psychophysiological
+Methods to Evaluate User' s Response in Human Robot
+Interaction: A Review and Feasibility Study. //Robotics.-
+2013. -Vol.2(2). -P.92-121.
+\href{https://doi.org/10.3390/robotics2020092}{DOI
+10.3390/robotics2020092}.
+
+4. Schmälzle R., Grall C. Psychophysiological Methods: Options, Uses,
+and Validity. // The International Encyclopedia of Media Psychology, J.
+Bulck (Ed.). - 2020.
+\href{https://doi.org/10.1002/9781119011071.iemp0013}{DOI
+10.1002/9781119011071.iemp0013}.
+
+5. Li K, Rüdiger H, Ziemssen T. Spectral Analysis of Heart Rate
+Variability: Time Window Matters// Front Neurol.- 2019.-Vol.10. doi
+10.3389/ fneur.2019.00545.
+
+6. Estévez M., Machado C., Leisman G., Estévez-Hernández T.,
+Arias-Morales A., Machado A., Montes-Brown J. Spectral analysis of heart
+rate variability //International Journal on Disability and Human
+Development. - 2016. -Vol.15(1). - P.5-17.
+\href{https://doi.org/10.1515/ijdhd-2014-0025}{DOI
+10.1515/ijdhd-2014-0025}.
+
+7. Pradhan BK, Neelappu B. Ch., Sivaraman J., Kim D., Pal K. A Review on
+the Applications of Time-Frequency Methods in ECG Analysis// Journal of
+Healthcare Engineering. - 2023.-Vol.1:3145483.
+\href{https://doi.org/10.1155/2023/3145483}{DOI 10.1155/2023/3145483.}
+
+8. Zyout A, Alquran H, Mustafa WA, Alqudah AM. Advanced Time-Frequency
+Methods for ECG Waves Recognition. Diagnostics (Basel).
+-2023.-Vol.1:308. doi 10.3390/diagnostics13020308.
+
+9. Kei H., Satoshi Y., Yasuya I., Ryota Y., Ryo W., Naoki T., Noriyuki
+S. Time-frequency analysis of high-frequency power profile within the
+QRS complex in patients with ventricular tachycardia using wavelet
+transform //Journal of Electrocardiology. -2025.-Vol.91:154027.
+
+DOI 10.1016/j.jelectrocard.2025.154027.
+
+10. Amekran Y., Damoun N., El H. Analysis of frequency-domain heart rate
+variability using absolute versus normalized values: implications and
+practical concerns // Frontiers in Physiology. -2024.-Vol.15:1470684.
+DOI 10.3389/fphys.2024.1470684.
+
+11. Mazakova A.T., Daribayeva G.D., Amirkhanov B.S., Zholmagambetova B.,
+Abdirazak B.K. Biotechnical system of psychophysiological diagnostics of
+personality conflict// Bulletin of KazUTB. - 2019. - No.4. - P.2-19.
+
+12. Mazakova A.T., Amirkhanov B.S., Daribaeva G.D., Ziyatbekova G.Z.,
+Abdirazak B.K. Программно-аппаратный комплекс психофизиологического
+тестирования// Вестник КазУТБ. -2019.-№ 1.-С-2-9
+
+13. Mazakova A. T., Amirkhanov B.S., Mussabek G.K.,
+Abdirazak B.K., Daribaeva G.D. Expansion of psychological test battery
+biotechnical psychophysiological diagnostic system // Bulletin of the
+Kazakh-British Technical University. -2021.-Vol.18(3).-P.51-55. DOI
+10.55452/1998-6688-2021-18-3-51-55.
+
+14. A.s. No.5499, 2019, September 26. Mazakov T.Z., Ziyatbekova G.Z.,
+Mazakova A.T., Daribaeva G.D., Əbdirazak B.K., Amirkhanov B.S.,
+Zholmagambetova B.R. A set of psychophysiological testing programs.
+Computer program.
+
+\emph{{\bfseries Information about the authors}}
+
+Mazakova A. T. - PhD, senior lecturer, Al-Farabi Kazakh National
+University, Almaty, Kazakhstan, e-mail:
+aigerym97@mail.ru;
+
+Jomartova Sh.А.- Doctor of Technical Sciences, Professor, Al-Farabi
+Kazakh National University, Almaty, Kazakhstan, e-mail:
+jomartova@mail.ru;
+
+Mazakov T. Zh. - Doctor of Physical and Mathematical Sciences,
+Professor, Al-Farabi Kazakh National University and International
+University of Engineering and Technology, Almaty, Kazakhstan, e-mail:
+tmazakov@mail.ru;
+
+Zhao Baidong \emph{-} Senior Lecturer, Dalian Polytechnic University,
+Dalian, China, e-mail: xiaoyuezhishang@vip.qq.com;
+
+Abubakirov A. M. - 2nd year Master, Al-Farabi Kazakh National
+University, Almaty, Kazakhstan, e-mail: adlett28@gmail.com.
+
+\emph{{\bfseries Сведения об авторах}}
+
+Мазакова А.N. - PhD, старший преподаватель КазНУ им. аль-Фараби, Алматы,
+Казахстан, e-mail:
+aigerym97@mail.ru;
+
+Джомартова Ш. А. -- д.т.н., профессор КазНУ им. аль-Фараби, Алматы,
+Казахстан, e-mail:
+jomartova@mail.ru;
+
+Мазаков Т. Ж. - д.ф.-м.н., КазНУ им. аль-Фараби, Международный
+инженерно-технологический университет, Алматы, Казахстан, e-mail:
+tmazakov@mail.ru;
+
+Чжао Байдун \emph{-} старший преподаватель, Даляньский политехнический
+университет, Далянь, Китай, e-mail: xiaoyuezhishang@vip.qq.com;
+
+Абубакиров А. М. - 2 курс магистратуры, КазНУ им. Аль-Фараби, Алматы,
+Казахстан, e-mail:
+adlett28@gmail.com.\

@@ -1,0 +1,818 @@
+\id{IRSTI 28.23.37}{}
+
+\begin{quote}
+{\bfseries ADAPTIVE NONLINEAR CONTROL OF SPACECRAFT ATTITUDE USING NEURAL
+NETWORKS}
+\end{quote}
+
+{\bfseries \tsp{1}M.A.
+Bisenbi}\fig{i/image1}[]{\bfseries ,
+\tsp{1}O.G.Abdiramanov}\fig{i/image1}[]{\bfseries \envelope ,
+\tsp{2}M.B.}
+{\bfseries Rakhimzhanova}\fig{i/image1}[],
+{\bfseries \tsp{3}G.B.
+Balgozhina}\fig{i/image1}[],
+
+{\bfseries \tsp{2}G.S.
+Shuteyeva}\fig{i/image1}[]{\bfseries ,
+\tsp{1}D.C.Zhamangarin}\fig{i/image1}[]
+
+\emph{{\bfseries \tsp{1}}Eurasian National University named by
+L.N. Gumilyev, Astana, Kazakhstan,}
+
+\emph{{\bfseries \tsp{2}}Astana IT University, Astana,
+Kazakhstan,}
+
+\emph{{\bfseries \tsp{3}}Abai Kazakh National Pedagogical
+University, Astana, Kazakhstan}
+
+\envelope Corresponding author:
+risbajbdiramanov@gmail.com
+
+Recent developments in aerospace control systems emphasize the need for
+intelligent and resilient algorithms capable of handling the complex
+nonlinearities and uncertainties of spacecraft dynamics. This research
+presents a neural adaptive fixed, time control framework to the attitude
+stabilization and vibration suppression of a flexible spacecraft that is
+subjected to unknown and time, varying conditions. The research object
+is a spacecraft that has uncertain inertia and is equipped with flexible
+appendages and is also subjected to external disturbances. The proposed
+method introduces a neural network compensator into a fixed, time
+backstepping controller, where the neural network approximates the
+unknown nonlinear dynamics and unmodeled disturbances online. The
+adaptive device in the loop empowers the controller to change its
+parameters on its own, thus it is able to ensure precise attitude
+tracking and vibration damping even when there is actuator saturation.
+
+Simulation, based tests reveal that the newly designed controller is
+capable of attaining quicker convergence, better robustness, and lower
+residual vibration as compared to conventional adaptive and sliding,
+mode schemes. The findings show that neural compensation has a major
+effect in stability margins and control accuracy. The advanced technique
+extends the nonlinear spacecraft control domain by creating a self,
+organizing structure that has the features of autonomy, adaptability,
+and reliability, thus, it is a viable option for the next generation of
+intelligent spacecraft guidance and stabilization systems.
+
+{\bfseries Keywords:} adaptive control system, nonlinear dynamics,
+spacecraft, stabilization, neural networks, control systems.
+
+{\bfseries АДАПТИВНОЕ НЕЛИНЕЙНОЕ УПРАВЛЕНИЕ ПОЛОЖЕНИЕМ КОСМИЧЕСКОГО
+ЛЕТАТЕЛЬНОГО АППАРАТА С ИСПОЛЬЗОВАНИЕМ НЕЙРОННЫХ СЕТЕЙ}
+
+{\bfseries \tsp{1}М.А. Бейсенби, \tsp{1}Ө.Ғ.
+Әбдіраманов\envelope , \tsp{2}М.Б. Рахимжанова,
+\tsp{3}Г.Б. Балгожина,}
+
+{\bfseries \tsp{2}Г.С. Шутеева, \tsp{1}Д.С.
+Жамангарин}
+
+{\bfseries \tsp{1}}\emph{Евразийский Национальный университет
+имени Л.Н.Гумилева, Астана, Казахстан,}
+
+{\bfseries \tsp{2}}\emph{Astana IT University, Астана,
+Казахстан,}
+
+{\bfseries \tsp{3}}\emph{Казахский национальный педагогический
+университет им. Абая, Астана, Казахстан,}
+
+e-mail:
+risbajbdiramanov@gmail.com
+
+Последние разработки в области аэрокосмических систем управления
+подчеркивают необходимость в интеллектуальных и устойчивых алгоритмах,
+способных справляться со сложными нелинейностями и неопределенностями
+динамики космических аппаратов. В этом исследовании рассматривается
+нейронная адаптивная система управления с фиксированным временем для
+стабилизации положения и подавления вибрации гибких космических
+аппаратов, работающих в неизвестных и изменяющихся во времени условиях.
+Объектом исследования является космический аппарат с неопределенной
+инерцией и гибкими отростками, подверженными внешним воздействиям.
+Предлагаемый подход интегрирует компенсатор нейронной сети в контроллер
+обратного хода с фиксированным временем, где нейронная сеть
+аппроксимирует неизвестную нелинейную динамику и немоделированные
+возмущения в режиме реального времени. Этот адаптивный механизм
+позволяет контроллеру автоматически регулировать свои параметры,
+обеспечивая точное отслеживание положения и демпфирование вибрации даже
+при перегрузке привода. Эксперименты, основанные на моделировании,
+показывают, что предлагаемый контроллер обеспечивает более быструю
+конвергенцию, повышенную надежность и снижение остаточной вибрации по
+сравнению с традиционными схемами адаптивного и скользящего режимов.
+Результаты подтверждают, что нейронная компенсация значительно повышает
+запас устойчивости и точность управления. Разработанный метод вносит
+свой вклад в область нелинейного управления космическими аппаратами,
+предоставляя самоорганизующуюся структуру, которая повышает
+автономность, адаптивность и надежность, предлагая перспективное
+направление для будущих интеллектуальных систем наведения и стабилизации
+космических аппаратов.
+
+{\bfseries Ключевые слова:} адаптивная система управления, нелинейная
+динамика, космический летательный аппарат, стабилизация, нейронные сети,
+системы управления.
+
+{\bfseries НЕЙРОНДЫҚ ЖЕЛІЛЕРДІ ҚОЛДАНА ОТЫРЫП, ҒАРЫШТЫҚ ҰШУ АППАРАТТАРЫНЫҢ
+ОРНАЛАСУЫН АДАПТИВТІ СЫЗЫҚТЫҚ ЕМЕС БАСҚАРУ}
+
+{\bfseries \tsp{1}М.А. Бейсенби, \tsp{1}Ө.Ғ.
+Әбдіраманов\envelope , \tsp{2}М.Б. Рахимжанова,
+\tsp{3}Г.Б. Балгожина,}
+
+{\bfseries \tsp{2}Г.С. Шутеева, \tsp{1}Д.С.
+Жамангарин}
+
+{\bfseries \tsp{1}}\emph{Л.Н.Гумилев атындағы Еуразия Ұлттық
+университеті, Астана, Қазақстан,}
+
+{\bfseries \tsp{2}}\emph{Astana IT University, Астана,
+Қазақстан,}
+
+{\bfseries \tsp{3}}\emph{Абай атындағы Қазақ Ұлттық
+Педагогикалық университеті, Астана, Қазақстан,}
+
+e-mail:
+risbajbdiramanov@gmail.com
+
+Аэроғарыштық басқару жүйелерінің соңғы әзірлемелері ғарыш аппараттары
+динамикасының күрделі сызықтық емес және белгісіздіктерімен күресуге
+қабілетті интеллектуалды және тұрақты алгоритмдердің қажеттілігін
+көрсетеді. Бұл зерттеу белгісіз және уақыт бойынша өзгеретін жағдайларда
+жұмыс істейтін икемді ғарыш аппараттарының орнын тұрақтандыру және
+дірілін басу үшін нейрондық, бейімделетін, белгіленген уақытты басқару
+жүйесін қарастырады. Зерттеу нысаны-белгісіз инерциясы бар және сыртқы
+әсерлерге ұшырайтын икемді процестері бар ғарыш аппараты. Ұсынылған
+тәсіл нейрондық желінің компенсаторын белгіленген уақыттағы кері
+контроллерге біріктіреді, мұнда нейрондық желі нақты уақыт режимінде
+белгісіз сызықтық емес динамика мен имитацияланбаған бұзылуларға
+жуықтайды. Бұл адаптивті механизм контроллерге оның параметрлерін
+автоматты түрде реттеуге мүмкіндік береді, тіпті диск жетегі шамадан тыс
+жүктелген кезде де позицияны дәл бақылауға және дірілді демпферлеуге
+мүмкіндік береді. Модельдеуге негізделген эксперименттер ұсынылған
+контроллердің дәстүрлі адаптивті және жылжымалы режим схемаларымен
+салыстырғанда жылдам конвергенцияны, сенімділікті арттыруды және қалдық
+дірілді азайтуды қамтамасыз ететінін көрсетеді. Нәтижелер нейрондық
+өтемақы тұрақтылық пен басқару дәлдігін айтарлықтай арттыратынын
+растайды. Әзірленген әдіс болашақ интеллектуалды ғарыш аппараттарын
+бағыттау және тұрақтандыру жүйелері үшін перспективалық бағытты ұсына
+отырып, автономияны, бейімделуді және сенімділікті арттыратын өзін-өзі
+ұйымдастыратын құрылымды қамтамасыз ету арқылы ғарыштық аппараттарды
+сызықтық емес басқару саласына үлес қосады.
+
+{\bfseries Түйін сөздер:} адаптивті басқару жүйесі, сызықтық емес динамика,
+ғарыштық ұшу аппараты, бағдарлауды тұрақтандыру, нейрондық желілер,
+басқару жүйелері.
+
+{\bfseries Introduction.} Modern spacecraft are increasingly using large
+and lightweight flexible structures such as solar panels, booms, and
+antennas to meet the growing needs of long-duration and multifunctional
+missions {[}1{]}. These flexible components are necessary to ensure
+sufficient power supply, communications, and placement of instruments in
+orbit. However, they create a strong connection between the motion of a
+solid body and elastic vibrations, which significantly complicates the
+dynamics of spacecraft orientation and control design. {[}2{]}. Even
+small vibrations can propagate through the structure and deteriorate
+pointing precision, stability, and imaging performance. Consequently,
+maintaining high-precision position stabilization in conditions of
+flexibility, environmental disturbances and uncertainty of parameters
+remains a constant problem in aerospace engineering {[}3{]}.
+
+The task of controlling the orientation of a spacecraft becomes even
+more difficult if practical limitations are taken into account, such as
+drive saturation, limited control torque, and nonlinear dynamics with
+uncertain inertia parameters {[}4{]}. These factors can lead to
+fluctuations, performance degradation, or even instability if
+mismanaged. Over the past few decades, researchers have proposed a
+variety of management strategies to address these issues. Classical
+linear controllers are simple, but they cannot cope with non-linear
+communication and high-angle maneuvers {[}5{]}. Reliable control methods
+can provide limited stability over known ranges of disturbances, but
+they often require highly accurate system models and, as a rule, are
+conservative in performance {[}6{]}.
+
+Adaptive control has been widely studied to compensate for parameter
+uncertainties in real time, allowing online assessment of unknown
+dynamics {[}7{]}. Although adaptive circuits can guarantee asymptotic
+stability, they usually depend on constant excitation and cannot ensure
+convergence in a fixed or finite time. In addition, their performance
+may deteriorate with rapid changes in external torques or design
+flexibility. To improve the accuracy and adaptability of control,
+intelligent control methods integrating machine learning methods, in
+particular neural networks (NNS), have recently attracted increasing
+attention to the use of spacecraft {[}8{]}.
+
+Neural networks have a powerful ability to approximate nonlinear
+functions and unknown dynamics of systems without using explicit
+mathematical models {[}9{]}. When controlling a spacecraft, NNS can
+study the correspondence between input torques and orientation
+characteristics, providing real-time compensation for unmodeled
+disturbances, friction, and vibration effects {[}10{]}. Several studies
+have shown that NN-based adaptive controllers significantly improve
+reliability, vibration suppression, and overall control accuracy
+compared to traditional adaptive or sliding mode approaches {[}11{]}.
+However, conventional NN-based controllers are often oriented towards
+asymptotic convergence, as a result of which the convergence time
+depends on the initial conditions, which may not be suitable for
+time-consuming tasks such as rapid orientation maneuvers or target
+tracking.
+
+In recent years, fixed-time control has become a promising approach that
+guarantees convergence of the system within a given limited time,
+regardless of the initial state {[}12{]}. Unlike time-limited control,
+whose convergence time depends on initial conditions, fixed-time control
+ensures predictability and uniformity of performance, which is critical
+for flight planning and the safety of space operations. However, most
+existing fixed-time systems are based on the sliding terminal control
+mode, which suffers from rattling and potential features. These problems
+can cause unwanted vibrations, drive wear, or even oversaturation of
+regulators, especially in flexible spacecraft systems.
+
+To overcome these limitations, this paper proposes a neural adaptive
+fixed-time backstepping control framework for nonlinear spacecraft
+attitude stabilization and vibration suppression {[}13{]}. The proposed
+approach integrates a neural network compensator with a fixed- time
+backstepping design to approximate and cancel unknown nonlinearities,
+inertia variations, and external disturbances in real time. The
+supporting structure ensures smooth generation of control laws,
+eliminating interference while maintaining global stability. The neural
+network dynamically adjusts its parameters based on tracking errors,
+allowing the system to adapt autonomously to changing conditions.
+
+Thus, the aim of this study is to develop a control scheme that combines
+the reliability of adaptive control, the ability of neural networks to
+learn, and the predictability of fixed-time convergence. The resulting
+controller improves the accuracy of the spacecraft' s
+orientation, suppresses vibration, and is resistant to uncertainties.
+
+Consider a rigidly flexible spacecraft equipped with deployable solar
+panels or antennas that provide a link between the relative motion of a
+rigid body and elastic vibrations. The dynamics of spacecraft
+orientation can be represented in a special orthogonal group SO(3) with
+rotational motion determined by Euler' s equations:
+
+\[J\dot{\omega} + \omega \times (J\omega) = u + d + \tau_{f}\]
+
+\(\dot{q} = Q(q)\omega\) (1)
+
+Here, \(J \in R^{3 \times 3}\) is the inertia matrix of the spacecraft,
+\(\omega \in R^{3}\) is the angular velocity vector, \(u \in R^{3}\) is
+the control moment, \(d \in R^{3}\ \)is an unknown limited external
+disturbance (e.g., solar pressure, magnetic field), and
+\(\tau_{f}\ \)denotes the torque the moment caused by vibration of
+flexible elements. The unit quaternion
+\(q = \left\lbrack q_{0},\ q_{v}^{Τ} \right\rbrack^{Τ}\) represents
+attitude, where \(q_{0}\) and \(q_{v} \in R^{3}\) denote the scalar and
+vector components, respectively, satisfying
+\(q_{0}^{2} + q_{v}^{Τ}q_{v} = 1\). The matrix \(Q(q)\) is the standard
+quaternion transformation matrix.
+
+Due to uncertainties in \(J\), unmodeled dynamics, and unknown
+disturbances, the exact model is not available for direct control
+design. To simplify the representation, the attitude dynamics can be
+written in compact nonlinear form as:
+
+\[\dot{x} = f(x) + g(x)u + \mathrm{\Delta}(x,t)\ \ \ \ (2)\]
+
+where \(x = \left\lbrack q_{v}^{Τ},\ \omega^{Τ} \right\rbrack^{Τ}\) is
+the system state vector, \(f(x)\) represents the nominal nonlinear
+dynamics, \(g(x)\) is the control input matrix, and
+\(\mathrm{\Delta}(x,t)\) denotes the lumped uncertainty, including
+modeling errors, vibration dynamics, and external disturbances.
+
+The main control objective is to design a control input \(u(t)\) such
+that the attitude \(q\) tracks a desired orientation \(q_{d}\) while
+suppressing vibration, ensuring convergence of both the attitude error
+\(e_{q} = q\bigotimes q_{d}^{- 1}\) and angular velocity error
+\(e_{\omega} = \omega - \omega_{d}\) to a small neighborhood around zero
+within a fixed time \(T_{\max}\), regardless of initial conditions.
+
+To handle nonlinear and uncertain terms in \(f(x)\) and
+\(\mathrm{\Delta}(x,t)\), a neural network (NN) approximator is
+introduced to estimate the unknown dynamics online. The NN is defined
+as:
+
+\[\widehat{f}(x) = W^{Τ}\varphi(x)\ \ \ \ (3)\]
+
+where \(\varphi(x) \in R^{m}\) is a vector of activation functions, and
+\(W \in R^{m}\) is the configurable weight vector. The approximation
+error is:
+
+\[\varepsilon(x) = f(x) - \widehat{f}(x)\ \ \ (4)\]
+
+which is supposed to be limited by the known constant
+\(\left\| \varepsilon(x) \right\| \leq \varepsilon_{\max}\). The law of
+adaptive updating for NN weights will be developed later to minimize
+this error during operation, allowing the controller to study the
+nonlinear behavior of the system in real time.
+
+This study uses a fixed-return approach, in which the laws of virtual
+control are recursively developed to stabilize each subsystem. A
+non-singular finite sliding surface guarantees a finite rate of
+convergence, while neural compensation provides resilience to
+concentrated uncertainties. By integrating the principles of adaptive
+learning and fixed-time convergence, the proposed control scheme
+provides fast, stable and accurate position adjustment for both rigid
+and flexible communication.
+
+{\bfseries Materials and methods.} The main goal of this study is to
+develop an adaptive nonlinear control system for spacecraft position
+stabilization that effectively compensates for model uncertainties and
+external disturbances using neural networks. The proposed approach is
+based on previous developments in adaptive control, neural network
+approximation, and fixed-time convergence control {[}14{]}.
+
+\begin{quote}
+A. Dynamics and kinematics of spacecraft.
+\end{quote}
+
+The dynamics of the orientation of a rigidly flexible spacecraft is
+determined by the Euler rotation equations:
+
+\(J\dot{\omega} + \omega \times (J\omega) = u + d + \tau_{f}\) (5)
+
+where \(J \in R^{3 \times 3}\) is the inertia matrix of the spacecraft,
+\(\omega \in R^{3}\) is the angular velocity vector, \(u \in R^{3}\) is
+the control moment, \(d \in R^{3}\) are external disturbances, and
+\(\tau_{f}\) is the moment caused by vibration of flexible elements.
+
+The orientation kinematics, represented by the unit quaternions
+\(q = \left\lbrack q_{0},q_{v}^{Τ} \right\rbrack^{Τ}\), is expressed as:
+
+\[\dot{q} = \left( \frac{1}{2} \right)Q(q)\omega\ \ \ (6)\]
+
+where \(Q(q)\) is the standard quaternion transformation matrix
+{[}15{]}. Quaternions are used to avoid the singularities of Euler
+angles and to provide a globally correct representation of the
+orientation of the spacecraft {[}16{]}.
+
+To formulate a compact nonlinear model, the full dynamics can be
+rewritten as:
+
+\[\dot{x} = f(x) + g(x)u + \mathrm{\Delta}(x,\ t)\ \ \ \ \ (7)\]
+
+where \(x = \left\lbrack q_{v}^{T},\omega^{Τ} \right\rbrack^{Τ}\) is the
+vector of the system state, \(f(x)\) denotes nominal dynamics, \(g(x)\)
+is the matrix of control input data, and \(\mathrm{\Delta}(x,\ t)\)
+represents concentrated uncertainty, including unmodeled flexibility,
+parameter variations, and external disturbances {[}17{]}.
+
+Neural Network - based approximation. To compensate for unknown
+nonlinearities \(\mathrm{\Delta}(x,t)\), a Radial Basis Function Neural
+Network (RBFNN) is employed as a universal approximator {[}18{]}:
+
+\(\widehat{\mathrm{\Delta}}(x) = W^{Τ}\varphi(x)\ \ \ (8)\)
+
+where \(\varphi(x) \in R^{m}\) is a vector of Gaussian basis functions,
+\(W \in R^{m \times 3}\) is the ideal weight matrix, and the
+approximation error
+\(\varepsilon(x) = \mathrm{\Delta}(x,\ t) - \widehat{\mathrm{\Delta}}(x)\)
+is assumed to be bounded by
+\(\left\| \varepsilon(x) \right\| \leq \varepsilon_{\max}\) {[}19{]}.
+
+The adaptive weight update law, derived from Lyapunov stability theory,
+is given by
+
+\[\widehat{W} = \Gamma\varphi(x)s^{Τ}\ \ \ \ \ (9)\]
+
+where \(\widehat{W}\) is the estimate of \(W,\Gamma > 0\) is a positive-
+definite learning-rate matrix, and \(s = \omega - \omega_{d}\) is the
+sliding surface representing angular-velocity tracking error {[}20{]}.
+This law of updating makes it possible to study dynamic uncertainties
+online, while maintaining the stability of the system {[}21{]}.
+
+B. Nonlinear control scheme. The proposed control scheme combines neural
+adaptive compensation, step-by-step design, and fixed-time convergence
+concepts. The backstepping system guarantees smooth generation of
+virtual control and avoids failures typical of controllers with smooth
+operation {[}22{]}, while the fixed-time structure ensures convergence
+over a specified time, regardless of initial conditions.
+
+The total control moment is calculated as
+
+\(u = J{\dot{\omega}}_{d} + \omega \times (J\omega) - Ks - {\widehat{W}}^{T}\phi(x)\)
+(10)
+
+where \(K > 0\) is a positive-definite gain matrix determining the rate
+of convergence, and the neural- network term
+\({\widehat{W}}^{Τ}\varphi(x)\) adaptively compensates for concentrated
+uncertainties and external disturbances {[}23{]}.
+
+Using the corresponding Lyapunov analysis, it is demonstrated that all
+closed-loop signals remain limited, and the errors of orientation and
+angular velocity converge to small controlled neighborhoods close to
+zero for a fixed time {[}24{]}.
+
+C. Implementation algorithm. The algorithm is implemented in an onboard
+discrete-time environment suitable for spacecraft computers, in
+accordance with the methodology described in {[}25{]}:
+
+1. Initialization: Set the initial neural weights \(\widehat{W}(0)\) and
+the parameters \(J,\ \Gamma,\) and \(K\).
+
+2. Measurement: Get the current position \(q\) and angular velocity
+\(\omega\) from sensors.
+
+3. Calculation of the sliding surface: Calculate
+\(s = \omega - \omega_{d}\).
+
+4. Neural-weight update: Adjust \(\widehat{W}\) using Eq. (9).
+
+5. Torque estimation: Calculate \(u\) using Eq. (10) and apply
+constraints to the drive.
+
+6. Command execution: Send control torque to actuators until
+\(s \rightarrow 0\) or mission objectives are achieved.
+
+Overload protection and filtering mechanisms are built in to maintain
+stability in the presence of drive saturation and measurement noise
+{[}26{]}.
+
+D. Selection and justification of the method. Classical control methods
+such as PID and LQR are simple to implement, but they are not able to
+effectively cope with strong nonlinearities, flexibility, and uncertain
+dynamics {[}27{]}. Reliable \emph{H∞} controllers and controllers based
+on perturbation observation provide limited performance, but require
+accurate modeling and can be overly conservative. Controllers operating
+in sliding mode provide reliability, but at the same time suffer from
+rattling and intermittent control signals.
+
+The proposed neural adaptive reverse step method with a fixed execution
+time has several advantages:
+
+- neural networks provide real-time approximation of unmodeled
+nonlinearities without explicit parameter identification.
+
+- the reverse stroke ensures smooth and continuous operation, avoiding
+rattling.
+
+- fixed-time control guarantees predictable convergence regardless of
+initial conditions, which is essential for time-consuming tasks.
+
+This combination provides superior reliability, faster stabilization,
+and improved vibration suppression compared to classical adaptive or
+sliding mode approaches, making it highly efficient for nonlinear space
+systems.
+
+{\bfseries Results and discussion.} To evaluate the performance of the
+proposed neural adaptive feedback controller with a fixed action time, a
+number of detailed numerical calculations were performed on a nonlinear
+flexible spacecraft model. The spacecraft was tested under conditions of
+uncertain inertia parameters, external torque disturbances, and drive
+saturation to test the effectiveness of the control circuit in terms of
+position stabilization, vibration suppression, and reliability.
+
+\begin{quote}
+Configuring the simulation.
+\end{quote}
+
+The spacecraft model consisted of a rigid central body with two flexible
+solar panels. The nominal inertia matrix was defined as:
+
+J = diag (12.5, 11.3, 9.8) kg·m²
+
+and it varied by ±25\% to represent the error. The maximum moment of
+disturbance was 0.5 N·m per axis, and output torque of the drives was
+limited to ±1 N·m.
+
+The radial basis function neural network (RBFNN) used 15 Gaussian nodes
+per axis. The learning rate and gain matrices were tuned as:
+
+Γ = diag (10, 10, 10) and K = diag (4.5, 4.0, 3.8)
+
+These parameters ensured stable and fast convergence. A conventional
+adaptive controller (CAC) was used as a reference under identical
+conditions.
+
+\begin{quote}
+\fig{i/image73}[]Attitude
+stabilization result
+\end{quote}
+
+{\bfseries Fig.1 - Convergence of the orientation error}
+
+Figure 1 shows the error rate of orientation determination (‖qᵥ‖) over
+time. The proposed controller achieved convergence in 8.5 seconds, while
+the traditional adaptive method took 22 seconds to achieve similar
+accuracy. The error of the steady-state position remained below
+0.01°, which confirmed convergence over a fixed time,
+independent of the initial conditions.
+
+\begin{quote}
+\fig{i/image74}[]Flexible
+vibration suppression
+\end{quote}
+
+{\bfseries Fig.2 - Flexible battery tip deflection response}
+
+The reaction of a flexible solar cell to the tip deflection is shown in
+Figure 2. When using a conventional controller, the oscillations lasted
+for more than 25 seconds with a residual amplitude of about 0.15 m. The
+proposed controller dampened these fluctuations for 8 seconds, reducing
+the deviation to less than 0.03 m.
+
+\begin{quote}
+Interference elimination and robustness.
+\end{quote}
+
+\fig{i/image75}[]
+
+{\bfseries Fig.3 - Timeline chart}
+
+To assess the reliability along the Y-axis, a disturbing moment of 0.5
+N·m was applied at t = 15 seconds. The proposed controller restored
+stability in 2 seconds, while the traditional controller took 10
+seconds. Neural adaptation effectively compensated for this disruption
+without hesitation or instability.
+
+Computational performance. A comparative evaluation of both control
+systems showed that the fixed-time adaptive neural controller
+consistently outperforms the traditional adaptive approach in all key
+performance indicators. The proposed controller provided faster and more
+predictable orientation while reducing installation time by almost 60\%
+and more accurate angular velocity tracking.
+
+Vibration suppression has been significantly improved, the residual
+deflection has been reduced from 0.15 m to 0.03 m, and the time to
+achieve a stable vibration level has been reduced by more than 70\%. The
+control signals generated by the neural controller were smoother, with
+less overspeed, and required less peak torque.
+
+During reliability tests, the controller effectively suppressed external
+interference and maintained stable operation when the drive was
+overloaded. The position deviation after interference was reduced from
+0.052 rad (at CAC) to 0.018 rad, which confirms the high resistance to
+interference.
+
+Despite the higher computational requirements, the data processing time
+by the neural controller remained significantly below the threshold
+value of the on-board system. This confirms its feasibility for
+real-time spacecraft applications.
+
+The results confirm that the proposed control strategy provides
+significant advantages in speed, accuracy, vibration damping, and
+reliability, all while maintaining computational efficiency. The
+demonstrated performance improvements make it an excellent candidate for
+autonomous spacecraft attitude control, especially for missions
+involving flexible structures or large-scale deployments where
+traditional controllers often do not provide consistent results.
+
+The obtained simulation results convincingly indicate that the proposed
+neural adaptive feedback controller with a fixed action time
+significantly improves the characteristics of spacecraft position
+stabilization in nonlinear, uncertain and time-varying conditions. The
+fixed-time property ensures that the orientation and angular velocity
+errors converge within a strictly limited time, regardless of the
+initial state. This feature is especially useful for space missions that
+require urgent execution, such as autonomous rendezvous, docking
+maneuvers, debris avoidance, or rapid reorientation required during
+payload operations. Compared to classic controllers with finite
+operating time or sliding mode, the fixed operating time system
+eliminates dependence on initial conditions and avoids the
+high-frequency interference commonly seen in intermittent control laws.
+
+The inclusion of the radial basis function neural network (RBFNN) plays
+a crucial role in increasing the adaptability and reliability of the
+system. By approximating unknown nonlinearities and perturbations in
+real time, the neural compensator allows the controller to maintain
+stability even under conditions of sudden environmental changes,
+uncertain inertia, or sudden vibration effects. This real-time
+adaptation mechanism allows the spacecraft to study the changing
+dynamics of the system autonomously and compensate for it, improving
+both transient and steady-state characteristics.
+
+An important practical advantage of this approach is the smooth
+generation of torque and predictable behavior in transients, which are
+necessary for high-precision tasks such as Earth observation, satellite
+formation, and payload guidance for communications. The simulation
+results showed that the proposed controller provides high guidance
+accuracy with a reduced load on the drive, which means reduced energy
+consumption and increased drive life. Such efficiency is crucial for
+small satellites and nanosatellites with limited power consumption and
+hardware limitations.
+
+However, for practical implementation, several engineering
+considerations must be taken into account. Real spacecraft systems face
+sensor interference, time delays, signal quantization, and limited
+onboard processing capabilities. To ensure reliable operation, future
+developments should use noise filtering, delay-compensated adaptation
+laws, and a computationally optimized neural architecture. Another
+direction involves the implementation of the controller on
+hardware-in-the-loop (HIL) test benches or satellite simulators in real
+time to test its performance in real conditions, including communication
+latency and drive saturation dynamics.
+
+The proposed control concept can also be extended to joint
+multi-satellite systems, where convergence at a fixed time will ensure
+synchronized maneuvers of several spacecraft operating in service. In
+addition, combining neural adaptation with reinforcement learning or
+deep actor-critic architecture can further enhance the
+system' s decision-making ability by providing fully
+autonomous orientation and orbit control.
+
+The research contributes to the creation of a reliable, adaptive, and
+computationally feasible framework for intelligent spacecraft control.
+It bridges the gap between classical analytical control theory and
+modern data-driven learning, providing the foundation for the next
+generation of autonomous, self-organizing, and fault-tolerant space
+systems.
+
+{\bfseries Conclusion.} This article presents a neural adaptive feedback
+controller with a fixed action time to stabilize the position of the
+spacecraft and suppress vibrations in uncertain and dynamic conditions.
+The framework combines a neural network with a radial basis function
+(RBFNN) to compensate for unknown nonlinearities in real time with a
+fixed-time design that ensures convergence within a guaranteed boundary,
+regardless of the initial conditions.
+
+The simulation results showed that the proposed controller provides
+faster convergence, higher guidance accuracy and higher reliability
+compared to traditional adaptive methods. The neural component improved
+interference suppression and adaptability, while the feedback structure
+ensured a smooth change in control moments without rattling or
+instability.
+
+This approach is suitable for missions involving flexible or deployable
+structures, autonomous docking, and Earth observation, where precision
+and time predictability are critical. The fixed-time property ensures
+reliability when performing time-consuming operations, while the
+adaptive neural layer supports long-term autonomy in the uncertain space
+environment.
+
+Future work should focus on in-loop hardware verification, optimizing
+neural network architecture to minimize computation, and integration
+with deep learning or reinforcement learning to enhance self-learning
+capabilities.
+
+Thus, the proposed controller represents a practical and intelligent
+solution for next-generation spacecraft, combining theoretical stability
+with the ability to adapt in real time to provide fast, reliable and
+autonomous attitude control.
+
+{\bfseries References}
+
+1. Yao Q. et al. Neural adaptive fixed-time attitude stabilization and
+vibration suppression of flexible spacecraft
+//Mathematics.-2022.Vol.10(10):1667.\href{https://doi.org/10.3390/math10101667}{DOI
+10.3390/math10101667}.
+
+2. Chen R., Wang Z., Che W. Adaptive sliding mode attitude-tracking
+control of spacecraft with prescribed time performance //Mathematics.
+-2022. -Vol.10(3):40. DOI10.3390/math10030401.
+
+3. Zhang G. Et al. Fixed-time sliding mode attitude control of a flexible
+spacecraft with rotating appendages connected by magnetic bearing
+//Mathematical Biosciences and Engineering. -2022.-Vol.19(3): 2286-2309.
+DOI 10.3934/mbe.2022106.
+
+4. Javaid U., Dong H. Disturbance-observer-based attitude control under
+input nonlinearity //Transactions of the Institute of Measurement and
+Control. -2021.-Vol.43(10): 2358-2367. DOI 10.1177/0142331221997204.
+
+5. Liu Y. et al. An overview of finite/fixed-time control and its
+application in engineering systems//IEEE/CAA Journal of Automatica
+Sinica. -2022.-Vol.9(12):2106-2120. DOI 10.1109/JAS.2022.105413.
+
+6. Li S., Liu K., Liu M. Adaptive Dynamic Programming-Based Spacecraft
+Attitude Control Under a Tube-Based Framework//Electronics.
+-2024.-Vol.13(22): 4575. DOI 10.3390/electronics13224575.
+
+7. Wu H., Xu D. Attitude regulation of flexible spacecrafts with unknown
+control directions and input disturbances //Journal of Systems Science
+and Complexity.-2024.-Vol.37.-P.2347-2367. DOI
+10.1007/s11424-024-3539-8.
+
+8. Lu M. et al. RBFNN-Based Adaptive Fixed-Time Sliding Mode Tracking
+Control for Coaxial Hybrid Aerial--Underwater Vehicles Under
+Multivariant Ocean Disturbances //Drones. -2024.-Vol.8(12): 745. DOI
+10.3390/drones8120745.
+
+9. Esmaeilzadeh S. M., Zeyghami M. S. Nonlinear finite time attitude
+control of flexible spacecraft based on a novel output redefinition
+method //Chinese Journal of Aeronautics. -2023.-Vol.36(11). -P.373-385.
+DOI 10.1016/j.cja.2023.08.001.
+
+10. Liu F., Yao X., Liu Y. Adaptive neural network control of
+multiple-sectioned flexible riser with time-varying output constraint
+and input nonlinearity //Asian Journal of Control. -2023.-Vol.26(2).
+-P.917-930.DOI 10.1002/asjc.3231.
+
+11. Efimov D. Et al. Finite-time stability tools for control and
+estimation //Foundations and Trends in Systems and Control. -2020.
+Vol.9(2-3): 171-364. DOI 10.1561/2600000026.
+
+12. Post M. A., Yan X. T., Letier P. Modularity for the future in space
+robotics: A review //Acta Astronautica. -2021.-Vol.189.-P.530-547. DOI
+10.1016/j.actaastro.2021.09.007.
+
+13. Liu Z. Et al. Dual-condition event-triggered distributed adaptive
+neural control for multi-agent systems with nonlinear fault //Journal of
+the Franklin Institute. -2022.-Vol.359(14). -P.7393-7414. DOI
+10.1016/j.jfranklin.2022.07.026.
+
+14. You Z. Et al. Adaptive neural network vibration suppression control
+of flexible joints space manipulator based on H∞ theory//Journal of
+Vibroengineering. -2023.-Vol.25(3). -P.492-505. DOI
+10.21595/jve.2022.22797.
+
+15. Cao T., Gong H., Han B. Observer-Based Predefined-Time Attitude
+Control for Spacecraft Subject to Loss of Actuator
+Effectiveness//Processes. -2022.-Vol.10(11): 2294. DOI
+10.3390/pr10112294.
+
+16. Matessa M. Algorithms for encoding interstellar messages//Acta
+Astronautica. -2025. -Vol.229: 161-165. DOI
+10.1016/j.actaastro.2025.01.011.
+
+17. Czornik A. et al. Some conditions for the proportional local
+assignability of the Lyapunov spectrum of discrete linear time-varying
+systems //Automatica. -2022.-Vol.144: 110458. DOI
+10.1016/j.automatica.2022.110458.
+
+18. Chen W., Hu Q. Sliding-mode-based attitude tracking control of
+spacecraft under reaction wheel uncertainties //IEEE/CAA Journal of
+Automatica Sinica. -2023.-Vol.10(6): 1475-1487. DOI
+10.1109/JAS.2022.105665.
+
+19. Kong X. Et al. Predefined-Time Control of a Spacecraft Attitude with
+Thrust Booms //Aerospace. -2023.-Vol.10(2): 94. DOI
+10.3390/aerospace10020094.
+
+20. Bima A. I. H. et al. Integrative system biology and mathematical
+modeling of genetic networks identifies shared biomarkers for obesity
+and diabetes //Mathematical Biosciences and Engineering.
+-2022.-Vol.19(3): 2310-2329. DOI 10.3934/mbe.2022107.
+
+21. Liu M. Et al. Adaptive dynamic programming-based fault-tolerant
+attitude control for flexible spacecraft with limited wireless
+resources//Science China Information Sciences. -2023.-Vol.66: 202201.
+DOI 10.1007/s11432-022-3732-9.
+
+22. Gao Y. Et al. Fault deviation estimation and integral sliding mode
+control design for Lipschitz nonlinear systems //Systems \& Control
+Letters. -2019.-Vol.123.-P.8-15. DOI 10.1016/j.sysconle.2018.08.006.
+
+23. Guo Q. Et al. Neural adaptive backstepping control of a robotic
+manipulator with prescribed performance constraint //IEEE Transactions
+on Neural Networks and Learning Systems. -2019.-Vol.30(12).
+-P.3572-3583. DOI 10.1109/TNNLS.2018.2854699.
+
+24. Lunghi P. Et al. Energy efficiency analysis of Spiking Neural
+Networks for space applications//Astrodynamics. -2025.-Vol.9(6).
+-P.909-932. DOI 10.1007/s42064-024-0256-y.
+
+25. Dai X. Et al. Mechanical behaviors of inner and outer sidewalls of
+honeycomb cores subjected to out-of-plane compression //Aerospace
+Science and Technology. -2022.-Vol.127:107659. DOI
+10.1016/j.ast.2022.107659.
+
+26. Abdiramanov O. Et al. Self-Organizing Control Systems for Nonlinear
+Spacecraft in the Class of Structurally Stable Mappings //International
+Journal of Advanced Computer Science and Applications.
+-2023.-Vol.14(11). -Р.786-792. DOI 10.14569/ijacsa.2023.0141179.
+
+27. Beisenbi M. Et al. Control of deterministic chaotic modes in power
+systems //IEEE. -2023.DOI 10.1109/SIST58284.2023.10223493.
+
+\emph{{\bfseries Information about authors}}
+
+Beisenbi M.A. - Doctor of Technical Sciences, Professor, L.N.Gumilyov
+Eurasian National University, Astana, Kazakhstan, e-mail:
+beisenbi@mail.ru;
+
+Abdiramanov O.G. - PhD student, L.N.Gumilyov Eurasian National
+University, Astana, Kazakhstan, e-mail:
+risbajbdiramanov@gmail.com;
+
+Rakhimzhanova M.B. - PhD, Assistant Professor Astana IT University,
+Astana, Kazakhstan, е-mail: rakhimzhan.mira@gmail.com;
+
+Balgozhina G.B. - doctoral student, Abai Kazakh National Pedagogical
+University, Almaty Kazakhstan, е-mail: balgulmira300982@gmail.com;
+
+Shuteyeva G.S. - PhD, Astana IT University, Astana, Kazakhstan, е-mail:
+g.shuteyeva@astanait.edu.kz
+
+Zhamangarin D.S. - PhD, associate professor, L.N. Gumilyov Eurasian
+National University, Astana, Kazakhstan, е-mail:
+enu\_1@enu.kz.
+
+\emph{{\bfseries Сведения об авторах}}
+
+Бейсенби М.А. - д.т.н., профессор, Евразийский Национальный университет
+им. Л.Н.Гумилёва, Астана, Казахстан, е-mail:
+beisenbi@mail.ru;
+
+Әбдіраманов Ө.Ғ. - докторант, Евразийский Национальный
+университет им. Л.Н.Гумилёва, Астана, Казахстан, е-mail:
+risbajbdiramanov@gmail.com;
+
+Рахимжанова М.Б. - PhD, асс.профессор, Astana IT University, Астана,
+Казахстан, е-mail: rakhimzhan.mira@gmail.com;
+
+Балгожина Г.Б. - докторант, Казахский национальный педагогический
+университет им. Абая, Алматы, Казахстан, е-mail:
+balgulmira300982@gmail.com;
+
+Шутеева Г.С. - PhD, Astana IT University, Астана, Казахстан, е-mail:
+g.shuteyeva@astanait.edu.kz;
+
+Жамангарин Д.С. - PhD, асс. профессор, Евразийский Национальный
+университет им. Л.Н.Гумилёва, Астана, Казахстан, е-mail: enu\_1@enu.kz.\

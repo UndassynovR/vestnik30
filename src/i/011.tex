@@ -1,0 +1,834 @@
+\id{IRSTI}{}: 27.35.21
+
+{\bfseries DEVELOPMENT OF MATHEMATICAL MODELS OF THE MAIN UNITS OF THE
+SULFUR PRODUCTION UNIT BASED ON SYSTEM ANALYSIS}
+
+{\bfseries B.B.
+Orazbayev}\fig{i/image1}[]{\bfseries ,
+N.N.
+Seit}\fig{i/image1}[]\envelope 
+
+\emph{L.N.Gumilyov Eurasian National University, Astana, Kazakhstan}
+
+\envelope Corresponding author:
+nurgulnurmash@gmail.com
+
+A methodology has been proposed for constructing a package of models for
+technological systems composed of interconnected units, based on diverse
+available information. This methodology is demonstrated through the
+development of models for the main units of the sulfur production block.
+The models describing the relationship between sulfur yield at the
+reactor outlets and their input and operating parameters were identified
+as a system of multiple regression equations, using aggregated
+experimental, statistical, and expert data, along with the sequential
+inclusion of regressors approach. Models assessing the sulfur quality at
+the Claus reactor outlet were constructed as fuzzy regression equations.
+Parametric identification of the regression coefficients was performed
+using the least squares method in the REGRESS software package, while
+fuzzy regression coefficients were determined using modified least
+squares and α-level sets within the framework of fuzzy set theory. As a
+result, mathematical models of the thermoreactor and Claus reactor at
+the Atyrau refinery's sulfur production unit were developed.
+
+{\bfseries Keywords:} sulfur production unit, mathematical model, system
+analysis, fuzzy information, fuzzy model, structural and parametric
+identification.
+
+{\bfseries КҮКІРТ ӨНДІРУ БЛОГЫ НЕГІЗГІ АГРЕГАТТАРЫНЫҢ МАТЕМАТИКАЛЫҚ
+МОДЕЛЬДЕР КЕШЕНІН ЖҮЙЕЛІК ТАЛДАУ НЕГІЗІНДН ҚҰРУ}
+
+{\bfseries Б.Б. Оразбаев, Н.Н. Сейт\envelope }
+
+\emph{Л.Н.Гумилев атындағы Еуразия ұлттық университеті, Астана,
+Қазақстан,}
+
+e-mail:
+nurgulnurmash@gmail.com
+
+Өзара байланысқан агрегаттар кешенінен тұратын технологиялық жүйенің
+модельдер пакетін әртүрлі қолжетімді ақпараттар негізінде және жүйелік
+талдау тәсілдерін қолдану арқылы құру методикасы әзірленіп, оны күкірт
+өндіру блогы мысалында жүзеге асыру көрсетілген. Жинақталған және
+өңделген эксперименталдық-статистикалық деректер мен эксперттік
+ақпараттар негізінде, сондай-ақ регрессорларды тізбектей қосу тәсілінің
+идеясын пайдалана отырып, реакторлар шығысындағы күкірт көлемін
+сипаттайтын модельдер құрылымы көп регрессиялық теңдеулер жүйесі түрінде
+идентификацияланған. Клаус реакторының шығысындағы күкірт сапасын
+бағалайтын модельдер айқын емес регрессиялық теңдеулер түрінде жасалған.
+Регрессиялық коэффициенттерді параметрлік идентификациялау ең кіші
+квадраттар әдісі арқылы REGRESS бағдарламалық пакетінде жүзеге
+асырылған, ал айқын емес коэффициенттерді анықтау α-деңгейлі жиындар
+негізінде айқын емес жиындар теориясының тәсілдері арқылы орындалған.
+Нәтижесінде, Атырау МӨЗ күкірт өндіру блогының термо және Клаус
+реакторларының математикалық модельдері құрылған.
+
+{\bfseries Түйін сөздер:} күкірт өндіру блогы, математикалық модель,
+жүйелік талдау, айқын емес ақпарат, айқын емес модель, құрылымдық,
+параметрлік идентификациялау.
+
+{\bfseries РАЗРАБОТКА МАТЕМАТИЧЕСКИХ МОДЕЛЕЙ ОСНОВНЫХ АГРЕГАТОВ БЛОКА
+ПРОИЗВОДСТВА СЕРЫ НА ОСНОВЕ СИСТЕМНОГО АНАЛИЗА}
+
+{\bfseries Б.Б. Оразбаев, Н.Н. Сейт\envelope }
+
+\emph{Евразийский национальный университет им. Л.Н. Гумилева, Астана,
+Казахстан,}
+
+e-mail:
+nurgulnurmash@gmail.com
+
+Разработана методика построения пакета моделей технологической системы,
+состоящей из взаимосвязанных агрегатов, на основе различных доступных
+данных с использованием методов системного анализа, и реализована на
+примере блока производства серы. На основе агрегированных и обработанных
+экспериментально-статистических данных и экспертной информации, а также
+с использованием идеи последовательного включения регрессоров, были
+идентифицированы модели, описывающие объем серы на выходе реакторов, в
+виде системы многорегрессионных уравнений. Модели, оценивающие качество
+серы на выходе Клаус-реактора, построены в форме нечетких регрессионных
+уравнений. Параметрическая идентификация регрессионных коэффициентов
+выполнялась с применением метода наименьших квадратов через программный
+пакет REGRESS, а нечеткие коэффициенты определялись с использованием
+методов теории нечетких множеств и преобразования на основе α-уровней. В
+результате были построены математические модели термо- и Клаус-реакторов
+блока производства серы Атырауского НПЗ.
+
+{\bfseries Ключевые слова:} блок производства серы, математическая модель,
+системный анализ, нечеткая информация, нечеткая модель, структурная и
+параметрическая идентификация.
+
+{\bfseries Introduction.} In oil refining production, for example at the
+Atyrau Oil Refinery, the existing sulfur production unit is a complex
+facility, that is, a system consisting of interconnected units
+influenced simultaneously by many different parameters {[}1{]}. The main
+units of the sulfur production block include reactors, namely the Claus
+reactor (R-001), thermal (SWS) reactors (R-002, R-003); condensers
+(E-001, E-002, E-004); a furnace (F-002); separators (D-001, D-004); and
+pumps (B-001, B-002) {[}2{]}. An analysis of approaches to developing
+mathematical models of such complex technological facilities has shown
+that issues related to constructing mathematical models of complexes
+consisting of interconnected technological units under conditions of
+insufficient initial information, as well as system modeling of their
+operation, remain insufficiently studied {[}3-8{]}.
+
+When developing mathematical models of industrial technological
+facilities and systems, problems arise due to the lack of initial
+information required for their construction.
+
+Under conditions of uncertainty arising from the randomness of the
+initial information, it is recommended to apply probabilistic modeling
+or simulation modeling approaches {[}9-12{]}.
+
+However, if uncertainty arises due to the vagueness of the initial
+information-which is common in industrial practice-these approaches
+cannot be applied. In such cases, statistical data are insufficient or
+completely unavailable, and because the information is vague, it is
+impossible to collect quantitative statistical data. As a result, the
+axioms of probability theory (such as statistical stability of the
+object, repetition of experiments under identical conditions, etc.) are
+not satisfied, and therefore there is no basis for applying
+probabilistic approaches. Conducting active experiments for the purpose
+of collecting statistical data is either impossible or economically
+inefficient {[}13, 14{]}. Thus, in these situations, the main available
+information consists of vague information expressed in the form of
+words, statements, opinions, and judgments based on the knowledge,
+experience, and intuition of human decision-makers and expert
+specialists. In such cases, it is undoubtedly possible to compensate for
+the missing part of the information required for model development by
+using vague (fuzzy) information. That is, it is necessary to organize
+and conduct expert evaluation {[}15-17{]} and to process its results
+using methods of fuzzy set theory {[}18{]}. If the indicated sources of
+fuzzy information are reliable-namely, if the decision-makers and expert
+specialists are competent and the expert evaluation and its results are
+processed correctly-then on the basis of such information it is possible
+to construct models that take into account all complex interrelations
+between various parameters of complex, non-quantifiable industrial
+facilities and processes and that most closely correspond to real
+production conditions. The obtained fuzzy models, as a rule, describe
+real industrial facilities and problems with higher adequacy than models
+constructed using traditional approaches (if such models can be
+constructed at all). Therefore, the development of mathematical models
+of technological systems in industry based on various available types of
+information, including fuzzy information, using the methodology of
+systems analysis, is a highly relevant task for both science and
+industry.
+
+The aim of this work is to develop a methodology for constructing a
+complex of mathematical models for technologically complex units with
+difficult quantitative characterization, using the main units of the
+sulfur production block as an example, based on systems analysis, as
+well as to develop models of the main reactors of the sulfur production
+block.
+
+{\bfseries Materials and Methods.} It is necessary to formulate a
+methodology for constructing a system of mathematical models of
+industrial technological facilities that operate under conditions of
+insufficient initial information and uncertainty and are difficult to
+describe using quantitative data. Using the Claus reactor and thermal
+reactors as examples-where part of the available initial information is
+characterized by uncertainty-it is required to construct mathematical
+models of reactors R-001, R-002, and R-003 for the purpose of their
+optimal control, employing statistical data and fuzzy information
+{[}19{]}. Let us formulate the problem of developing mathematical models
+of the Claus and thermal reactors using statistical methods, expert
+evaluation, and approaches based on fuzzy set theory. As a result of
+collecting and processing the available initial information, it has been
+established that the statistical data required to estimate the sulfur
+yield (output) at the outlets of these reactors can be obtained
+experimentally. That is, statistical models determining the sulfur
+output at the reactor outlets can be constructed in the form of
+regression equations. Since quantitative information for assessing the
+quality of the produced sulfur is insufficient and cannot be collected,
+models for evaluating sulfur quality should be developed based on
+additional fuzzy information.
+
+Thus, through an interconnected internal (parametric) and external
+(structural) cyclic process, the problem is formulated of identifying
+mathematical models of the sulfur production reactors under study in the
+form of the following set of regression and fuzzy regression equations:
+
+\[y_{j} = a_{0j} + \sum_{i = 1}^{n}{a_{ij}x_{ij}} + \sum_{i = 1}^{n}{\sum_{k = i}^{n}{a_{ijk}x_{ij}x_{kj}} + ... + ,j = 1,2};\]
+
+\[\widetilde{y_{j}} = {\widetilde{a}}_{0j} + \sum_{i = n + 1}^{m}{{\widetilde{a}}_{ij}x_{ij}} + \sum_{i = n + 1}^{m}{\sum_{k = i}^{m}{{\widetilde{a}}_{ijk}x_{ij}x_{kj}} + ... + ,j = 3,4}.\]
+
+The constructed models should adequately describe the sulfur yield at
+the outlets of the thermal reactors and the Claus reactor
+(\(y_{j},\ j = 1,2\)) , as well as the fuzzy indicators characterizing
+
+sulfur quality, namely the mass fraction of sulfur and the mass fraction
+(\({\widetilde{y}}_{j},\ j = 3,4\)) of water in the
+
+product obtained from the Claus reactor.
+
+Solution approaches and results. The results of this work include a
+methodology for constructing mathematical models of technological
+facilities based on various types of information using systems analysis,
+as well as models of the Claus and thermal reactors. The units of the
+sulfur production block are interconnected, and changes in the operating
+parameters of one unit lead to changes in the parameters of others,
+thereby affecting the sulfur production process. Therefore, to optimize
+and control the sulfur production process, a system of models of the
+main units of the technological complex is required, constructed on the
+basis of systems analysis and taking into account the influence of
+technological parameters of each unit on the intermediate and final
+products of the entire complex. In order to develop such a system
+(package) of models, this work employs systems analysis methods,
+probabilistic and experimental-statistical approaches, as well as expert
+evaluation and fuzzy set theory methods {[}20{]}.
+
+Let us formulate a methodology for constructing a complex of
+mathematical models of complex industrial technological facilities based
+on systems analysis. The model of each facility within a technological
+system can be developed using various approaches and methods; that is,
+for each unit of the sulfur production complex, a set of models may be
+obtained, for example deterministic, statistical, fuzzy, or structured
+models.
+
+In order to integrate such diverse models into a single complex (model
+package) for the purpose of system-level modeling of the technological
+complex, a systems analysis of the advantages and disadvantages of each
+model to be constructed is required. This involves defining criteria
+that evaluate characteristics such as the costs required to develop the
+model, its accuracy, adequacy, applicability for the intended purpose,
+and so on, as well as establishing principles for combining the
+constructed models into a single package.
+
+For this purpose, the various possible types of models for the main
+units of the sulfur production block have been systematically analyzed.
+Based on the study of the features of the sulfur production complex and
+process {[}21{]}, experimental and expert evaluation data, and an
+analysis of modeling approaches for these or similar complex units, the
+possible model types for the main units of the sulfur production block
+have been assessed. The results of this analysis (model evaluation) are
+presented in Table 1. The main criteria used to compare the different
+types of models for evaluation are: the availability of information
+required to construct the model; the cost (complexity) of model
+development; the accuracy (adequacy) of the model; the applicability of
+the model for the intended purpose (in our case, solving multi-criteria
+optimization and control problems under conditions of uncertainty); and
+the possibility of integrating the model into a single system (package)
+for the purpose of system-level modeling of the entire facility.
+
+Table 1 presents the evaluations of the possible models for the main
+units of the sulfur production block, obtained based on the processing
+of the results of the systematic analysis. Based on the information
+provided in the table, it is possible to select the most effective types
+of models for the main units of sulfur production according to the
+chosen criteria.
+
+The construction of regression models for the reactors of the sulfur
+production block at the Atyrau Oil Refinery is complicated due to the
+lack or insufficiency of proper statistical information, the absence of
+specialized industrial instruments, and the low reliability of the
+available instruments. Therefore, as an effective tool to supplement the
+missing information with additional qualitative data-such as the
+knowledge, experience, and judgment of expert specialists-it is
+recommended to use expert evaluation methods, while the modeling
+approach should involve models and composite methods based on fuzzy set
+theory.
+
+The accuracy of the constructed fuzzy or composite models is generally
+lower compared to other considered models; however, under conditions of
+uncertainty, they are fully sufficient for modeling, optimizing, and
+controlling sulfur production processes.
+
+In practice, when information is insufficient, it is necessary to use
+all available types of data to construct a model. A model built on such
+diverse information is called a \emph{composite model}. However,
+constructing a composite model can be inefficient, as it requires
+organizing and conducting various types of experiments and studies, as
+well as preprocessing the collected data.
+
+{\bfseries Table 1 - Results of the Systematic Analysis of Possible Model
+Types for the Main Units of the Sulfur Production Block}
+
+%% \begin{longtable}[]{@{}
+%%   >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0692}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2036}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.3926}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0873}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1018}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0707}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0748}}@{}}
+%% \toprule\noalign{}
+%% \multirow{2}{=}{\begin{minipage}[b]{\linewidth}\raggedright
+%% №
+%% \end{minipage}} &
+%% \multirow{2}{=}{\centering\arraybackslash \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Main units of the sulfur production block}
+%% \end{minipage}} &
+%% \multirow{2}{=}{\centering\arraybackslash \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Criteria}
+%% \end{minipage}} &
+%% \multicolumn{4}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.3345} + 6\tabcolsep}@{}}{%
+%% \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Types of Models}
+%% \end{minipage}} \\
+%% & & & \begin{minipage}[b]{\linewidth}\centering
+%% \begin{quote}
+%% {\bfseries Deter-ministic}
+%% \end{quote}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% \begin{quote}
+%% {\bfseries Statistical}
+%% \end{quote}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% \begin{quote}
+%% {\bfseries Fuzzy}
+%% \end{quote}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% \begin{quote}
+%% {\bfseries Composed}
+%% \end{quote}
+%% \end{minipage} \\
+%% \midrule\noalign{}
+%% \endhead
+%% \bottomrule\noalign{}
+%% \endlastfoot
+%% 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+%% 1.1 & \multirow{6}{=}{\centering\arraybackslash {\bfseries Reactors}
+%% 
+%% (R-001,
+%% 
+%% R-002,
+%% 
+%% R-003)} & Availability of required information & 2.5 & 4.5 & 4.5 &
+%% 5.0 \\
+%% 1.2 & & Cost of model development & 1.0 & 4.0 & 3.5 & 3.0 \\
+%% 1.3 & & Model accuracy & 4.5 & 3.0 & 2.5 & 4.0 \\
+%% 1.4 & & Applicability to the need & 3.5 & 4.0 & 3.5 & 5.0 \\
+%% 1.5 & & Possibility of integration into one package & 4.0 & 3.5 & 3.5 &
+%% 3.5 \\
+%% 1.6 & & Model adequacy & 3.0 & 3.5 & 3.5 & 4.0 \\
+%% & & Sum of prices & {\bfseries 18.5} & {\bfseries 22.5} & {\bfseries 21.5} &
+%% {\bfseries 24.5} \\
+%% 2.1 & \multirow{6}{=}{\centering\arraybackslash {\bfseries Capacitors}
+%% 
+%% (Е-001,
+%% 
+%% Е-002,
+%% 
+%% Е-004)} & Availability of required information & 3.5 & 4.5 & 4.0 &
+%% 4.0 \\
+%% 2.2 & & Cost of model development & 1.5 & 4.0 & 3.5 & 3.0 \\
+%% 2.3 & & Model accuracy & 4.5 & 3.5 & 3.5 & 3.5 \\
+%% 2.4 & & Applicability to the need & 4.0 & 4.0 & 4.0 & 4.5 \\
+%% 2.5 & & Possibility of integration into one package & 4.5 & 4.0 & 4.0 &
+%% 4.0 \\
+%% 2.6 & & Model adequacy & 3.5 & 3.5 & 3.5 & 3.5 \\
+%% & & Sum of prices & {\bfseries 21.5} & {\bfseries 23.5} & {\bfseries 22.5} &
+%% {\bfseries 22.5} \\
+%% 3.1 & \multirow{5}{=}{\centering\arraybackslash {\bfseries Oven}
+%% 
+%% (F-002)} & Availability of required information & 4.0 & 5.0 & 4.5 &
+%% 4.0 \\
+%% 3.2 & & Cost of model development & 3.0 & 5.0 & 4.0 & 4.0 \\
+%% 3.3 & & Model accuracy & 4.5 & 4.5 & 3.5 & 4.0 \\
+%% 3.4 & & Applicability to the need & 4.0 & 4.0 & 4.0 & 4.0 \\
+%% 3.5 & & Possibility of integration into one package & 4.0 & 4.5 & 4.0 &
+%% 5.0 \\
+%% 3.6 & & Model adequacy & 4.0 & 4.5 & 4.5 & 5.0 \\
+%% & & Sum of prices & {\bfseries 23.5} & {\bfseries 27.5} & {\bfseries 24.5} &
+%% {\bfseries 25.0} \\
+%% 4.1 & \multirow{5}{=}{\centering\arraybackslash {\bfseries Separators}
+%% (D-001,
+%% 
+%% D-004)} & Availability of required information & 4.5 & 5.0 & 4.0 &
+%% 4.5 \\
+%% 4.2 & & Cost of model development & 3.0 & 5.0 & 4.0 & 2.5 \\
+%% 4.3 & & Model accuracy & 4.5 & 4.5 & 2.0 & 4.0 \\
+%% 4.4 & & Applicability to the need & 4.0 & 4.5 & 4.5 & 4.5 \\
+%% 4.5 & & Possibility of integration into one package & 3.5 & 4.0 & 3.5 &
+%% 4.0 \\
+%% 4.6 & & Model adequacy & 4.0 & 4.0 & 3.5 & 4.0 \\
+%% & & Sum of prices & {\bfseries 23.5} & {\bfseries 27.0} & {\bfseries 21.5} &
+%% {\bfseries 23.5} \\
+%% 5.1 & \multirow{5}{=}{\centering\arraybackslash {\bfseries Extractors}
+%% 
+%% (B-001,
+%% 
+%% B-002)} & Availability of required information & 4.5 & 4.0 & 4.0 &
+%% 4.5 \\
+%% 5.2 & & Cost of model development & 5.0 & 4.5 & 4.0 & 4.0 \\
+%% 5.3 & & Model accuracy & 5.0 & 4.0 & 4.0 & 4.5 \\
+%% 5.4 & & Applicability to the need & 4.5 & 4.5 & 4.0 & 4.5 \\
+%% 5.5 & & Possibility of integration into one package & 4.5 & 4.0 & 4.0 &
+%% 4.0 \\
+%% 5.6 & & Model adequacy & 4.5 & 4.0 & 4.0 & 4.5 \\
+%% & & Sum of prices & {\bfseries 28.0} & {\bfseries 25.0} & {\bfseries 24.0} &
+%% {\bfseries 26.0} \\
+%% \end{longtable}
+
+Note: The evaluation (ranking) uses a score scale (1-5), where 1
+represents the lowest score and 5 the highest. The scores may be fuzzy,
+i.e., expressed as fuzzy numbers.
+
+\emph{Mathematical Models of the Sulfur Production Block Reactors.} As
+determined from the results of the systematic analysis above, the models
+of the Claus and thermal reactors are constructed based on various types
+of information, including aggregated and processed statistical data,
+results of expert evaluations processed using fuzzy set theory methods,
+and material and heat balance equations.
+
+To identify the mathematical models of the reactors as multiple
+structural and fuzzy regression models, the approach of sequentially
+adding regressors {[}22{]} is used, while a modified form of the least
+squares method is employed for parametric identification {[}23{]}.
+
+Thus, using the mentioned approach of sequentially adding regressors,
+the structure of the mathematical models of the reactors was obtained in
+the form of the following multiple and fuzzy regression equations:
+
+\(y_{TR} = a_{0} + \sum_{i = 1}^{4}{a_{i}x_{i}} + \sum_{i = 1}^{4}{\sum_{k = 1}^{4}{a_{ik}x_{i}x_{k}}}\)
+(1)
+
+\(y_{RC} = a_{0} + \sum_{i = 5}^{7}{a_{i}x_{i}} + \sum_{i = 5}^{7}{\sum_{k = i}^{7}{a_{ik}x_{i}x_{k}}}\)
+(2) \emph{\hfill\break
+}\({\widetilde{y}}_{S} = {\widetilde{a}}_{0} + \sum_{i = 5}^{7}{{\widetilde{a}}_{i}x_{i}} + \sum_{i = 5}^{7}{\sum_{k = i}^{7}{{\widetilde{a}}_{ik}x_{i}x_{k}}}\)
+(3)
+
+\(\ \ \ \ \ \ \ \ {\widetilde{y}}_{W} = {\widetilde{a}}_{0} + \sum_{i = 1}^{7}{{\widetilde{a}}_{i}x_{i}} + \sum_{i = 5}^{7}{\sum_{k = i}^{7}{{\widetilde{a}}_{ik}x_{i}x_{k}}}\)
+(4)
+
+where: \(y_{TR}\) - sulfur yield at the outlet of the thermal reactor;
+\(y_{RC}\) - sulfur yield at the outlet of the Claus reactor;
+qualitative indicators of the produced sulfur: \({\widetilde{y}}_{S}\) -
+fuzzy estimate of the sulfur mass fraction (depending on grade, from
+99.20\% to 99.98\%); \({\widetilde{y}}_{W}\) - fuzzy estimate of the
+mass fraction of water in the product (depending on grade, from 1.0\% to
+0.2\%); input and operating parameters of the reactors affecting the
+sulfur production process
+(\(x_{i},\ i = \overline{1,4};\ x_{i},\ i = \overline{5,7};\)):
+\(x_{1}\) - feed to the thermal reactor (26--28 t/h); \(x_{2}\) -
+temperature in the thermal reactor (1000--1413\,°C); \(x_{3}\) -
+temperature at the outlet of the thermal reactor (180--350\,°C);
+\(x_{4}\) \emph{-} flow rate of combustion air in the thermal reactor
+(200--700 Nm³/h); \(x_{5}\) - feed to the Claus reactor (6--8 t/h);
+\(x_{6}\) - temperature at the inlet of the Claus reactor
+(180--290\,°C); \(x_{7}\) - temperature at the outlet of the Claus
+reactor (300-345\,°C);
+\(a_{0},a_{i},a_{ik},\ i = \overline{1,4},\ k = \overline{i,4};\) and
+\({\widetilde{a}}_{0},{\widetilde{a}}_{i},{\widetilde{a}}_{ik},\ i = \overline{5,7},\ k = \overline{i,7};\)
+- regression coefficients to be identified (with crisp and fuzzy
+notations): constant term affecting the reactor outlet parameters
+\({(a}_{0},{\widetilde{a}}_{0})\) ; linear effects (\(x_{i}\)) ;
+quadratic and interaction effects (\(x_{ik}\)).
+
+The obtained models (1)-(4) had their regression coefficients identified
+using the REGRESS software package based on the modified least squares
+method.
+
+Thus, the results of the parametric identification of the models
+describing the relationship between the sulfur yield at the reactor
+outlets and their input and operating parameters are as follows:
+
+\[y_{TR} = f_{1}(x_{1}{,x}_{2},x_{4}) = 0.686792x_{1} + 0.012480x_{2} + 0.052000x_{3} + 0.260000x_{4} + 0.025917x_{1}^{2} + 0.0000090x_{2}^{2} + 0.0002080x_{3}^{2} + 0.00005200x_{4}^{2} + 0.000471x_{1}x_{2} + 0.000589x_{1}x_{4} + 0.0000250x_{2}x_{4} + 0.000104x_{3}x_{4}\]
+
+\[y_{RC} = f_{2}(x_{5}{,x}_{6},x_{7}) = 0.6712330x_{5} + 0.0171430x_{6} + 0.0129230x_{7} + 0.0788140x_{5}^{2} + 0.000058x_{6}^{2} + 0.00003x_{7}^{2} + 0.000035x_{5}x_{6} + 0.000589x_{5}x_{7} + 0.0000250x_{6}x_{7}\]
+
+The unknown fuzzy regression coefficients
+\({\widetilde{\mathbf{a}}}_{\mathbf{0}}\mathbf{,}{\widetilde{\mathbf{a}}}_{\mathbf{i}}\mathbf{,,\ i =}\overline{\mathbf{5,7}}\)
+and
+\({\widetilde{\mathbf{a}}}_{\mathbf{ik}}\mathbf{,\ i =}\overline{\mathbf{5,7}}\mathbf{,\ k =}\overline{\mathbf{i,7}}\mathbf{;}\)
+of models (3) and (4), which describe the sulfur quality at the Claus
+reactor outlet, are evaluated using α-level sets with α = 0.5, 0.75, and
+1. As an example, we present \({\widetilde{\mathbf{y}}}_{\mathbf{S}}\)
+- the identified fuzzy estimate of the sulfur mass fraction in
+the product at the Claus reactor outlet:
+
+\[{\widetilde{y}}_{S} = f_{3}(x_{5}{,x}_{6},x_{7}) = (0.5/0.037008 + 0.75/0.037020 + 1/0.037033 + 0.75/0.037045 + 0.5/0.037057)x_{5} + (0.5/0.076885 + 0.75/0.076900 + 1/0.076915 + 0.75/0.076930 + 0.5/0.076945)x_{6} - (0.5/0.169430 + 0.75/0.169455 + 1/0.169475 + 0.75/0.169495 + 0.5/0.169520)x_{7} + (0.5/0.000010{+ 0.75/0.000020 + 1/0.000027 + 0.75/0.000034 + 0.5/0.000044)x}_{5}^{2} + (0.5/0.000093 + 0.75/0.000108 + 1/0.000118 + 0.75/0.000128 + 0.5/0.000143)x_{6}^{2} - (0.5/0.000007 + 0.75/0.000057 + 1/0.000574 + 0.75/0.000157 + 0.5/0.000207)x_{7}^{2} + (0.5/0.000050 + 0.75/0.000070 + 1/0.000080 + 0.75/0.000090 + 0.5/0.00011)x_{5}x_{6} - (0.5/0.000045 + 0.75/0.000065 + 1/0.000075 + 0.75/0.000085 + 0.5/0.000105)x_{5}x_{7} - (0.5/0.000174 + 0.75/0.000199 + 1/0.000209 + 0.75/0.000219 + 0.5/0.000244)x_{6}x_{7}\]
+
+{\bfseries Results and Discussions.} From the results of the systematic
+analysis of the possible model types for the main units of the existing
+sulfur production block at the Atyrau Oil Refinery, it is evident-from
+the sum of the criteria values (18.5, Table 1)-that due to the
+complexity of the reactors and the processes occurring within them, the
+difficulty of their study, and the impossibility of obtaining
+theoretical information and necessary data, constructing deterministic
+models for the reactors is practically infeasible or economically
+inefficient.
+
+According to the evaluation results, statistical (stochastic) and fuzzy
+models for the reactors of the sulfur production block received
+relatively high scores (21.5; 22.5). However, based on the sum of the
+criteria values, the most effective type of model for the reactors is
+the composite model (24.5). In other words, it is necessary to construct
+composite models for the reactors.
+
+For the pumps, based on the criteria scores, constructing a
+deterministic model is more advantageous (28.0) compared to other model
+types, meaning that a deterministic model is the most efficient choice
+for them (Table 1). As shown in the table constructed on the basis of
+systems analysis, for the condensers, furnace, and separators, building
+statistical models is the most optimal solution (23.5; 27.5; 27,
+respectively).
+
+In constructing models of the units included in a technological complex,
+a decomposition approach is often used, in which the models of each unit
+are developed individually, without considering the integration of the
+obtained models into a single system. Solving system-level modeling
+tasks in this isolated manner does not yield the desired efficiency or
+positive outcomes. Since the operation of an individual unit in a
+technological system is interconnected with the operations of other
+units, modeling and optimizing a single unit alone cannot fully improve
+the performance of the entire system. Therefore, to comprehensively
+address the issues of modeling and optimizing a technological system, it
+is necessary to create a package of interconnected models that accounts
+for the relationships between units. By using such a model package, it
+is possible to perform system-level modeling of the technological
+complex. Systemic modeling of the technological complex allows for the
+identification of ``bottlenecks'' that limit its operation, and
+addressing these issues can significantly increase the capacity and
+efficiency of the technological complex and its processes.
+
+The integration of individual unit models into a single system (package)
+must be carried out in accordance with the operation of the
+technological complex process. In this case, the output of one model
+(the modeling results) serves as the input for another model (the
+initial data required for modeling), and this output may in turn be the
+input for a previous or another model. For example, in the sulfur
+production complex, the output of the E-001 condenser model - that is,
+its modeling results - serves as the input for the E-004 condenser
+model, and the results of modeling this condenser are then used as the
+input for the R-001 Claus reactor. In turn, the outputs of the Claus
+reactor models are required as input data for modeling the
+parallel-connected R-002 and R-003 reactors and the E-002 condenser.
+
+The model describing the product of the Claus reactor, that is, the
+sulfur yield, was identified as a multiple regression model using
+experimental--statistical methods, while the models for assessing sulfur
+quality were constructed as fuzzy regression equations based on fuzzy
+information obtained from experts.
+
+{\bfseries Conclusion.} Based on the results of the systems analysis, a
+methodology for constructing mathematical models of technological
+facilities using various types of information has been formulated.
+According to the proposed methodology, the model of each unit of a
+technological complex is selected from among the possible types of
+models based on comparison and selection criteria, identifying the most
+effective model for that unit. The possible models of the main units of
+the sulfur production block were systematically analyzed, and the most
+efficient type of model to be constructed for each unit was determined.
+
+Based on the conducted systems analysis and research results, the
+structure and parameters of the mathematical models of the reactors in
+the sulfur production block at the Atyrau Oil Refinery were identified
+using aggregated and processed information.
+
+The model describing the relationship between the sulfur yield at the
+outlets of the thermal and Claus reactors and their input and operating
+parameters was identified in the form of multiple regression equations.
+The qualitative indicators of sulfur: the mass fractions of sulfur and
+water in the product at the outlet of the Claus reactor - were
+structurally identified as multiple fuzzy regression equations. Thus, in
+this work, using the example of the sulfur production block, a
+methodology for constructing a package of models for technological
+complexes consisting of interconnected units is presented, along with
+the results of its implementation.
+
+{\bfseries Литература}
+
+1. Оразбаев Б.Б., Оразбаева К.Н., Жумадиллаева А.К., Шүйтенов Г.Ж.
+Зарыпхан М.Т. Разработка системы моделей взаимосвязанных реакторов
+блока производства серы Атырауского нефтеперерабатывающего завода //
+Вестник Университета Шакарима. -2025. -Т.2(18). -С.75-86.
+\href{https://doi.org/10.53360/2788-7995-2025-2(18)-9}{DOI
+10.53360/2788-7995-2025-2(18)-9}.
+
+2. Мурзагалиева Т. Технология переработки нефти и газа: монография //
+Фолиант. - 2015. -192c. ISBN 978-601-302-124-9.
+
+3. Zhao Zh-W., Wang D-H.
+\href{http://www.sciencedirect.com/science/article/pii/S0895717711007655}{Statistical
+inference for generalized random coefficient autoregressive
+model}//Mathematical and Computer Modelling. -2012. -Vol.56.
+-P.152-166.
+
+\href{https://doi.org/10.1016/j.mcm.2011.12.002}{DOI
+10.1016/j.mcm.2011.12.002}.
+
+\setcounter{enumi}{3}
+
+1. Нәдіров Н.К., Сармурзина Р.Ғ., Оразбаева К.Н. Мұнай өңдеу, мұнай
+химиясы технологиялық кешендерінің математикалық модельдерін
+ақпараттың жетіспеушілігі және айқын еместігі жағдайында құру тәсілін
+жасақтау// Доклады НАН РК. -2010. -№2. -Б.77-81.
+
+2. \href{http://www.springerlink.com/content/?Author=Yu.+V.+Sharikov}{Sharikov}
+U.V.,
+\href{http://www.springerlink.com/content/?Author=P.+A.+Petrov}{Petrov}
+P.A.
+\href{http://www.springerlink.com/content/br0wn2h316r1v65x/}{Universal
+model for catalytic reforming} //
+\href{http://www.springerlink.com/content/0009-2355/}{Chemical and
+Petroleum Engineering}. -2007. -Vol.43. -Р.580-584.
+\href{https://doi.org/10.1007/s10556-007-0103-z}{DOI
+10.1007/s10556-007-0103-z}.
+
+3. \href{http://www.sciencedirect.com/science/article/pii/S0895717710004474}{Stampar}
+S., Sokolic S.,
+\href{http://www.sciencedirect.com/science/article/pii/S0895717710004474}{Karer}
+G., Znidarsic A.,
+\href{http://www.sciencedirect.com/science/article/pii/S0895717710004474}{Skrjanc}
+I. Theoretical and fuzzy modelling of a pharmaceutical batch reactor
+//
+\href{http://www.sciencedirect.com/science/journal/08957177}{Mathematical
+and Computer Modelling}. -2011. -Vol.53. -P.637-645.
+\href{https://doi.org/10.1016/j.mcm.2010.09.016}{DOI
+10.1016/j.mcm.2010.09.016}.
+
+4. Анчита Х. Переработка тяжелой нефти. Реакторы и моделирование
+процессов//Пер.с англ. под ред. Глаголевой О.Ф., Винокурова В.А.
+Издательство Профессия. -2015. -592 c. ISBN 978-5-91884-068-9.
+
+5. Беккер В.Ф. Моделирование химико-технологических объектов управления:
+учебное пособие. -2-е изд. // РИОР. -2019. -142c.
+ISBN~978-5-369-01194-2,~978-5-16-006670-7.
+
+10. Гмурман В.Е. Теория вероятностей и математическая статистика:
+учебник. -12-е изд.// Издательство Юрайт. -2024. -480 с. ISBN
+978-5-534-00859-3.
+
+11. Акопов А.С. Имитационное моделирование: учебник и практикум для
+вузов. -2-е изд.// М.: Издательство Юрайт. - 2024. - 426 c.
+ISBN~978-5-534-18379-5.~
+
+12. Кобелев Н.Б., Девятков В.В., Половников В.А. Имитационное
+моделирование: учебник. -2-е издание// КУРС. -2024. - 353c. ISBN
+978-5-907228-65-8.
+
+13. Воробьев С.Н., Гирина Н.В., Лазарев И.В., Осипов Л.А. Статистическое
+моделирование информационных систем: учебное пособие//Издательство ГУАП.
+-2010. -15 c. ISBN 978-5-8088-0596-5.
+
+13. Афонин В.В., Федосин С.А. Моделирование систем: учебное пособие //
+Национальный Открытый Университет Интуит. -2016. - 269 c. ISBN
+978-5-9963-0352-6.
+
+14. Сериков Т.П., Оразбаева К.Н. Интенсификация технологических обьектов
+нефтепереработки на основе математических методов: монография // Эверо.
+-2006. -157 с. ISBN 9965-769-46-X.
+
+15. Sabzi H.Z., King J.Ph., Abudu Sh. Developing an intelligent expert
+system for streamflow prediction, integrated in a dynamic decision
+support system for managing multiple reservoirs: A case study // Expert
+systems with applications. -2017. -Vol.83. -P.145--163.
+\href{https://doi.org/10.1016/j.eswa.2017.04.039}{DOI
+10.1016/j.eswa.2017.04.039}.
+
+16. Джарратано Д. Экспертные системы: принципы разработки и
+программирование: научное издание пер. с англ. -4-е изд.//Вильямс.
+-2007. -1152 с. ISBN~978-5-8459-1156-8, 0-534-38447-1.
+
+17. Оразбаев Б.Б., Курмангазиева Л.Т., Коданова Ш.К. Теория и методы
+системного анализа// Издательство Академия Естествознания. -2017. -249с.
+ISBN~978-5-91327-498-4.
+
+18. Dubois D. The role of fuzzy sets indecision sciences: Old techniques
+and new directions // Fuzzy Sets Systems. -2011. -Vol.184. -P.3-28.
+\href{https://doi.org/10.1016/j.fss.2011.06.003}{DOI
+10.1016/j.fss.2011.06.003}.
+
+19. Orazbayev В.В., Orazbayeva K.N., Utenova B.E. Development of
+Mathematical Models and Modeling of Chemical Engineering Systems under
+Uncertainty// Theoretical Foundations of Chemical Engineering. -2014.
+-Vol.48. -P.138-147.
+\href{https://doi.org/10.1134/S0040579514020092}{DOI
+10.1134/S0040579514020092}.
+
+20. Калижанова А.У., Картбаев Т.С., Тогжанова К.О. Системный анализ:
+учебное пособие // АУЭС. -2020. -126 с. ISBN 978-601-7939-33-5.
+
+21. Жұманов Қ.Б. Күкірт қышқылы өндірісі: оқу құралы // Фолиант. -2019.
+-160б. ISBN~978-601-338-012-4.
+
+22. Валеев С.Г. Регрессивное моделирование при обработке наблюдений:
+монография // Наука. -1991. -272 c. ISBN: 5-02-014820-2, 9785020148208.
+
+23. Дилигенская А.Н. Идентификация объектов управления: учебное пособие
+// \href{https://samgtu.ru/}{Самарский государственный технический
+университет}. -2009. -126 с.
+
+{\bfseries References}
+
+1. Orazbaev B.B., Orazbaeva K.N., Zhumadillaeva A.K., Shүjtenov G.Zh.
+Zaryphan M.T. Razrabotka sistemy modelej vzaimosvjazannyh reaktorov
+bloka proizvodstva sery Atyrauskogo neftepererabatyvajushhego zavoda //
+Vestnik Universiteta Shakarima. -2025. -T.2(18). -S.75-86. DOI
+10.53360/2788-7995-2025-2(18)-9. {[}in Russian{]}
+
+2. Murzagalieva T. Tehnologija pererabotki nefti i gaza: monografija //
+Foliant. - 2015. -192c. ISBN 978-601-302-124-9. {[}in Russian{]}
+
+3. Zhao Zh-W., Wang D-H.
+\href{http://www.sciencedirect.com/science/article/pii/S0895717711007655}{Statistical
+inference for generalized random coefficient autoregressive
+model}//Mathematical and Computer Modelling. -2012. -Vol.56. -P.152-166.
+\href{https://doi.org/10.1016/j.mcm.2011.12.002}{DOI
+10.1016/j.mcm.2011.12.002}.
+
+4. Nәdіrov N.K., Sarmurzina R.Ғ., Orazbaeva K.N. Mұnaj өңdeu, mұnaj
+himijasy tehnologijalyқ keshenderіnің matematikalyқ
+model' derіn aқparattyң zhetіspeushіlіgі zhәne ajқyn
+emestіgі zhaғdajynda құru tәsіlіn zhasaқtau// Doklady NAN RK. -2010.
+-№2. -B.77-81. {[}in Kazakh{]}
+
+5. \href{http://www.springerlink.com/content/?Author=Yu.+V.+Sharikov}{Sharikov}
+U.V.,
+\href{http://www.springerlink.com/content/?Author=P.+A.+Petrov}{Petrov}
+P.A.
+\href{http://www.springerlink.com/content/br0wn2h316r1v65x/}{Universal
+model for catalytic reforming} //
+\href{http://www.springerlink.com/content/0009-2355/}{Chemical and
+Petroleum Engineering}. -2007. -Vol.43. -Р.580-584.
+\href{https://doi.org/10.1007/s10556-007-0103-z}{DOI
+10.1007/s10556-007-0103-z}.
+
+6. \href{http://www.sciencedirect.com/science/article/pii/S0895717710004474}{Stampar}
+S., Sokolic S.,
+\href{http://www.sciencedirect.com/science/article/pii/S0895717710004474}{Karer}
+G., Znidarsic A.,
+\href{http://www.sciencedirect.com/science/article/pii/S0895717710004474}{Skrjanc}
+I. Theoretical and fuzzy modelling of a pharmaceutical batch reactor //
+\href{http://www.sciencedirect.com/science/journal/08957177}{Mathematical
+and Computer Modelling}. -2011. -Vol.53. -P.637-645.
+\href{https://doi.org/10.1016/j.mcm.2010.09.016}{DOI
+10.1016/j.mcm.2010.09.016}.
+
+7. Anchita H. Pererabotka tjazheloj nefti. Reaktory i modelirovanie
+processov//Per.s angl. pod red. Glagolevoj O.F., Vinokurova V.A.
+Izdatel' stvo Professija. -2015. -592 c. ISBN
+978-5-91884-068-9. {[}in Russian{]}
+
+8. Bekker V.F. Modelirovanie himiko-tehnologicheskih ob\#ektov
+upravlenija: uchebnoe posobie. -2-e izd. // RIOR. -2019. -142c. ISBN
+978-5-369-01194-2, 978-5-16-006670-7. {[}in Russian{]}
+
+9. Gmurman V.E. Teorija verojatnostej i matematicheskaja statistika:
+uchebnik. -12-e izd. // Izdatel' stvo Jurajt. -2024. -
+480 s. ISBN 978-5-534-00859-3. {[}in Russian{]}
+
+10. Akopov A.S. Imitacionnoe modelirovanie: uchebnik i praktikum dlja
+vuzov. -2-e izd. // M.: Izdatel' stvo Jurajt. - 2024. -
+426c. ISBN 978-5-534-18379-5. {[}in Russian{]}
+
+11. Kobelev N.B., Devjatkov V.V., Polovnikov V.A. Imitacionnoe
+modelirovanie: uchebnik. -2-e izdanie// KURS. -2024. - 353c. ISBN
+978-5-907228-65-8. {[}in Russian{]}
+
+12. Vorob' ev S.N., Girina N.V., Lazarev I.V., Osipov
+L.A. Statisticheskoe modelirovanie informacionnyh sistem: uchebnoe
+posobie//Izdatel' stvo GUAP. -2010. -15 c. ISBN
+978-5-8088-0596-5. {[}in Russian{]}
+
+13. Afonin V.V., Fedosin S.A. Modelirovanie sistem: uchebnoe posobie //
+Nacional' nyj Otkrytyj UniversitetIntuit. -2016. - 269 c.
+ISBN 978-5-9963-0352-6. {[}in Russian{]}
+
+14. Serikov T.P., Orazbaeva K.N. Intensifikacija tehnologicheskih
+ob' ektov neftepererabotki na osnove matematicheskih
+metodov: monografija // Jevero. -2006. -157 s. ISBN 9965-769-46-X. {[}in
+Russian{]}
+
+15. Sabzi H.Z., King J.Ph., Abudu Sh. Developing an intelligent expert
+system for streamflow prediction, integrated in a dynamic decision
+support system for managing multiple reservoirs: A case study // Expert
+systems with applications. -2017. -Vol.83. -P.145--163.
+\href{https://doi.org/10.1016/j.eswa.2017.04.039}{DOI
+10.1016/j.eswa.2017.04.039}.
+
+16. Dzharratano D. Jekspertnye sistemy: principy razrabotki i
+programmirovanie: nauchnoe izdanie per. s angl. -4-e izd.
+//Vil' jams. -2007. -1152 s. ISBN 978-5-8459-1156-8,
+0-534-38447-1. {[}in Russian{]}
+
+17. Orazbaev B.B., Kurmangazieva L.T., Kodanova Sh.K. Teorija i metody
+sistemnogo analiza// Izdatel' stvo Akademija
+Estestvoznanija. -2017. -249s. ISBN 978-5-91327-498-4. {[}in Russian{]}
+
+18. Dubois D. The role of fuzzy sets indecision sciences: Old techniques
+and new directions // Fuzzy Sets Systems. -2011. -Vol.184. -P.3-28.
+\href{https://doi.org/10.1016/j.fss.2011.06.003}{DOI
+10.1016/j.fss.2011.06.003}.
+
+19. Orazbayev В.В., Orazbayeva K.N., Utenova B.E. Development of
+Mathematical Models and Modeling of Chemical Engineering Systems under
+Uncertainty// Theoretical Foundations of Chemical Engineering. -2014.
+-Vol.48. -P.138-147.
+\href{https://doi.org/10.1134/S0040579514020092}{DOI
+10.1134/S0040579514020092}.
+
+20. Kalizhanova A.U., Kartbaev T.S., Togzhanova K.O. Sistemnyj analiz:
+uchebnoe posobie // AUJeS. -2020. -126s. ISBN 978-601-7939-33-5. {[}in
+Russian{]}
+
+21. Zhұmanov Қ.B. Kүkіrt қyshқyly өndіrіsі: oқu құraly // Foliant.
+-2019. -160b. ISBN 978-601-338-012-4. {[}in Kazakh{]}
+
+22. Valeev S.G. Regressivnoe modelirovanie pri obrabotke nabljudenij:
+monografija // Nauka. -1991. -272c. ISBN: 5-02-014820-2, 9785020148208.
+{[}in Russian{]}
+
+23. Diligenskaja A.N. Identifikacija ob\#ektov upravlenija: uchebnoe
+posobie // Samarskij gosudarstvennyj tehnicheskij universitet. -2009.
+-126 s. {[}in Russian{]}
+
+\emph{{\bfseries Information about the authors}}
+
+Orazbayev B.B. - doctor of Technical Sciences professor, L.N. Gumilyov
+Eurasian National University, Astana, Kazakhstan, e-mail:
+batyr\_o@mail.ru;
+
+Seit N.N. - Senior Lecturer, L.N. Gumilyov Eurasian National University,
+Astana, Kazakhstan, e-mail:
+nurgulnurmash@gmail.com.
+
+\emph{{\bfseries Сведения об авторах}}
+
+Оразбаев Б.Б. - доктор технических наук, профессор, Евразийский
+национальный университет имени Л. Н. Гумилёва, Астана, Казахстан,
+e-mail: batyr\_o@mail.ru;
+
+Сейт Н.Н. - старший преподаватель, Евразийский Hациональный университет
+имени Л. Н. Гумилёва, Астана, Казахстан, e-mail:
+nurgulnurmash@gmail.com.
