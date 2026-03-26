@@ -1,7 +1,7 @@
 \id{МРНТИ 27.25.19}{}
 
 \begin{header}
-\swa{}{ЖЕЛІ АРҚЫЛЫ ЖАЛҒАН КОНТЕНТТІ ТАСЫМАЛДАУДЫ ІЗДЕУ ҮШІН ЖЕЛІЛІК ТРАФИКТІ ТАЛДАУ}
+\swa{З.А.~Сарсембаева, Г.И.~Аймичева, А.Е.~Назырова}{ЖЕЛІ АРҚЫЛЫ ЖАЛҒАН КОНТЕНТТІ ТАСЫМАЛДАУДЫ ІЗДЕУ ҮШІН ЖЕЛІЛІК ТРАФИКТІ ТАЛДАУ}
 
 З.А.~Сарсембаева\envelope,
 Г.И.~Аймичева,
@@ -432,10 +432,12 @@ def save_and_analyze_image(data_bytes: bytes, content_type: str):
 \end{verbatim}
 }
 
+\begin{multicols}{2}
 Бұл функция екі маңызды істі атқарады. Біріншіден, суретті жеке файл
 ретінде сақтайды. Екіншіден, сақталған суретті deepfake\_detector
 модульі арқылы тексереді. Сурет дипфейк деп таңылған жағдайда, Telegram
 арқылы хабар жіберіледі.
+\end{multicols}
 
 \tcap{Листинг 3. MesoNet модельі}
 {\footnotesize
@@ -454,32 +456,45 @@ def is_deepfake(image_path):
 MesoNet моделі медиафайлды дипфейк деп анықтаған жағдайда true мәнін
 қайтарады {[}10{]}.
 
-{\bfseries Листинг 4. Telegram арқылы хабарлама жіберу}
-
-\fig{i/image11}[]
+\tcap{Листинг 4. Telegram арқылы хабарлама жіберу}
+{\footnotesize
+\begin{verbatim}
+def notify_telegram(message: str):
+    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+    requests.post(
+        url,
+        data={
+            "chat_id": TELEGRAM_CHAT_ID,
+            "text": message
+        },
+        timeout=5
+    )
+\end{verbatim}
+}
 
 \emph{Қадам 4. Docker контейнерін іске қосу}
 
+\begin{multicols}{2}
 Жасалған снифферді docker ішінде қосу үшін желіге толық қолжетімділік
 беру қажет. Сондықтан -\/-network=host және -\/-cap-add=NET\_ADMIN
 опцияларын қолданамыз. Бұл Scapy-ге http трафигін ешқандай кедергісіз
 өңдеуге мүмкіндік береді.
+\end{multicols}
 
-\fig{i/image12}[]
-
-{\bfseries 7-сурет. Контейнерді желіге қосу конфигурациясы}
+\fig{i/image12}[7-сурет. Контейнерді желіге қосу конфигурациясы]
 
 \emph{Қадам 5. Дипфейк анықталған кезде Telegram арқылы хабарлама
 жіберу}
 
+\begin{multicols}{2}
 Дипфейк анықталған кезде жүйе автоматты түрде Telegram боты арқылы
 хабарлама жіберді. Бұл механизм бізге қауіп-қатерге мүмкіндігінше тез
 жауап беруге және шешім қабылдауға мүмкіндік берді.
+\end{multicols}
 
-\fig{i/image13}[]
+\fig{i/image13}[8-сурет. Телеграм хабарламасы]
 
-{\bfseries 8-сурет. Телеграм хабарламасы}
-
+\begin{multicols}{2}
 Эксперимент нәтижелері біз таңдаған әдістің тиімділігін толық растады:
 трафикті ұстап қалудан бастап хабарлама жіберуге дейінгі барлық қадамдар
 қатесіз және жылдам орындалды.
@@ -499,9 +514,13 @@ Docker технологияларын қолдану арқасында желі
 протоколдармен жұмыс істеуді қамтамасыз етуі керек. Бұл бағыттағы
 зерттеу жұмыстарының артуының арқасында дезинформациямен күресте жаңа
 деңгейге шығуға мүмкіндік пайда болады.
+\end{multicols}
 
+\begin{center}
 {\bfseries Әдебиеттер}
+\end{center}
 
+\begin{refs}
 1. Abbasi M., Shahraki A., Taherkordi A. Deep learning for network
 traffic monitoring and analysis (NTMA): A survey// Computer
 Communications. -2021. -Vol.170. -P.19-41. DOI
@@ -544,9 +563,13 @@ analysis and classification utilizing machine learning// Sensors.
 10. Liu Honggu. MesoNet-Pytorch. -2019. URL:
 \url{https://github.com/HongguLiu/MesoNet-Pytorch/tree/master}.
 -Қаралған күні: 19.09.2025.
+\end{refs}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
+\begin{refs}
 1. Abbasi M., Shahraki A., Taherkordi A. Deep learning for network
 traffic monitoring and analysis (NTMA): A survey// Computer
 Communications. -2021. -Vol.170. -P.19-41. DOI
@@ -588,8 +611,10 @@ analysis and classification utilizing machine learning// Sensors.
 10. Liu Honggu. MesoNet-Pytorch. -2019. URL:
 \url{https://github.com/HongguLiu/MesoNet-Pytorch/tree/master}.
 -Қаралған күні: 19.09.2025.
+\end{refs}
 
-\emph{{\bfseries Авторлар туралы мәлімет}}
+\begin{info}
+\hspace{1em}\emph{{\bfseries Авторлар туралы мәлімет}}
 
 Сарсембаева З. - магистрант, Л.Н. Гумилев атындағы Еуразия ұлттық
 университеті, Астана, Қазақстан,
@@ -602,7 +627,7 @@ aimicheva\_gi\_1@enu.kz;
 Назырова А. - PhD, Л.Н. Гумилев атындағы Еуразия ұлттық
 университеті,Астана, Қазақстан, e-mail: nazyrova\_aye\_1@enu.kz.
 
-\emph{{\bfseries Information about the authors}}
+\hspace{1em}\emph{{\bfseries Information about the authors}}
 
 Sarsembayeva Z.-- Master's student, L.N. Gumilyov Eurasian National
 University, Astana, Kazakhstan, e-mail: 040203650680@enu.kz;
@@ -612,4 +637,5 @@ Astana, Kazakhstan, е-mail:
 aimicheva\_gi\_1@enu.kz;
 
 Nazyrova A. - PhD, senior lecturer , L.N. Gumilyov Eurasian National
-University, Astana, Kazakhstan, е-mail: nazyrova\_aye\_1@enu.kz.\
+University, Astana, Kazakhstan, е-mail: nazyrova\_aye\_1@enu.kz.
+\end{info}
