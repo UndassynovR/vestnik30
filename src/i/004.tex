@@ -1,16 +1,16 @@
-\id{МРНТИ 20.51.19}{}, 47.13.07}
+\id{МРНТИ 20.51.19, 47.13.07}{}
 
-{\bfseries МЕТОДЫ ИЗВЛЕЧЕНИЯ ЭЛЕКТРОКАРДИОГРАММ ИЗ ЭЛЕКТРОННЫХ СИГНАЛОВ И
-ИЗОБРАЖЕНИИ В СРЕДЕ PYTHON}
+\begin{header}
+\swa{Б.~Рысбекқызы}{МЕТОДЫ ИЗВЛЕЧЕНИЯ ЭЛЕКТРОКАРДИОГРАММ ИЗ ЭЛЕКТРОННЫХ СИГНАЛОВ И ИЗОБРАЖЕНИИ В СРЕДЕ PYTHON}
 
-{\bfseries б.
-рысбекқызы}\fig{i/image1}[]
+Б.~Рысбекқызы
+\end{header}
 
-\emph{Карагандинский технический университет им. Абылкаса Сагинова,
-Караганда,Казахстан}
+\begin{affil}
+Карагандинский технический университет им. Абылкаса Сагинова, Караганда,Казахстан
 
-\envelope Корреспондент - автор\emph{:}
-bakhytgulz@mail.ru
+\corrauthor{Корреспондент-автор: bakhytgulz@mail.ru}
+\end{affil}
 
 Качественная обработка сигнала электрокардиограммы (ЭКГ) является
 актуальной проблемой в современной диагностике для выявления опасных
@@ -35,14 +35,17 @@ bakhytgulz@mail.ru
 {\bfseries Ключевые слова:} сигнал ЭКГ, MIT/BIH, Python, обработка
 изображений, одномерный массив, OpenCV, Matplotlib, NumPy.
 
-{\bfseries ELECTRONIC SIGNALS AND IMAGES IN THE PYTHON ENVIRONMENT}
+\begin{header}
+ELECTRONIC SIGNALS AND IMAGES IN THE PYTHON ENVIRONMENT
 
-{\bfseries Rysbekkyzy B.}
+B.~Rysbekkyzy
+\end{header}
 
-\emph{Abylkas Saginov Karaganda Technical University, Karaganda,
-Kazakhstan},
+\begin{affil}
+Abylkas Saginov Karaganda Technical University, Karaganda, Kazakhstan
 
 e-mail: bakhytgulz@mail.ru
+\end{affil}
 
 High-quality signal processing of an electrocardiogram (ECG) is an
 urgent problem in present day diagnostics for revealing dangerous signs
@@ -64,17 +67,19 @@ automatic analyzing the data and determining arrhythmias or other
 pathologies.
 
 {\bfseries Keywords:} ECG signal, MIT/BIH, Python, image processing,
-one-dimensional array, OpenCV, Matplotlib, NumPy.
+one-dimensional array, OpenCV, \\Matplotlib, NumPy.
 
-{\bfseries PYTHON ОРТАСЫНДАҒЫ ЭЛЕКТРОНДЫҚ СИГНАЛДАР МЕН БЕЙНЕЛЕРДЕН
-ЭЛЕКТРОКАРДИОГРАММАЛАРДЫ АЛУ ӘДІСТЕРІ}
+\begin{header}
+PYTHON ОРТАСЫНДАҒЫ ЭЛЕКТРОНДЫҚ СИГНАЛДАР МЕН БЕЙНЕЛЕРДЕН ЭЛЕКТРОКАРДИОГРАММАЛАРДЫ АЛУ ӘДІСТЕРІ
 
-{\bfseries б. рысбекқызы}
+Б.~Рысбекқызы
+\end{header}
 
-\emph{Сағынов атындағы Қарағанды техникалық университеті, Қарағанды,
-Қазақстан,}
+\begin{affil}
+Сағынов атындағы Қарағанды техникалық университеті, Қарағанды, Қазақстан,
 
 e-mail: bakhytgulz@mail.ru
+\end{affil}
 
 Электрокардиограмма сигналын (ЭКГ) сапалы өңдеу пациенттердегі жүрек-қан
 тамырлары аурулары мен аритмияның қауіпті белгілерін анықтау үшін
@@ -98,6 +103,7 @@ Mit/BIH дерекқорынан алынған үлгілерді сынау н
 {\bfseries Түйін сөздер:} ЭКГ сигналы, MIT / BIH, Python, кескінді өңдеу,
 бір өлшемді массив, OpenCV, Matplotlib, NumPy.
 
+\begin{multicols}{2}
 {\bfseries Введение.} Сигнал электрокардиограммы (ЭКГ) демонстрирует
 множество информации о состоянии сердечно-сосудистой системы пациента.
 Одним из важных анализов в ЭКГ является выявление аритмий сердечных
@@ -208,11 +214,11 @@ N-мерных помеченных массивов {[}21{]}. Данный ин
 MIT/BIH из двух источников
 (\href{https://physionet.org/}{\ul{https://physionet.org/}} and
 \href{https://ecgpedia.org/}{\ul{https://ecgpedia.org/}}).
+\end{multicols}
 
-\fig{i/image33}[]
+\fig{i/image33}[Рис.1 - Рисунок со сканом ЭКГ сигнала]
 
-{\bfseries Рис.1 - Рисунок со сканом ЭКГ сигнала}
-
+\begin{multicols}{2}
 Для дальнейшей работы из каждого изображения вырезалось одна полоса
 электрокардиограммы (рис.2). Для работы в приложении были отобраны
 файлы содержащие изображения высокого разрешения. В итоге из 500 файлов
@@ -220,10 +226,9 @@ MIT/BIH из двух источников
 файлов *.hea), которые соответствовали необходимым требованиям. Для
 построения интерфейса использовалась библиотека PyQt5, т.к. интерфейс
 этого приложения очень прост и понятен для обычного пользователя.
+\end{multicols}
 
-\fig{i/image34}[]
-
-{\bfseries Рис.2 - Однополосное изображение сигнала ЭКГ}
+\fig[0.65\textwidth]{i/image34}[Рис.2 - Однополосное изображение сигнала ЭКГ]
 
 \emph{Построение алгоритма обработки изображений в Python.} В
 зависимости от загруженного типа данных программа выбирает
@@ -463,20 +468,17 @@ points-одномерный массив со всеми точками.
 что не требует дополнительных инструкций и введения других операций для
 загрузки файла.
 
-\fig{i/image35}[]\fig{i/image36}[]
-
-{\bfseries Рис.4 - Интерфейс приложения для чтения ЭКГ сигналов с
-изображений и электронных записей}
+\fig[0.5\textwidth]{i/image35}
+\fig[0.5\textwidth]{i/image36}[Рис.4 - Интерфейс приложения для чтения ЭКГ сигналов с
+изображений и электронных записей]
 
 После выбора файла в окне загрузчика, на экране открывается окно с
 графиком изображения в виде одномерного массива (рис.5), который можно
 использовать для приложения, анализирующего предоставленный полный
 сигнал ЭКГ.
 
-\fig{i/image37}[]
-
-{\bfseries Рис.5} - {\bfseries График одномерного массива построенный с
-помощью библиотеки matplotlib}
+\fig[0.5\textwidth]{i/image37}[Рис.5 - График одномерного массива построенный с
+помощью библиотеки matplotlib]
 
 Как видно, предложенный алгоритм обработки сканов и других изображений
 электрокардиограмм демонстрирует хорошие результаты. Используемый подход
@@ -487,10 +489,9 @@ points-одномерный массив со всеми точками.
 масштаб и малейшие отклонения, которые могут скрывать в себе очень
 важную информацию при расшифровке.
 
-\fig{i/image38}[]\fig{i/image38}[]
-
-{\bfseries Рис.6} - {\bfseries До и после наложения маски с фильтром выделения
-черного цвета}
+\fig{i/image38}
+\fig{i/image38.1}[Рис.6 - До и после наложения маски с фильтром выделения
+черного цвета]
 
 Аналогичные результаты были получены после обработки записей MIT / BIH.
 Сравнительный анализ 100 образцов изображений до и после обработки
@@ -524,67 +525,52 @@ points-одномерный массив со всеми точками.
 сигналов, но и для других измерений, которые используют схожую методику
 записи данных.
 
-{\bfseries Таблица 1 - Результат эффективности при использовании
+\tcap{Таблица 1 - Результат эффективности при использовании
 математической модели в РФК и ВП}
+\begin{longtblr}[
+  label = none,
+  entry = none,
+]{
+  cells = {c},
+  cells = {font = \small},
+  row{1} = {font=\bfseries\small},
+  cell{1}{1} = {r=2}{},
+  cell{1}{2} = {c=2}{},
+  cell{1}{4} = {c=2}{},
+  column{1} = {font=\bfseries\small},
+  hlines,
+  vlines,
+}
+Номер ЭКГ & ВП       &          & РФК      &          \\
+          & ОСШ (дБ) & СКО      & ОСШ (дБ) & СКО      \\
+101       & 6,7326   & 2,0е-03  & 3,8286   & 1,73е-04 \\
+105       & 3,8545   & 3,12е-04 & 2,5305   & 1,28е-07 \\
+106       & 8,4883   & 6,0е-03  & 4,1280   & 1,04е-03 \\
+108       & 9,0482   & 1,7е-03  & 5,2344   & 1,5е-05  \\
+111       & 5,3831   & 5,01е-04 & 2,9266   & 2,1е-05  \\
+115       & 10,8044  & 9,34е-03 & 9,7907   & 6,46е-04 \\
+117       & 6,5982   & 5,76е-03 & 4,4769   & 2,31е-05 \\
+118       & 9,5621   & 6,30е-04 & 7,3690   & 2,6е-05  \\
+119       & 8,9988   & 2,06е-02 & 6,5206   & 1,4е-04  \\
+120       & 7,3859   & 6,89е-04 & 3,4411   & 1,57е-06 \\
+121       & 5,7911   & 4,7е-03  & 3,3853   & 3,03е-04 \\
+144       & 8,7677   & 8,1е-03  & 7,5622   & 6,81е-05 \\
+145       & 9,9772   & 2,6е-03  & 6,3583   & 1,7е-04  \\
+156       & 5,7318   & 4,0е-03  & 3,6376   & 3,5е-05  \\
+158       & 10,1275  & 9,13е-03 & 5,7961   & 4,3е-05  \\
+160       & 6,2156   & 6,13е-04 & 5,9036   & 1,3е-06  \\
+161       & 8,0652   & 2,4е-03  & 7,7988   & 1,06е-04 \\
+165       & 7,5938   & 6,89е-04 & 6,3384   & 1,39е-04 \\
+166       & 5,7915   & 4,7е-03  & 5,3323   & 3,01е-05 \\
+167       & 8,7677   & 7,0е-03  & 8,2256   & 5,81е-05 \\
+171       & 9,7297   & 2,7е-03  & 7,8335   & 2,5е-06  \\
+172       & 4,7318   & 4,0е-03  & 3,7663   & 3,3е-06  \\
+175       & 9,7215   & 4,41е-03 & 4,7581   & 2,89е-07 \\
+183       & 5,7629   & 5,30е-04 & 5,3690   & 2,8е-05  \\
+188       & 7,9624   & 6,57е-04 & 7,9075   & 3,3е-05  
+\end{longtblr}
 
-%% \begin{longtable}[]{@{}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2083}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1875}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1875}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2291}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1875}}@{}}
-%% \toprule\noalign{}
-%% \multirow{2}{=}{\begin{minipage}[b]{\linewidth}\raggedright
-%% {\bfseries Номер ЭКГ}
-%% \end{minipage}} &
-%% \multicolumn{2}{>{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.3751} + 2\tabcolsep}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% {\bfseries ВП}
-%% \end{minipage}} &
-%% \multicolumn{2}{>{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4167} + 2\tabcolsep}@{}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% {\bfseries РФК}
-%% \end{minipage}} \\
-%% & \begin{minipage}[b]{\linewidth}\centering
-%% ОСШ (дБ)
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% СКО
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% ОСШ (дБ)
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% СКО
-%% \end{minipage} \\
-%% \midrule\noalign{}
-%% \endhead
-%% \bottomrule\noalign{}
-%% \endlastfoot
-%% {\bfseries 101} & 6,7326 & 2,0е-03 & 3,8286 & 1,73е-04 \\
-%% {\bfseries 105} & 3,8545 & 3,12е-04 & 2,5305 & 1,28е-07 \\
-%% {\bfseries 106} & 8,4883 & 6,0е-03 & 4,1280 & 1,04е-03 \\
-%% {\bfseries 108} & 9,0482 & 1,7е-03 & 5,2344 & 1,5е-05 \\
-%% {\bfseries 111} & 5,3831 & 5,01е-04 & 2,9266 & 2,1е-05 \\
-%% {\bfseries 115} & 10,8044 & 9,34е-03 & 9,7907 & 6,46е-04 \\
-%% {\bfseries 117} & 6,5982 & 5,76е-03 & 4,4769 & 2,31е-05 \\
-%% {\bfseries 118} & 9,5621 & 6,30е-04 & 7,3690 & 2,6е-05 \\
-%% {\bfseries 119} & 8,9988 & 2,06е-02 & 6,5206 & 1,4е-04 \\
-%% {\bfseries 120} & 7,3859 & 6,89е-04 & 3,4411 & 1,57е-06 \\
-%% {\bfseries 121} & 5,7911 & 4,7е-03 & 3,3853 & 3,03е-04 \\
-%% {\bfseries 144} & 8,7677 & 8,1е-03 & 7,5622 & 6,81е-05 \\
-%% {\bfseries 145} & 9,9772 & 2,6е-03 & 6,3583 & 1,7е-04 \\
-%% {\bfseries 156} & 5,7318 & 4,0е-03 & 3,6376 & 3,5е-05 \\
-%% {\bfseries 158} & 10,1275 & 9,13е-03 & 5,7961 & 4,3е-05 \\
-%% {\bfseries 160} & 6,2156 & 6,13е-04 & 5,9036 & 1,3е-06 \\
-%% {\bfseries 161} & 8,0652 & 2,4е-03 & 7,7988 & 1,06е-04 \\
-%% {\bfseries 165} & 7,5938 & 6,89е-04 & 6,3384 & 1,39е-04 \\
-%% {\bfseries 166} & 5,7915 & 4,7е-03 & 5,3323 & 3,01е-05 \\
-%% {\bfseries 167} & 8,7677 & 7,0е-03 & 8,2256 & 5,81е-05 \\
-%% {\bfseries 171} & 9,7297 & 2,7е-03 & 7,8335 & 2,5е-06 \\
-%% {\bfseries 172} & 4,7318 & 4,0е-03 & 3,7663 & 3,3е-06 \\
-%% {\bfseries 175} & 9,7215 & 4,41е-03 & 4,7581 & 2,89е-07 \\
-%% {\bfseries 183} & 5,7629 & 5,30е-04 & 5,3690 & 2,8е-05 \\
-%% {\bfseries 188} & 7,9624 & 6,57е-04 & 7,9075 & 3,3е-05 \\
-%% \end{longtable}
-
+\begin{multicols}{2}
 Расширенный фильтр Kалмана в сочетании с Дискретно-Вейвлет
 преобразованием, реализуется для улучшения качества сигналов ЭКГ,
 доступных на выходе РФK. Производительность алгоритма оценивается двумя
@@ -627,9 +613,13 @@ points-одномерный массив со всеми точками.
 обработки данных ЭКГ имеет большой потенциал в будущем для разработки
 более сложных приложений для автоматического анализа данных и более
 быстрого определения аритмий и других патологий у пациентов.
+\end{multicols}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
+\begin{refs}
 1. Bhirud, B., \& Pachghare, V. K. Arrhythmia Detection Using ECG Signal:
 A Survey //Proceeding of International Conference on Computational
 Science and Applications. -2020.-P.329-341. DOI
@@ -637,7 +627,7 @@ Science and Applications. -2020.-P.329-341. DOI
 
 2. Trayanova, N. A., Boyle, P. M., \& Nikolov, P. P. Personalized imaging
 and modeling strategies for arrhythmia prevention and therapy //Current
-opinion in biomedical engineering. -2018. Vol.5.-P.21-28. DOI
+opinion in biomedical engineering -2018. Vol.5.-P.21-28. DOI
 10.1016/j.cobme.2017.11.007
 
 3. Chatha, S. R., Chahal, C. A. A., Westwood, M., \& Khanji, M.
@@ -746,17 +736,18 @@ and Multimedia Technology VI. -2019. Vol.11187:111870K. DOI
 processing based on daubechies wavelets//In 2018 10th International
 Conference on Communication Software and Networks (ICCSN)). -2018. DOI
 \href{https://doi.org/10.1109/ICCSN.2018.8488270}{10.1109/ICCSN.2018.8488270}.
+\end{refs}
 
-\begin{quote}
-\emph{{\bfseries Сведение об авторе}}
-\end{quote}
+\begin{info}
+\hspace{1em}\emph{{\bfseries Сведение об авторе}}
 
 Б. Рысбекқызы - PhD, и.о.доцента Карагандинского технического
 университета им. Абылкаса Сагинова, Караганда, Казахстан, e-mail:
 bakhytgulz@mail.ru.
 
-\emph{{\bfseries Information about the author}}
+\hspace{1em}\emph{{\bfseries Information about the author}}
 
 B. Rysbekkyzy - PhD, Acting Associate Professor, Abylkas Saginov
 Karaganda Technical University, Karaganda, Kazakhstan, e-mail:
-bakhytgulz@mail.ru.\
+bakhytgulz@mail.ru.
+\end{info}
