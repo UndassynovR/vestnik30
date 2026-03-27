@@ -514,11 +514,13 @@ varying decision thresholds, making it particularly suitable for highly
 imbalanced datasets such as AML detection.
 
 Precision (P) and Recall (R) are defined as:
-
+\end{multicols}
+\vspace{-1em}
 \begin{equation}
 \text{Precision} = \frac{TP}{TP + FP}, \quad \text{Recall} = \frac{TP}{TP + FN}
 \end{equation}
 
+\begin{multicols}{2}
 where:
 
 - \(TP\) - number of true positives (correctly identified suspicious
@@ -530,7 +532,7 @@ transactions),
 
 The area under the curve (AUPRC) is then computed as the integral of
 precision with respect to recall:
-
+\vspace{-0.5em}
 \begin{equation}
 \text{AUPRC} = \int_{0}^{1}{P(R)}\, dR
 \end{equation}
@@ -542,13 +544,13 @@ The~AUROC~evaluates the model's ability to discriminate between positive
 and negative classes across all thresholds. It is defined as the
 probability that a randomly chosen positive instance receives a higher
 predicted score than a randomly chosen negative instance:
-
+\vspace{-0.5em}
 \begin{equation}
 \text{AUROC} = \int_{0}^{1}{TPR(FPR)}\, dFPR
 \end{equation}
 
 where:
-
+\vspace{-0.5em}
 \begin{equation}
 TPR = \frac{TP}{TP + FN},\quad FPR = \frac{FP}{FP + TN}
 \end{equation}
@@ -560,7 +562,7 @@ imbalanced AML data where false negatives are critical.
 The~Brier score (BS)~measures the mean squared difference
 between predicted probabilities \((p_{i})\) and actual outcomes
 \((y_{i})\):
-
+\vspace{-0.5em}
 \begin{equation}
 \text{Brier score} = \frac{1}{N}i = 1N\left( \widehat{p_{i}} - y_{i} \right)^{2}
 \end{equation}
@@ -619,7 +621,7 @@ random selection at a given cutoff. It is computed as the ratio between
 the model's Precision@Top k and the base rate of positives in the
 dataset:
 \end{multicols}
-
+\vspace{-1em}
 \begin{equation}
 LiftatTopk = \frac{\text{Precision at Top}\, k}{P_{\text{base}}},
 \quad P_{\text{base}} = \frac{TP + FP}{N}
@@ -653,6 +655,13 @@ sacrificing ranking performance.
 This observation complements behavioural feature-based approaches
 {[}6{]} by quantifying calibration effects under operational AML
 metrics.
+
+The CatBoost model with Platt calibration achieved the strongest overall
+performance among the evaluated models under the selected ranking,
+calibration, and operational metrics, with an AUPRC of
+0.367 and Lift@1\% of 40.9×, indicating that a large proportion
+of true laundering cases is concentrated within the top-ranked
+transactions.
 \end{multicols}
 
 \tcap{Table 1 - Performance comparison of baseline models on the IBM-AML dataset}
@@ -678,13 +687,6 @@ Graph Neural Network (EdgeSAGE) & 0.0110 & 0.666 & 0.772  & 0.007         & 0.00
 \end{longtblr}
 
 \begin{multicols}{2}
-The CatBoost model with Platt calibration achieved the strongest overall
-performance among the evaluated models under the selected ranking,
-calibration, and operational metrics, with an AUPRC of
-0.367 and Lift@1\% of 40.9×, indicating that a large proportion
-of true laundering cases is concentrated within the top-ranked
-transactions.
-
 This corresponds to an approximately four-fold improvement in
 operational precision relative to XGBoost and a substantial gain over
 random selection under the chosen top-k operational setting. The Brier
@@ -729,6 +731,12 @@ Platt (Sigmoid) Calibration & 0.3674 & 0.0062 & 0.285         & 0.409      & 40.
 Isotonic Calibration        & 0.3439 & 0.0054 & 0.281         & 0.403      & 40.4×    
 \end{longtblr}
 
+\begin{figs}
+    \fig[0.49\textwidth]{i2/image2}[Fig.1 - AUPRC by model on the IBM-AML dataset]
+    \fig[0.49\textwidth]{i2/image3}[Fig.2 - Brier Score by model]
+\end{figs}
+\fig[0.49\textwidth]{i2/image4}[Fig.3 - Combined reliability diagram for all models]
+
 \begin{multicols}{2}
 Both Platt scaling and isotonic regression markedly improved probability
 reliability without reducing ranking accuracy.
@@ -745,17 +753,11 @@ Figure 2 compares Brier scores, confirming superior calibration, while
 Figure 3 presents reliability curves indicating near-linear alignment
 between predicted and empirical probabilities, suggesting improved
 probability interpretability.
-\end{multicols}
-
-\begin{figs}
-    \fig[0.49\textwidth]{i2/image2}[Fig.1 - AUPRC by model on the IBM-AML dataset]
-    \fig[0.49\textwidth]{i2/image3}[Fig.2 - Brier Score by model]
-\end{figs}
-\fig[0.45\textwidth]{i2/image4}[Fig.3 - Combined reliability diagram for all models]
 
 To analyse the impact of temporal and dispersion-based behavioural
 features, an ablation study was performed by sequentially excluding
 specific feature groups. Table 3 summarises the results.
+\end{multicols}
 
 \tcap{Table 3 - Ablation results for behavioural features}
 \begin{longtblr}[
@@ -795,30 +797,21 @@ in Table 4 and visualised in Figure 4.
 \end{multicols}
 
 \tcap{Table 4 - Monthly backtesting results (AUPRC) on the IBM-AML dataset}
+\begin{longtblr}[
+  label = none,
+  entry = none,
+]{
+  cells = {c},
+  cells = {font = \small},
+  row{1} = {font=\bfseries\small},
+  hlines,
+  vlines,
+}
+Month   & AUPRC (XGB) & AUPRC (CAT) & n (Transactions) \\
+2022-09 & 0.1784      & 0.3674      & 107 484          
+\end{longtblr}
 
-%% \begin{longtable}[]{@{}
-%%   >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1576}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2761}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2740}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2924}}@{}}
-%% \toprule\noalign{}
-%% \begin{minipage}[b]{\linewidth}\centering
-%% {\bfseries Month}
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% {\bfseries AUPRC (XGB)}
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% {\bfseries AUPRC (CAT)}
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% {\bfseries n (Transactions)}
-%% \end{minipage} \\
-%% \midrule\noalign{}
-%% \endhead
-%% \bottomrule\noalign{}
-%% \endlastfoot
-%% 2022-09 & 0.1784 & 0.3674 & 107 484 \\
-%% \end{longtable}
-
-\fig{i2/image5}[Fig. 4 - Temporal backtesting results
+\fig[0.49\textwidth]{i2/image5}[Fig. 4 - Temporal backtesting results
 (AUPRC): comparison of CatBoost and XGBoost models on the September 2022
 transaction period]
 
