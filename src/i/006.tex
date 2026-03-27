@@ -276,7 +276,6 @@ transport problem, emergency situa\-tion (ES), evacuation
 условиях угрозы наступления ЧС.
 
 Для решения поставленной задачи введем следующие обозначения:
-\end{multicols}
 
 \(n\) - количество пунктов сбора населения,
 
@@ -293,28 +292,22 @@ transport problem, emergency situa\-tion (ES), evacuation
 \(j\)-й эвакуационный пункт (это может быть время в пути, денежные
 затраты, обобщённые издержки и т.п.),
 
--
-маршрут из \(i\)-го пункта сбора в \(j\)-й эвакуационный пункт,
-,
-,
+\(i \rightarrow j\) - маршрут из \(i\)-го пункта сбора в \(j\)-й эвакуационный пункт,
+\(i \in I\), \(j \in J\),
 
--
-максимальная пропускная способность направления
-,
-т.е. количество людей, которых можно перевезти из \emph{i}-го пункта
-сбора в \emph{j}-й эвакуационный пункт (из-за ограничения дорог,
+\(u_{ij}\) - максимальная пропускная способность направления \(i \rightarrow j\),
+т.е. количество людей, которых можно перевезти из \(i\)-го пункта
+сбора в \(j\)-й эвакуационный пункт (из-за ограничения дорог,
 автобусов и т.п.),
 
--
-количество людей, перевезённых по направлению
-,
-,
-.
+\(x_{ij}\) - количество людей, перевезённых по направлению
+\(i \rightarrow j\), \(i \in I\), \(j \in J\).
 
 \emph{Предположение 1}. Все люди из пунктов сборов должны быть вывезены:
 
-,
-(1)
+\begin{equation}
+\sum_{i \in I} A_{i} = \sum_{j \in J} B_{j},
+\end{equation}
 
 т.е. общее количество выехавших из пунктов сборов равно общему
 количеству приехавших в эвакуационные пункты. Если суммы не равны, то
@@ -322,41 +315,39 @@ transport problem, emergency situa\-tion (ES), evacuation
 недостающим спросом или предложением.
 
 Все выше введенные параметры
-,
-,
-,
-,
+\(A_i\geq0\),
+\(B_i\geq0\),
+\(c_{ij}\geq0\),
+\(x_{ij}\geq0\),
 
-удовлетворяют требованиям неотрицательности
-,
-.
+удовлетворяют требованиям неотрицательности \(i \in I\), \(j \in J\).
 
 \emph{Предположение 2.} Балансовое уравнение по пунктам сбора населения.
-Из каждого \emph{i}-го пункта сбора должны выехать ровно
+Из каждого \emph{i}-го пункта сбора должны выехать ровно \(A_i\) людей:
 
-людей:
-
-,
-(2)
+\begin{equation}
+\sum_{j \in J} x_{ij} = A_{i}, i \in I
+\end{equation}
 
 \emph{Предположение 3.} Балансовое уравнение по эвакуационным пунктам. В
-каждый \emph{j}-й эвакопункт должны приехать ровно
+каждый \emph{j}-й эвакопункт должны приехать ровно \(B_j\) людей:
 
-людей:
-
-,
-(3)
+\begin{equation}
+\sum_{i \in I} x_{ij} = B_{j}, j \in J
+\end{equation}
 
 \emph{Предположение 4.} Ограничения пропускной способности:
 
-,
-,
-(4)
+\begin{equation}
+0\leq x_{ij}\leq u_{ij}, i \in I, j \in J
+\end{equation}
 
 \emph{Предположение 5.} Целевая функция состоит в минимизации суммарных
 затрат на общую эвакуацию:
 
-(5)
+\begin{equation}
+\min_{x_{ij}} Z = \sum_{i \in I} \sum_{j \in J} c_{ij} x_{ij}
+\end{equation}
 
 Требуется определить оптимальное распределение потоков людей по
 маршрутам таким образом, чтобы: 1) все люди были эвакуированы; 2)
@@ -370,20 +361,19 @@ transport problem, emergency situa\-tion (ES), evacuation
 Проблема выбора маршрутов эвакуации сведена к следующей задаче линейного
 программирования {[}5-9{]}.
 
-(6)
+\begin{equation}
+\min_{x_{ij}} Z = \sum_{i \in I} \sum_{j \in J} c_{ij} x_{ij}
+\end{equation}
 
 при условиях
 
-,
-,
-
-,
-,
-(7)
-
-,
-,
-.
+\begin{equation}
+\begin{aligned}
+\sum_{j \in J} x_{ij} &= A_{i}, & i \in I, \\
+\sum_{i \in I} x_{ij} &= B_{j}, & j \in J, \\
+0 \le x_{ij} &\le u_{ij}, & i \in I, j \in J.
+\end{aligned}
+\end{equation}
 
 Для решения задачи линейного программирования (6) -(7) существуют много
 методов: 1) симплекс метод, 2) метод потенциалов, 3) алгоритмы сетевого
@@ -524,9 +514,13 @@ transport problem, emergency situa\-tion (ES), evacuation
 Авторы имеют опыт разработки программы построения маршрутов для
 эвакуации сотрудников из здания при возникновении ЧС, основанном на
 теории графов {[}10{]}.
+\end{multicols}
 
+\begin{center}
 {\bfseries Литература}
+\end{center}
 
+\begin{refs}
 1. Каменская Е.Н. Чрезвычайные ситуации мирного и военного времени. -
 Ростов-на-Дону, Таганрог: Изд-во Южного ФУ, 2020. - 160 с. ISBN
 978-5-9275-3489-0.
@@ -569,9 +563,13 @@ transport problem, emergency situa\-tion (ES), evacuation
 Мазақова Ә.Т., Әлиасқар М.С., Саметова А.А., Досаналиева А.Т. Программа
 построения маршрутов для эвакуации сотрудников из здания при
 возникновении ЧС. Программа для ЭВМ.
+\end{refs}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
+\begin{refs}
 1. Kamenskaja E.N. Chrezvychajnye situacii mirnogo i voennogo vremeni. -
 Rostov-na-Donu, Taganrog: Izd-vo Juzhnogo FU, 2020. - 160 s. ISBN
 978-5-9275-3489-0. {[}in Russian{]}
@@ -615,8 +613,10 @@ Dzhomartova Sh.A., Tojkenov G.Ch., Majlybaeva A.D., Zijatbekova G.Z.,
 Mazaқova Ә.T., Әliasқar M.S., Sametova A.A., Dosanalieva A.T. Programma
 postroenija marshrutov dlja jevakuacii sotrudnikov iz zdanija pri
 vozniknovenii ChS. Programma dlja JeVM. {[}in Russian{]}
+\end{refs}
 
-\emph{{\bfseries Сведения об авторах}}
+\begin{info}
+\hspace{1em}\emph{{\bfseries Сведения об авторах}}
 
 Демеубаева Д.К. - старший преподаватель МИТУ, Алматы, Казахстан, e-mail:
 laura.demeubayeva1618@gmail.com;
@@ -645,7 +645,7 @@ m.alyasqar@gmail.ru;
 Досаналиева А.Т.- сеньор-лектор, Алматинский Технологический
 Университет, Алматы, Казахстан, e-mail: Dosanalieva1985@gmail.com.
 
-\emph{{\bfseries Information about the authors}}
+\hspace{1em}\emph{{\bfseries Information about the authors}}
 
 Demeubayeva L.- senior lecturer at IETU, Almaty, Kazakhstan, e-mail:
 laura.demeubayeva1618@gmail.com;
@@ -667,11 +667,9 @@ a.maylibayeva@asu.edu.kz;
 Aliaskar M.-senior lecturer at IETU, Almaty, Kazakhstan, e-mail:
 m.alyasqar@gmail.ru;
 
-Zhao Baidong \emph{-} Senior Lecturer, Dalian Polytechnic University,
+Zhao Baidong - Senior Lecturer, Dalian Polytechnic University,
 Dalian, China, e-mail: xiaoyuezhishang@vip.qq.com;
 
 Dossanaliyeva A.- Senior Lecturer, Almaty Technological University,
 Almaty, Kazakhstan, e-mail: dosanalieva1985@gmail.com.
-
-{\bfseries \hfill\break
-}\
+\end{info}
