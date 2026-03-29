@@ -1,3 +1,11 @@
 build
+
+# Neovim temporary/lock files
 *~
+
+# Libreoffice temporary/lock files
 .~lock.*
+
+# Emacs temporary/lock files
+\#*\#
+.\#*
