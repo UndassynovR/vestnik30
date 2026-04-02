@@ -288,7 +288,7 @@ The subject of the research is methods, architecture, algorithms,
 software tools for developing a data integration and forecasting
 platform.
 
-Materials and methods. The initial data of the study are the production
+{\bfseries Materials and methods.} The initial data of the study are the production
 and technological data of the mining and metallurgical enterprise Fig.1,
 including:
 
@@ -309,25 +309,7 @@ power, vibration, loading);
 
 The study uses time series of production parameters with a discreteness
 from 1 s to 10 min, data on the operation of the production line.
-\end{multicols}
 
-\begin{figs}
-    \fig[0.52\textwidth][5.5cm]{g/image77}
-    \fig[0.38\textwidth][5.5cm]{g/image78}
-\end{figs}
-
-\begin{figs}
-    \fig[0.39\textwidth][5.5cm]{g/image80}
-    \fig[0.51\textwidth][5.5cm]{g/image79}
-\end{figs}
-
-\begin{figs}[Fig.1 - Technological equipment, Scada systems, mining and
-metallurgical enterprise]
-    \fig[0.5\textwidth][5.5cm]{g/image82}
-    \fig[0.4\textwidth][5.5cm]{g/image81}
-\end{figs}
-
-\begin{multicols}{2}
 The research uses methods of system analysis, digital modeling, and data
 processing.:
 
@@ -351,6 +333,25 @@ A hybrid storage model has been applied:
 - relational storage (Data Warehouse);
 
 - distributed storage of unstructured data (Data Lake).
+\end{multicols}
+\vspace{-1cm}
+\begin{figs}
+    \fig[0.52\textwidth][5.5cm]{g/image77}
+    \fig[0.38\textwidth][5.5cm]{g/image78}
+\end{figs}
+
+\begin{figs}
+    \fig[0.39\textwidth][5.5cm]{g/image80}
+    \fig[0.51\textwidth][5.5cm]{g/image79}
+\end{figs}
+
+\begin{figs}[Fig.1 - Technological equipment, Scada systems, mining and
+metallurgical enterprise]
+    \fig[0.5\textwidth][5.5cm]{g/image82}
+    \fig[0.4\textwidth][5.5cm]{g/image81}
+\end{figs}
+
+\begin{multicols}{2}
 
 Used:
 
@@ -550,8 +551,6 @@ An integrated matrix of features, target variables, and a structured
 dataset is being prepared for training machine learning models and
 performing analytical calculations.
 
-\fig[0.8\columnwidth]{g/image83}[Fig.2 - Block diagram of the system functioning algorithm]
-
 Block 7. Store in Data Repositories
 
 Data storage in storage: time series database, Data Warehouse, Data
@@ -563,6 +562,8 @@ Statistical analysis, training, and testing of machine learning models
 are performed, quality metrics (R\tsp{2}, RMSE) are
 calculated, validation is performed, and a forecast of copper content is
 formed.
+
+\fig[0.8\columnwidth]{g/image83}[Fig.2 - Block diagram of the system functioning algorithm]
 
 Block 9. Publish and Integrate
 
@@ -871,7 +872,7 @@ significance of the results obtained; the stability of the forecast
 makes it possible to reduce the variability of the technological regime,
 reduce the processing of substandard batches, and increase the
 efficiency of ore flow management.
-\vspace{-0.5cm}
+
 \begin{equation}
 R^{2} = 1 - \frac{\sum (y_{i} - \hat{y}_{i})^{2}}{\sum (y_{i} - \bar{y})^{2}}
 \end{equation}
@@ -883,7 +884,11 @@ demonstrates an increase in the proportion of the explained variance,
 which indicates a more complete consideration of technological factors.
 The decrease in RMSE and MAE reflects a decrease in the average and
 standard deviations of the forecast.
+\end{multicols}
 
+\fig[0.5\textwidth]{g/image90}[Fig.7 - Predicted vs Actual (after implementation)]
+
+\begin{multicols}{2}
 The scattering diagram in Fig.7 shows a dense concentration of points
 along the line of perfect alignment-this indicates a high degree of
 coincidence of the actual and predicted values of the copper content.
@@ -910,38 +915,32 @@ RMSE   & 0.0845 & 0.0352 \\
 MAE    & 0.0674 & 0.0280 
 \end{longtblr}
 
-\fig{g/image90}[]
-
-Fig.7 - Predicted vs Actual (after implementation)
-
+\begin{multicols}{2}
 The histogram in Fig.8 shows a wide range of forecast errors before the
 introduction of the platform with high variability, significant
 deviations and instability of the technological regime of ore
 processing, and an increase in the processing of substandard batches.
+\end{multicols}
 
-\fig{g/image91}[]
+\fig[0.65\textwidth]{g/image91}[Fig.8 - Error distribution before implementation]
+\fig[0.65\textwidth]{g/image92}[Fig.9 - Error distribution after implementation]
 
-Fig.8 - Error distribution before implementation
-
+\begin{multicols}{2}
 After the implementation of the platform, the error distribution narrows
 significantly, the shape of the distribution becomes more symmetrical,
 concentrated around the zero value of Fig.9., which indicates a decrease
 in the systematic component of the error, increasing the stability of
 the model.
 
-\fig{g/image92}[]
-
-Fig.9 - Error distribution after implementation
-
 The diagram in Fig.10 shows a twofold reduction in the root-mean-square
 error after the introduction of the digital platform with a significant
 improvement in the quality of copper content forecasting and an increase
 in the efficiency of technological management of the ore flow.
+\end{multicols}
 
-\fig{g/image93}[]
+\fig[0.5\textwidth]{g/image93}[Fig.10 - Decrease in RMSE]
 
-Fig.10 - Decrease in RMSE
-
+\begin{multicols}{2}
 The object of the production circuit is ore (an intermediate product),
 in this regard, the economic effect is estimated not through the "ore
 price", but through a reduction in unit processing costs and losses
@@ -951,7 +950,9 @@ performed according to two scenarios (conservative and basic).
 
 Formula 15, аnnual gross economic effect due to reduction of unit costs:
 
-\(E\_ g\  = \ k\  \cdot \ V\  \cdot \ \Delta c\) (15)
+\begin{equation}
+E_{g} = k \cdot V \cdot \Delta c
+\end{equation}
 
 where
 
@@ -962,7 +963,9 @@ cost savings, USD/t.
 Formula 16 is the annual net economic effect, taking into account
 operating costs:
 
-\(E\_ n\  = \ E\_ g\  - \ OPEX\) (16)
+\begin{equation}
+E_{n} = E_{g} - \text{OPEX}
+\end{equation}
 
 where
 
@@ -971,7 +974,9 @@ maintenance, licenses and infrastructure.
 
 Formula 17 Cash flows of the project:
 
-\(CF\_ 0\  = \  - CAPEX,\ \ CF\_ t\  = \ E\_ n\ \ (t = 1\ldots T)\) (17)
+\begin{equation}
+CF_{0} = -\text{CAPEX}, \quad CF_{t} = E_{n} \quad (t=1 \ldots T)
+\end{equation}
 
 where
 
@@ -980,8 +985,9 @@ CAPEX is the initial investment; \emph{CF\_t} is the cash flow per year
 
 Formula 18 is the Net present value (NPV):
 
-\(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NPV\  = \ \Sigma\_\{ t = 0\}\hat{}\{ T\}\ (CF\_ t\ /\ (1 + r)\hat{}t)\)
-(18)
+\begin{equation}
+NPV = \sum_{t=0}^{T} \frac{CF_{t}}{(1+r)^{t}}
+\end{equation}
 
 where
 
@@ -990,8 +996,9 @@ confirms the economic feasibility of the implementation.
 
 Formula 19 Discounted payback period (PP)\^{}
 
-\(PP\  = \ min\ \{\ t\ :\ \Sigma\_\{ i = 0\}\hat{}\{ t\}\ (CF\_ i\ /\ (1 + r)\hat{}i)\  \geq \ 0\ \}\)
-(19)
+\begin{equation}
+PP = \min \left\{ t : \sum_{i=0}^{t} \frac{CF_{i}}{(1+r)^{i}} \geq 0 \right\}
+\end{equation}
 
 where
 
@@ -999,67 +1006,38 @@ where
 becomes non negative.
 
 Source data and scenarios table 1.
+\end{multicols}
 
-Table 1 -- Scenario parameters and calculation results
+\tcap{Table 1 - Scenario parameters and calculation results}
+\begin{longtblr}[
+  label = none,
+  entry = none,
+]{
+  width = \linewidth,
+  colspec = {Q[87]Q[76]Q[62]Q[65]Q[83]Q[85]Q[100]Q[100]Q[92]Q[82]Q[65]},
+  cells = {c},
+  cells = {font = \footnotesize},
+  row{1} = {font=\bfseries\footnotesize},
+  hlines,
+  vlines,
+}
+The script & V, т/yeаr & k (co\-verage share) & Δc, USD/т & CAPEX, USD & OPEX, USD/год & Annual effect (gross), USD & Annual effect (net),USD & NPV, USD & Payback (disk.), year & ROI for 5 year, \%\\
+Conser\-vative & 500000 & 0.3 & 0.8 & 1200000 & 120000 & 120000.0 & 0.0 & 1200000.0 & - & 100.0\\
+Basic & 1200000 & 0.4 & 1.5 & 1200000 & 150000 & 720000.0 & 570000.0 & 854722.0 & 3.0 & 137.5
+\end{longtblr}
 
-%% \begin{longtable}[]{@{}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.1202}}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0876}}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0958}}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0734}}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0882}}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0914}}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0922}}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0994}}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.1013}}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0857}}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 20\tabcolsep) * \real{0.0648}}@{}}
-%% \toprule\noalign{}
-%% \begin{minipage}[b]{\linewidth}\raggedright
-%% The script
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-%% V, т/yeаr
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-%% k (coverage share)
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-%% Δc, USD/т
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-%% CAPEX, USD
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-%% OPEX, USD/год
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-%% Annual effect (gross), USD
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-%% Annual effect (net),USD
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-%% NPV, USD
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-%% Payback (disk.), year
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-%% ROI for5 year, \%
-%% \end{minipage} \\
-%% \midrule\noalign{}
-%% \endhead
-%% \bottomrule\noalign{}
-%% \endlastfoot
-%% Conservative & 500000 & 0.3 & 0.8 & 1200000 & 120000 & 120000.0 & 0.0 &
-%% 1200000.0 & - & 100.0 \\
-%% Basic & 1200000 & 0.4 & 1.5 & 1200000 & 150000 & 720000.0 & 570000.0 &
-%% 854722.0 & 3.0 & 137.5 \\
-%% \end{longtable}
-
+\begin{multicols}{2}
 The results obtained in Fig.11 show that for the ore contour, the effect
 is to reduce the specific costs of \emph{Δc} (energy, downtime,
 nonconditioning, logistics, and recycling). It is recommended to specify
 \emph{Δc} as a conservatively estimated value according to the
 company' s data, in order to avoid increasing the effect,
 the coverage coefficient k is used, reflecting the share of volume.
+\end{multicols}
 
-\fig{g/image94}[]
+\fig[0.7\textwidth]{g/image94}[Fig.11 - Payback schedule (accumulated discounted cash flow), "Baseline" scenario]
 
-Fig.11- Payback schedule (accumulated discounted cash flow), "Baseline"
-scenario
-
+\begin{multicols}{2}
 The payback of the implementation of the platform is achieved in the 3rd
 year, which confirms the financial efficiency and investment feasibility
 of the implementation of this study.
@@ -1108,11 +1086,13 @@ energy efficiency and the sustainability of technological processes.
 conducted within the framework of the initiative project "Digital twin
 of the product quality management system at all stages of mining and
 metallurgical production".}
+\end{multicols}
 
-\begin{quote}
-Referenses
-\end{quote}
+\begin{center}
+{\bfseries Referenses}
+\end{center}
 
+\begin{refs}
 1. Hildebrandt G., Dittler D., Habiger P., Drath R., Weyrich M. Data
 Integration for Digital Twins in Industrial Automation: A Systematic
 Literature Review\emph{.} //IEEE Access. - 2024.- Vol.12.- P.139129~-
@@ -1181,21 +1161,23 @@ sectors\emph{//}Telecom. -2024.-Vol.5(2). -P.369-399.
 13. Ficili I. et al. From sensors to data Intelligence: Leveraging IoT,
 Cloud, and Edge Computing with AI.//Sensors. -2025.-Vol.25 (6):1763.
 \href{https://doi.org/10.3390/s25061763}{DOI 10.3390/s25061763}.
+\end{refs}
 
-\emph{Information about the authors}
+\begin{info}
+\hspace{1em}\emph{{\bfseries Information about the author}}
 
-Akisheva L.- Nazarbayev Intellectual School, Astana, Kazakhstan, e-mail:
-lenaraakisheva@gmail.com;
+Akisheva L.- Nazarbayev Intellectual School, Astana, Kazakhstan,
+e-mail: lenaraakisheva@gmail.com;
 
 Bayzhomartov N.- 4 th year student, K. Kulazhanov Kazakh University of
 Technology and Business, Astana, Kazakhstan, e-mail:
 somebuddywant@gmail.com.
 
-\emph{Сведения об авторах}
+\hspace{1em}\emph{{\bfseries Сведения об авторах}}
 
-Акишева Л.- Назарбаев интеллектуальная школа, Астана, Казахстан, e-mail:
-lenaraakisheva@gmail.com;
+Акишева Л.- Назарбаев интеллектуальная школа, Астана, Казахстан,
+e-mail: lenaraakisheva@gmail.com;
 
 Байжомартов Н.- студент 4-го курса, Казахский университет технологии и
-бизнеса им. К.Кулажанова, Астана, Казахстан,
-somebuddywant@gmail.com.\
+бизнеса им. К.Кулажанова, Астана, Казахстан, somebuddywant@gmail.com.
+\end{info}
