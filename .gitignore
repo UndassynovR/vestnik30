@@ -1,10 +1,13 @@
-build
+build/
 
 # Neovim temporary/lock files
 *~
 
-# Libreoffice temporary/lock files
+# LibreOffice temporary/lock files
 .~lock.*
+
+# MS Word temporary files
+~$*.docx
 
 # Emacs temporary/lock files
 \#*\#
