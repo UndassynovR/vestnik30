@@ -1,14 +1,23 @@
 build/
 
 # Neovim temporary/lock files
+
 *~
 
 # LibreOffice temporary/lock files
+
 .~lock.*
 
 # MS Word temporary files
+
 ~$*.docx
 
 # Emacs temporary/lock files
-\#*\#
-.\#*
+
+#*#
+.#*
+
+# Windows Thumbs.db (including NTFS streams)
+
+**/Thumbs.db
+**/Thumbs.db:*
