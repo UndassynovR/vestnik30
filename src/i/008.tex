@@ -3,12 +3,12 @@
 \begin{header}
 \swa{M.A.~Bisenbi, O.G.~Abdiramanov, M.B.~Rakhimzhanova, G.B.~Balgozhina, G.S.~Shuteyeva, D.C.~Zhamangarin}{ADAPTIVE NONLINEAR CONTROL OF SPACECRAFT ATTITUDE USING NEURAL NETWORKS}
 
-\tsp{1}M.A.~Bisenbi,
-\tsp{1}O.G.~Abdiramanov\envelope,
-\tsp{2}M.B.~Rakhimzhanova,
-\tsp{3}G.B.~Balgozhina,
-\tsp{2}G.S.~Shuteyeva,
-\tsp{1}D.C.~Zhamangarin
+\tsp{1}M.A.~Bisenbi\alink{https://orcid.org/0000-0003-2109-4512},
+\tsp{1}O.G.~Abdiramanov\alink{https://orcid.org/0009-0004-9847-9669}\envelope,
+\tsp{2}M.B.~Rakhimzhanova\alink{https://orcid.org/0000-0002-1328-8109},
+\tsp{3}G.B.~Balgozhina\alink{https://orcid.org/0000-0001-9064-3330},
+\tsp{2}G.S.~Shuteyeva\alink{https://orcid.org/0000-0002-0289-0874},
+\tsp{1}D.C.~Zhamangarin\alink{https://orcid.org/0000-0002-2526-6492}
 \end{header}
 
 \begin{affil}
@@ -265,13 +265,13 @@ design. To simplify the representation, the attitude dynamics can be
 written in compact nonlinear form as:
 
 \begin{equation}
-\dot{x} = f(x) + g(x)u + \mathrm{\Delta}(x,t)
+\dot{x} = f(x) + g(x)u + \Delta (x,t)
 \end{equation}
 
 where \(x = \left\lbrack q_{v}^{Τ},\ \omega^{Τ} \right\rbrack^{Τ}\) is
 the system state vector, \(f(x)\) represents the nominal nonlinear
 dynamics, \(g(x)\) is the control input matrix, and
-\(\mathrm{\Delta}(x,t)\) denotes the lumped uncertainty, including
+\(\Delta (x,t)\) denotes the lumped uncertainty, including
 modeling errors, vibration dynamics, and external disturbances.
 
 The main control objective is to design a control input \(u(t)\) such
@@ -282,7 +282,7 @@ suppressing vibration, ensuring convergence of both the attitude error
 within a fixed time \(T_{\max}\), regardless of initial conditions.
 
 To handle nonlinear and uncertain terms in \(f(x)\) and
-\(\mathrm{\Delta}(x,t)\), a neural network (NN) approximator is
+\(\Delta (x,t)\), a neural network (NN) approximator is
 introduced to estimate the unknown dynamics online. The NN is defined
 as:
 
@@ -350,27 +350,27 @@ To formulate a compact nonlinear model, the full dynamics can be
 rewritten as:
 
 \begin{equation}
-\dot{x} = f(x) + g(x)u + \mathrm{\Delta}(x,\ t)
+\dot{x} = f(x) + g(x)u + \Delta (x,\ t)
 \end{equation}
 
 where \(x = \left\lbrack q_{v}^{T},\omega^{Τ} \right\rbrack^{Τ}\) is the
 vector of the system state, \(f(x)\) denotes nominal dynamics, \(g(x)\)
-is the matrix of control input data, and \(\mathrm{\Delta}(x,\ t)\)
+is the matrix of control input data, and \(\Delta (x,\ t)\)
 represents concentrated uncertainty, including unmodeled flexibility,
 parameter variations, and external disturbances {[}17{]}.
 
 Neural Network - based approximation. To compensate for unknown
-nonlinearities \(\mathrm{\Delta}(x,t)\), a Radial Basis Function Neural
+nonlinearities \(\Delta (x,t)\), a Radial Basis Function Neural
 Network (RBFNN) is employed as a universal approximator {[}18{]}:
 
 \begin{equation}
-\widehat{\mathrm{\Delta}}(x) = W^{Τ}\varphi(x)
+\widehat{\Delta }(x) = W^{Τ}\varphi(x)
 \end{equation}
 
 where \(\varphi(x) \in R^{m}\) is a vector of Gaussian basis functions,
 \(W \in R^{m \times 3}\) is the ideal weight matrix, and the
 approximation error
-\(\varepsilon(x) = \mathrm{\Delta}(x,\ t) - \widehat{\mathrm{\Delta}}(x)\)
+\(\varepsilon(x) = \Delta (x,\ t) - \widehat{\Delta }(x)\)
 is assumed to be bounded by
 \(\left\| \varepsilon(x) \right\| \leq \varepsilon_{\max}\) {[}19{]}.
 
@@ -514,6 +514,8 @@ for more than 25 seconds with a residual amplitude of about 0.15 m. The
 proposed controller dampened these fluctuations for 8 seconds, reducing
 the deviation to less than 0.03 m.
 
+Interference elimination and robustness.
+
 To assess the reliability along the Y-axis, a disturbing moment of 0.5
 N·m was applied at t = 15 seconds. The proposed controller restored
 stability in 2 seconds, while the traditional controller took 10
@@ -526,8 +528,6 @@ consistently outperforms the traditional adaptive approach in all key
 performance indicators. The proposed controller provided faster and more
 predictable orientation while reducing installation time by almost 60\%
 and more accurate angular velocity tracking.
-
-Interference elimination and robustness.
 \end{multicols}
 
 \fig{i/image75}[Fig.3 - Timeline chart]
